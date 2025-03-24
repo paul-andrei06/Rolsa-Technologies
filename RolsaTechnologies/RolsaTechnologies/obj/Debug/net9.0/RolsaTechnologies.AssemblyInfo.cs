@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RolsaTechnologies")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e274c9154ded6624695421a7cd4fe97612a92cfb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d0c361aa8eea50097697e27c0cc5fe44be48656")]
 [assembly: System.Reflection.AssemblyProductAttribute("RolsaTechnologies")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RolsaTechnologies")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

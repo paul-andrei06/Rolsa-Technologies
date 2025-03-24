@@ -1,0 +1,84 @@
+﻿@model RolsaTechnologies.Models.Calculator
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Calculator</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="UserId" class="control-label"></label>
+                <input asp-for="UserId" class="form-control" />
+                <span asp-validation-for="UserId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ElectricityUsage" class="control-label"></label>
+                <input asp-for="ElectricityUsage" class="form-control" />
+                <span asp-validation-for="ElectricityUsage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GasUsage" class="control-label"></label>
+                <input asp-for="GasUsage" class="form-control" />
+                <span asp-validation-for="GasUsage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CarMilesPerWeek" class="control-label"></label>
+                <input asp-for="CarMilesPerWeek" class="form-control" />
+                <span asp-validation-for="CarMilesPerWeek" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CarFuelEfficiency" class="control-label"></label>
+                <input asp-for="CarFuelEfficiency" class="form-control" />
+                <span asp-validation-for="CarFuelEfficiency" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PublicTransportMilesPerWeek" class="control-label"></label>
+                <input asp-for="PublicTransportMilesPerWeek" class="form-control" />
+                <span asp-validation-for="PublicTransportMilesPerWeek" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WasteProducedPerWeek" class="control-label"></label>
+                <input asp-for="WasteProducedPerWeek" class="form-control" />
+                <span asp-validation-for="WasteProducedPerWeek" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="RecyclingHabits" /> @Html.DisplayNameFor(model => model.RecyclingHabits)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="MeatConsumptionPerWeek" class="control-label"></label>
+                <input asp-for="MeatConsumptionPerWeek" class="form-control" />
+                <span asp-validation-for="MeatConsumptionPerWeek" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CalculatedCarbonFootprint" class="control-label"></label>
+                <input asp-for="CalculatedCarbonFootprint" class="form-control" />
+                <span asp-validation-for="CalculatedCarbonFootprint" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateCalculated" class="control-label"></label>
+                <input asp-for="DateCalculated" class="form-control" />
+                <span asp-validation-for="DateCalculated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

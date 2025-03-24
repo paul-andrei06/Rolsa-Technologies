@@ -1,0 +1,95 @@
+﻿@model IEnumerable<RolsaTechnologies.Models.Calculator>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ElectricityUsage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GasUsage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CarMilesPerWeek)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CarFuelEfficiency)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PublicTransportMilesPerWeek)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WasteProducedPerWeek)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RecyclingHabits)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MeatConsumptionPerWeek)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CalculatedCarbonFootprint)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateCalculated)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ElectricityUsage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GasUsage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CarMilesPerWeek)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CarFuelEfficiency)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PublicTransportMilesPerWeek)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WasteProducedPerWeek)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RecyclingHabits)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MeatConsumptionPerWeek)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CalculatedCarbonFootprint)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateCalculated)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
