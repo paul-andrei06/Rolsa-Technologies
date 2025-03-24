@@ -25,7 +25,13 @@ namespace RolsaTechnologies.Controllers
         // GET: ScheduleConsultations
         public async Task<IActionResult> Index()
         {
-            return View(await _context.ScheduleConsultation.ToListAsync());
+            string user = User.Identity.Name; // Get the current logged -in user's name
+            var currentUser = _context.Users.FirstOrDefault(x => x.UserName == user); // Retrieve the current user's details from the database
+            var currentUserId = currentUser.Id; // Gets the current user's Id
+
+            var userConsultation = await _context.ScheduleConsultation.Where(c => c.UserId == currentUserId).ToListAsync(); // Gets all energy tracker records associated with the current user
+
+            return View(userConsultation); // Return the data to the view
         }
 
         // GET: ScheduleConsultations/Details/5
@@ -59,13 +65,26 @@ namespace RolsaTechnologies.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,UserId,ScheduledDate,ContactMethod,Mobile,ContactEmail,Notes")] ScheduleConsultation scheduleConsultation)
         {
-            if (ModelState.IsValid)
+            string UserName = User.Identity.Name;  // Get the currently logged-in user's username
+            var currentUser = await _context.Users.FirstOrDefaultAsync(x => x.UserName == UserName);  // Retrieve the user details from the database based on the username
+
+            // If the user is not found, return an unauthorized response
+            if (currentUser == null)
             {
-                _context.Add(scheduleConsultation);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return Unauthorized();
             }
-            return View(scheduleConsultation);
+
+            scheduleConsultation.UserId = currentUser.Id; // Assign the logged-in user's ID to the calculator entry
+
+            ModelState.Remove("UserId"); // Remove ModelState validation for UserId as it is assigned manually
+
+            if (ModelState.IsValid) // Check if the provided model data is valid
+            {
+                _context.Add(scheduleConsultation); // Add the consultation entry to the database
+                await _context.SaveChangesAsync(); // Save changes asynchronously
+                return RedirectToAction(nameof(Index)); // Redirect the user to the Index page after successful creation
+            }
+            return View(scheduleConsultation); // If the data is invalid, return the same view with validation errors
         }
 
         // GET: ScheduleConsultations/Edit/5

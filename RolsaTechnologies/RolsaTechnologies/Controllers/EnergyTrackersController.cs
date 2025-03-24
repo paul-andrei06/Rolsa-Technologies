@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using NuGet.DependencyResolver;
 using RolsaTechnologies.Data;
 using RolsaTechnologies.Models;
 
@@ -20,12 +21,17 @@ namespace RolsaTechnologies.Controllers
             _context = context;
         }
 
-        [Authorize]
+        [Authorize] // This ensures that only logged in users are able to access this page
 
         // GET: EnergyTrackers
         public async Task<IActionResult> Index()
         {
-            return View(await _context.EnergyTracker.ToListAsync());
+            string user = User.Identity.Name; // Get the current logged-in user's name
+            var currentUser = await _context.Users.FirstOrDefaultAsync(x => x.UserName == user); // Retrieve the current user's details from the database
+            var currentUserId = currentUser.Id; // Get the current user's Id
+
+            var userTracker = await _context.EnergyTracker.Where(t => t.UserId == currentUserId).ToListAsync(); // Gets all energy tracker records associated with the current user
+            return View(userTracker); // Return the data to the view
         }
 
         // GET: EnergyTrackers/Details/5
@@ -59,12 +65,28 @@ namespace RolsaTechnologies.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,UserId,Consumption,EnergyType,Date")] EnergyTracker energyTracker)
         {
-            if (ModelState.IsValid)
+            string UserName = User.Identity.Name; // Get the currently logged-in user's username
+            var currentUser = await _context.Users.FirstOrDefaultAsync(x => x.UserName == UserName); // Retrieve the user details from the database based on the username
+
+            // If the user is not found, return an unauthorized response
+            if (currentUser == null)
             {
-                _context.Add(energyTracker);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return Unauthorized();
             }
+
+            energyTracker.UserId = currentUser.Id; // Assign the logged-in user's ID to the entry
+            energyTracker.Date = DateOnly.FromDateTime(DateTime.Now); // Set the date to the current date (DateOnly)
+
+            ModelState.Remove("UserId"); // Remove ModelState validation for UserId as it is assigned manually
+
+            if (ModelState.IsValid) // Check if the provided model data is valid
+            {
+                _context.Add(energyTracker); // Add the entry to the database
+                await _context.SaveChangesAsync(); // Save changes asynchronously
+                return RedirectToAction(nameof(Index)); // Redirect the user to the Index page after successful creation
+            }
+
+            // If the data is invalid, return the same view with validation errors
             return View(energyTracker);
         }
 

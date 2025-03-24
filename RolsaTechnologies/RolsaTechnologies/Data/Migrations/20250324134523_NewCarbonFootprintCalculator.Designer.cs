@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RolsaTechnologies.Data;
 
@@ -11,9 +12,11 @@ using RolsaTechnologies.Data;
 namespace RolsaTechnologies.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250324134523_NewCarbonFootprintCalculator")]
+    partial class NewCarbonFootprintCalculator
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -307,6 +310,7 @@ namespace RolsaTechnologies.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ContactEmail")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ContactMethod")
@@ -314,6 +318,7 @@ namespace RolsaTechnologies.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Mobile")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Notes")
@@ -331,7 +336,7 @@ namespace RolsaTechnologies.Data.Migrations
                     b.ToTable("ScheduleConsultation");
                 });
 
-            modelBuilder.Entity("RolsaTechnologies.Models.ScheduleInstallation", b =>
+            modelBuilder.Entity("RolsaTechnologies.Models.ScheduleInstalltion", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -363,7 +368,7 @@ namespace RolsaTechnologies.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ScheduleInstallation");
+                    b.ToTable("ScheduleInstalltion");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

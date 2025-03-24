@@ -14,7 +14,7 @@ namespace RolsaTechnologies.Controllers
     public class CalculatorsController : Controller
     {
         private readonly ApplicationDbContext _context;
-        
+
         public CalculatorsController(ApplicationDbContext context)
         {
             _context = context;
@@ -25,7 +25,13 @@ namespace RolsaTechnologies.Controllers
         // GET: Calculators
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Calculator.ToListAsync());
+            string user = User.Identity.Name; // Get the current logged-in user's name
+            var currentUser = await _context.Users.FirstOrDefaultAsync(x => x.UserName == user); // Retrieve the current user's details from the database
+            var currentUserId = currentUser.Id; // Get the current user's Id
+
+            var usercalculations = await _context.Calculator.Where(u => u.UserId == currentUserId).ToListAsync(); // Gets all energy tracker records associated with the current user
+
+            return View(usercalculations); // Return the data to the view
         }
 
         // GET: Calculators/Details/5
@@ -67,7 +73,7 @@ namespace RolsaTechnologies.Controllers
             {
                 return Unauthorized();
             }
-           
+
             calculator.UserId = currentUser.Id; // Assign the logged-in user's ID to the calculator entry
             calculator.CalculateFootprint(); // Call the CalculateFootprint method to compute the carbon footprint
 

@@ -24,15 +24,44 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
 
-                        <!-- This will show the button on the home page, making the page easily accessible-->
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Calculators" asp-action="Index">Calculator</a>
+                        <!-- Information Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" id="navbarDropdownInformation" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Information
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownInformation">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="About" asp-action="Index">About</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Contact" asp-action="Index">Contact</a></li>
+                                <!-- Add more links as needed -->
+                            </ul>
                         </li>
 
-
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        <!-- Tools Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" id="navbarDropdownTools" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Tools
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownTools">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Calculators" asp-action="Index">Calculator</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="EnergyTrackers" asp-action="Index">EnergyTracker</a></li>
+                                <!-- Add more tools as needed -->
+                            </ul>
                         </li>
+
+                        <!-- Services Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" id="navbarDropdownServices" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownServices">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="ScheduleConsultations" asp-action="Index">Consultations</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="ScheduleInstallations" asp-action="Index">Installations</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Services" asp-action="FAQ">FAQ</a></li>
+                                <!-- Add more services as needed -->
+                            </ul>
+                        </li>
+
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>

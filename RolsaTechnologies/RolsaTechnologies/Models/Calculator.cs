@@ -39,7 +39,7 @@
             double totalCarbonFootprint = electricityCarbon + gasCarbon + carCarbon + publicTransportCarbon + wasteCarbon + recyclingCredit + meatCarbon;
 
             // Convert to metric tons
-            CalculatedCarbonFootprint = totalCarbonFootprint / 1000;
+            CalculatedCarbonFootprint = Math.Round(totalCarbonFootprint / 1000, 2); // Calculates the Carbonfootprint to 2 d.p
         }
     }
 }

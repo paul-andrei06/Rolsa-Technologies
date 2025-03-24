@@ -13,8 +13,8 @@ namespace RolsaTechnologies.Models
         public string ContactMethod { get; set; } // This will be the users choice of contact method (Email or Phone)
 
         [Display(Name = "Phone Number")]
-        public string Mobile {  get; set; } // This is the phone number of the customer so that they can be contacted
-        public string ContactEmail { get; set; } // This is the email of the customer so that they can be contacted
+        public string? Mobile {  get; set; } // This is the phone number of the customer so that they can be contacted
+        public string? ContactEmail { get; set; } // This is the email of the customer so that they can be contacted
         public string? Notes { get; set; } // Any additional notes from the customer, not required
     }
 }

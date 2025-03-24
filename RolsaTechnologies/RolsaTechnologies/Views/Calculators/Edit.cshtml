@@ -13,11 +13,7 @@
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="UserId" class="control-label"></label>
-                <input asp-for="UserId" class="form-control" />
-                <span asp-validation-for="UserId" class="text-danger"></span>
-            </div>
+            
             <div class="form-group">
                 <label asp-for="ElectricityUsage" class="control-label"></label>
                 <input asp-for="ElectricityUsage" class="form-control" />
@@ -57,16 +53,6 @@
                 <label asp-for="MeatConsumptionPerWeek" class="control-label"></label>
                 <input asp-for="MeatConsumptionPerWeek" class="form-control" />
                 <span asp-validation-for="MeatConsumptionPerWeek" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CalculatedCarbonFootprint" class="control-label"></label>
-                <input asp-for="CalculatedCarbonFootprint" class="form-control" />
-                <span asp-validation-for="CalculatedCarbonFootprint" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DateCalculated" class="control-label"></label>
-                <input asp-for="DateCalculated" class="form-control" />
-                <span asp-validation-for="DateCalculated" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
