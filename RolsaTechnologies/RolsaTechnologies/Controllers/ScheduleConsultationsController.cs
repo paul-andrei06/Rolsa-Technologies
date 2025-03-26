@@ -52,9 +52,14 @@ namespace RolsaTechnologies.Controllers
             return View(scheduleConsultation);
         }
 
-        // GET: ScheduleConsultations/Create
+        // GET: ScheduleConsultation/Create
         public IActionResult Create()
         {
+            // Ensure that we are passing the current date to generate time slots
+            var availableSlots = GenerateAvailableTimeSlots(DateTime.Today);
+
+            ViewBag.AvailableSlots = availableSlots;
+
             return View();
         }
 
@@ -63,7 +68,7 @@ namespace RolsaTechnologies.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,UserId,ScheduledDate,ContactMethod,Mobile,ContactEmail,Notes")] ScheduleConsultation scheduleConsultation)
+        public async Task<IActionResult> Create(ScheduleConsultation scheduleConsultation, string scheduledTime)
         {
             string UserName = User.Identity.Name;  // Get the currently logged-in user's username
             var currentUser = await _context.Users.FirstOrDefaultAsync(x => x.UserName == UserName);  // Retrieve the user details from the database based on the username
@@ -74,9 +79,41 @@ namespace RolsaTechnologies.Controllers
                 return Unauthorized();
             }
 
-            scheduleConsultation.UserId = currentUser.Id; // Assign the logged-in user's ID to the calculator entry
+            // Generate available time slots for the selected date
+            var availableSlots = GenerateAvailableTimeSlots(scheduleConsultation.ScheduledDate);
+            ViewBag.AvailableSlots = availableSlots;
 
-            ModelState.Remove("UserId"); // Remove ModelState validation for UserId as it is assigned manually
+            // Validate if the selected time is valid
+            if (string.IsNullOrEmpty(scheduledTime) || !TimeSpan.TryParse(scheduledTime, out var time))
+            {
+                ModelState.AddModelError("ScheduledDate", "Invalid time selected.");
+                return View(scheduleConsultation);
+            }
+
+            // Combine the selected date with the selected time
+            scheduleConsultation.ScheduledDate = scheduleConsultation.ScheduledDate.Date + time;
+
+            // Prevent selecting a past date/time
+            if (scheduleConsultation.ScheduledDate < DateTime.Now)
+            {
+                ModelState.AddModelError("ScheduledDate", "You cannot select a past date or time.");
+                return View(scheduleConsultation);
+            }
+
+            // Check if the selected date/time is already booked
+            bool isSlotTaken = await _context.ScheduleConsultation.AnyAsync(s => s.ScheduledDate == scheduleConsultation.ScheduledDate);
+
+            if (isSlotTaken)
+            {
+                ModelState.AddModelError("ScheduledDate", "This time slot is already booked. Please select another.");
+                return View(scheduleConsultation);
+            }
+
+            // Assign the logged-in user's ID to the consultation entry
+            scheduleConsultation.UserId = currentUser.Id;
+
+            // Remove ModelState validation for UserId as it is assigned manually
+            ModelState.Remove("UserId");
 
             if (ModelState.IsValid) // Check if the provided model data is valid
             {
@@ -84,8 +121,33 @@ namespace RolsaTechnologies.Controllers
                 await _context.SaveChangesAsync(); // Save changes asynchronously
                 return RedirectToAction(nameof(Index)); // Redirect the user to the Index page after successful creation
             }
+
             return View(scheduleConsultation); // If the data is invalid, return the same view with validation errors
         }
+
+        // Helper method to generate available time slots
+        private List<TimeSpan> GenerateAvailableTimeSlots(DateTime scheduledDate)
+        {
+            List<TimeSpan> availableSlots = new List<TimeSpan>();
+
+            // Generate time slots from 9 AM to 5 PM, every 15 minutes
+            for (int hour = 9; hour < 17; hour++) // 9 AM to 5 PM
+            {
+                for (int minute = 0; minute < 60; minute += 15)
+                {
+                    availableSlots.Add(new TimeSpan(hour, minute, 0));
+                }
+            }
+
+            // Retrieve the already booked time slots for the selected date (without time)
+            var bookedSlots = _context.ScheduleConsultation.Where(s => s.ScheduledDate.Date == scheduledDate.Date).Select(s => s.ScheduledDate.TimeOfDay).ToList();
+
+            // Remove booked time slots from the available slots list
+            availableSlots = availableSlots.Where(slot => !bookedSlots.Contains(slot)).ToList();
+
+            return availableSlots;
+        }
+
 
         // GET: ScheduleConsultations/Edit/5
         public async Task<IActionResult> Edit(int? id)

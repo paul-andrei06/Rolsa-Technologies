@@ -11,10 +11,23 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddRoles<IdentityRole>() //Enables role support
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    
+    var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>(); // Gets the RoleManager service to manage user role
+    var userManager = services.GetRequiredService<UserManager<IdentityUser>>(); // Gets the UserManager service to manage user accounts
+
+    // Call SeedRoles with the required services
+    await SeedData.SeedRoles(services, userManager, roleManager);
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

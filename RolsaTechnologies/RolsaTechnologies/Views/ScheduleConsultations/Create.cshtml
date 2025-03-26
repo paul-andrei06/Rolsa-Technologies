@@ -13,10 +13,25 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-            <!-- Scheduled Date and Time input -->
+            <!-- Date Picker for Scheduled Date -->
             <div class="form-group">
-                <label asp-for="ScheduledDate" class="control-label"></label>
-                <input asp-for="ScheduledDate" type="datetime-local" class="form-control" />
+                <label asp-for="ScheduledDate" class="control-label">Select Date</label>
+                <input asp-for="ScheduledDate" type="date" class="form-control" />
+                <span asp-validation-for="ScheduledDate" class="text-danger"></span>
+            </div>
+
+            <!-- Time Slot Dropdown -->
+            <div class="form-group">
+                <label for="scheduledTime">Select Time</label>
+                <select id="scheduledTime" name="scheduledTime" class="form-control"> 
+                    <!-- Loop through each available time slot from ViewBag -->
+                    @foreach (var timeSlot in ViewBag.AvailableSlots as List<TimeSpan>) 
+
+                    {
+                        <!-- Create an option element for each time slot formatted as hh:mm -->
+                        <option value="@timeSlot.ToString(@"hh\:mm")">@timeSlot.ToString(@"hh\:mm")</option>
+                    }
+                </select>
                 <span asp-validation-for="ScheduledDate" class="text-danger"></span>
             </div>
 
