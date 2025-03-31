@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
-    <!-- Add styles directly here, not in the body -->
     <style>
-        /* Default desktop styles */
+        /* Default card-container style */
         .card-container {
             display: flex;
             flex-direction: row;
@@ -22,6 +24,46 @@
             width: 100%;
             max-width: 980px;
             min-height: 200px;
+            z-index: 1;
+            margin-bottom: 20px; /* Default margin between containers */
+        }
+
+        
+
+            /* Add extra margin after the last .card-container */
+            .card-container:last-of-type {
+                margin-bottom: 130px; /* Adds the white space after the last container */
+            }
+
+        /* Responsive media query */
+        @@media (max-width: 768px) {
+            .card-container
+
+        {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px; /* Adjust for mobile layout */
+        }
+
+        .card-container:last-of-type {
+            margin-bottom: 50px; /* Reduced margin after the last container on mobile */
+        }
+
+        .card-img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-text {
+            text-align: center;
+        }
+
+        .card-button {
+            position: relative;
+            margin-top: 10px;
+        }
+
         }
 
         .card-img {
@@ -106,22 +148,6 @@
             animation-delay: 0.2s;
         }
 
-        /* Keyframes for Sliding Down Effect */
-        @@keyframes slideDown {
-            from
-
-        {
-            transform: translateY(-100%);
-            opacity: 0;
-        }
-
-        to {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        }
-
         /* New containers with #0A9642 color */
         .inline-container {
             display: flex;
@@ -199,6 +225,106 @@
             color: #0A9642;
             margin-top: 40px;
         }
+
+        .footer {
+            padding: 50px 0;
+            background-color: #fff;
+            color: #4b4c4d;
+        }
+
+            .footer h3 {
+                margin-top: 0;
+                margin-bottom: 12px;
+                font-weight: bold;
+                font-size: 16px;
+            }
+
+            .footer ul {
+                padding: 0;
+                list-style: none;
+                line-height: 1.6;
+                font-size: 14px;
+                margin-bottom: 0;
+            }
+
+                .footer ul a {
+                    color: inherit;
+                    text-decoration: none;
+                    opacity: 0.8;
+                }
+
+                    .footer-clean ul a:hover {
+                        opacity: 1;
+                    }
+
+            .footer-clean .item.social {
+                text-align: right;
+            }
+
+        @@media (max-width:767px) {
+            .footer-clean .item
+
+        {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        }
+
+        @@media (max-width: 768px) {
+            .footer-clean .item.social
+
+        {
+            text-align: center;
+        }
+
+        }
+
+        .footer .item.social > a {
+            font-size: 24px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            margin-left: 10px;
+            margin-top: 22px;
+            color: inherit;
+            opacity: 0.75;
+        }
+
+            .footer .item.social > a:hover {
+                opacity: 0.9;
+            }
+
+        @@media (max-width:991px) {
+            .footer .item.social > a
+
+        {
+            margin-top: 40px;
+        }
+
+        }
+
+        @@media (max-width:767px) {
+            .footer .item.social > a
+
+        {
+            margin-top: 10px;
+        }
+
+        }
+
+        .footer .copyright {
+            margin-top: 14px;
+            margin-bottom: 0;
+            font-size: 13px;
+            opacity: 0.6;
+        }
+
+
     </style>
 </head>
 <body>
@@ -207,8 +333,8 @@
     <div style="text-align: center; margin-top: 30px;">
         <h2 class="intro-title">Welcome to Rosla Technologies</h2>
         <p class="intro-text">
-            At Rosla Technologies, we are committed to transforming the future of energy with sustainable and innovative solutions. 
-            Our services focus on providing cutting-edge green energy solutions, including solar panels, smart energy appliances, 
+            At Rosla Technologies, we are committed to transforming the future of energy with sustainable and innovative solutions.
+            Our services focus on providing cutting-edge green energy solutions, including solar panels, smart energy appliances,
             and electric vehicle charging stations. Join us in building a cleaner, greener, and more efficient world for future generations.
         </p>
     </div>
@@ -235,8 +361,10 @@
             <div style="width: 300px; border: 1px solid #ddd; border-radius: 8px; background-color: #0A9642; color: #ffffff; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 15px;">
                 <img src="@Url.Content("~/Images/Installation.png")" alt="Installation" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px 8px 0 0;">
                 <h3>Installation</h3>
-                <p>Ready to take the next step? Schedule an Installation of energy-efficient solutions for your home or business. From solar panels to smart thermostats, 
-                    we provide professional installation services to help you reduce your environmental impact.</p>
+                <p>
+                    Ready to take the next step? Schedule an Installation of energy-efficient solutions for your home or business. From solar panels to smart thermostats,
+                    we provide professional installation services to help you reduce your environmental impact.
+                </p>
                 <a asp-controller="ScheduleInstallations" asp-action="Index" style="display: inline-block; padding: 10px 15px; background-color: #ffffff; color: #005893; text-decoration: none; border-radius: 5px; font-weight: bold;">
                     Get Started
                 </a>
@@ -253,7 +381,7 @@
                 <img src="@Url.Content("~/Images/CFP.png")" alt="Carbon Footprint Calculator" style="width: 100%; height: 100%; border-radius: 5px;">
             </div>
             <div class="card-text">
-                Our Carbon Footprint Calculator helps you measure and track your carbon emissions. By understanding your personal or business carbon footprint, 
+                Our Carbon Footprint Calculator helps you measure and track your carbon emissions. By understanding your personal or business carbon footprint,
                 you can make more informed decisions about your environmental impact and take steps toward sustainability.
             </div>
             <a asp-controller="Calculators" asp-action="Index" class="card-button">
@@ -266,7 +394,7 @@
                 <img src="@Url.Content("~/Images/EnergyTracker.png")" alt="Energy Tracker" style="width: 100%; height: 100%; border-radius: 5px;">
             </div>
             <div class="card-text">
-                The EnergyTracker app allows you to monitor and optimize your energy consumption. With detailed insights and real-time data, 
+                The EnergyTracker app allows you to monitor and optimize your energy consumption. With detailed insights and real-time data,
                 you can make smarter energy decisions and reduce your overall energy bills while contributing to a greener planet.
             </div>
             <a asp-controller="EnergyTrackers" asp-action="Index" class="card-button">
@@ -280,7 +408,7 @@
                 <img src="@Url.Content("~/Images/Consultation.png")" alt="Consultation" style="width: 100%; height: 100%; border-radius: 5px;">
             </div>
             <div class="card-text">
-                Schedule a Consultation with one of our experts to discuss your energy usage and carbon footprint. 
+                Schedule a Consultation with one of our experts to discuss your energy usage and carbon footprint.
                 We offer tailored advice on reducing emissions and optimizing energy consumption for a more sustainable future.
             </div>
             <a asp-controller="ScheduleConsultations" asp-action="Index" class="card-button">
@@ -293,7 +421,7 @@
                 <img src="@Url.Content("~/Images/Installation.png")" alt="Installation" style="width: 100%; height: 100%; border-radius: 5px;">
             </div>
             <div class="card-text">
-                Ready to take the next step? Schedule an Installation of energy-efficient solutions for your home or business. 
+                Ready to take the next step? Schedule an Installation of energy-efficient solutions for your home or business.
                 From solar panels to smart thermostats, we provide professional installation services to help you reduce your environmental impact.
             </div>
             <a asp-controller="ScheduleInstallations" asp-action="Index" class="card-button">
@@ -302,6 +430,34 @@
         </div>
 
     </div>
+    <div class="footer">
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Accessibility</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><i class="bi bi-telephone"></i> +44 123 456 7890</li>
+                            <li><i class="bi bi-envelope"></i> info@rolsatechnologies.com</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 item social">
+                        <a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
+                        <p class="copyright">Rolsa Technologies © 2025</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
 
 </body>
 </html>

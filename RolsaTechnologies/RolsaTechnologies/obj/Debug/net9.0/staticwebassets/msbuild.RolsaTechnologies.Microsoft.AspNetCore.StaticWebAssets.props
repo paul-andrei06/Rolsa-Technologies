@@ -138,8 +138,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>pfqfor7uyh</Fingerprint>
-      <Integrity>a3izXeym22anldtV8zpzUfmzuuvIoD8E/m6uOVXKw/0=</Integrity>
+      <Fingerprint>ahnifn7iot</Fingerprint>
+      <Integrity>XmLYWZ07kwoT+MJxmG0F9K+QF3ZHra1nKi1HTVohyio=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\Logo.png'))</OriginalItemSpec>
