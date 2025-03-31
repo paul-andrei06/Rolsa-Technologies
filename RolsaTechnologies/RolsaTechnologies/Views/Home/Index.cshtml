@@ -1,8 +1,307 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <!-- Add styles directly here, not in the body -->
+    <style>
+        /* Default desktop styles */
+        .card-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+            background-color: #17195A;
+            border-radius: 10px;
+            gap: 20px;
+            position: relative;
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 980px;
+            min-height: 200px;
+        }
+
+        .card-img {
+            width: 170px;
+            height: 100px;
+            flex-shrink: 0;
+            border-radius: 5px;
+        }
+
+        .card-text {
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 0;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .card-button {
+            background-color: #FE5716;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            text-decoration: none;
+        }
+
+        /* Hero Banner Animation */
+        .banner {
+            width: 99vw; /* Full width */
+            height: 600px; /* Fixed height */
+            object-fit: cover; /* Ensure it covers the area */
+            display: block;
+            margin-bottom: 30px; /* Space below the banner */
+            /* Initial Position (Off-Screen) */
+            transform: translateY(-100%);
+            opacity: 0;
+            /* Animation */
+            animation: slideDown 1s ease-out forwards;
+        }
+
+        /* Keyframes for Sliding Down Effect */
+        @@keyframes slideDown {
+            from
+
+        {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        }
+
+        /* Title Animation */
+        .intro-title {
+            font-size: 32px;
+            color: #0A9642;
+            margin-top: 40px;
+            opacity: 0;
+            transform: translateY(-100%);
+            animation: slideDown 1s ease-out forwards;
+        }
+
+        /* Text Animation */
+        .intro-text {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(-100%);
+            animation: slideDown 1.2s ease-out forwards;
+            animation-delay: 0.2s;
+        }
+
+        /* Keyframes for Sliding Down Effect */
+        @@keyframes slideDown {
+            from
+
+        {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        }
+
+        /* New containers with #0A9642 color */
+        .inline-container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #0A9642;
+            border-radius: 10px;
+            max-width: 980px;
+            min-height: 200px;
+            margin-bottom: 30px; /* Gap between the inline containers and the title */
+            position: relative;
+        }
+
+            .inline-container .card-img {
+                width: 170px;
+                height: 100px;
+            }
+
+            .inline-container .card-text {
+                color: #fff;
+                font-size: 16px;
+                margin-bottom: 0;
+                text-align: left;
+                flex-grow: 1;
+            }
+
+            .inline-container .card-button {
+                background-color: #FE5716;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                position: absolute;
+                bottom: 10px;
+                right: 20px;
+                text-decoration: none;
+            }
+
+        /* Responsive styles */
+        @@media (max-width: 768px) {
+            .card-container, .inline-container
+
+        {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-img,
+        .inline-container .card-img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-text,
+        .inline-container .card-text {
+            text-align: center;
+        }
+
+        .card-button,
+        .inline-container .card-button {
+            position: relative;
+            margin-top: 10px;
+        }
+
+        }
+
+        /* Title Styles */
+        .features-title {
+            font-size: 24px;
+            color: #0A9642;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Introduction/Overview Section -->
+    <div style="text-align: center; margin-top: 30px;">
+        <h2 class="intro-title">Welcome to Rosla Technologies</h2>
+        <p class="intro-text">
+            At Rosla Technologies, we are committed to transforming the future of energy with sustainable and innovative solutions. 
+            Our services focus on providing cutting-edge green energy solutions, including solar panels, smart energy appliances, 
+            and electric vehicle charging stations. Join us in building a cleaner, greener, and more efficient world for future generations.
+        </p>
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; width: 100%; padding: 10px;">
+
+        <!-- Banner Image -->
+        <img src="@Url.Content("~/Images/HomePageBanner.jpg")" alt="Banner" class="banner">
+
+        <!-- Flexbox Container -->
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 30px;">
+
+            <!-- Consultation -->
+            <div style="width: 300px; border: 1px solid #ddd; border-radius: 8px; background-color: #0A9642; color: #ffffff; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 15px;">
+                <img src="@Url.Content("~/Images/Consultation.png")" alt="Consultation" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px 8px 0 0;">
+                <h3>Consultation</h3>
+                <p>Schedule a Consultation with one of our experts to discuss your energy usage and carbon footprint. We offer tailored advice on reducing emissions and optimizing energy consumption for a more sustainable future.</p>
+                <a asp-controller="ScheduleConsultations" asp-action="Index" style="display: inline-block; padding: 10px 15px; background-color: #ffffff; color: #005893; text-decoration: none; border-radius: 5px; font-weight: bold;">
+                    Book Now
+                </a>
+            </div>
+
+            <!-- Installation -->
+            <div style="width: 300px; border: 1px solid #ddd; border-radius: 8px; background-color: #0A9642; color: #ffffff; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 15px;">
+                <img src="@Url.Content("~/Images/Installation.png")" alt="Installation" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px 8px 0 0;">
+                <h3>Installation</h3>
+                <p>Ready to take the next step? Schedule an Installation of energy-efficient solutions for your home or business. From solar panels to smart thermostats, 
+                    we provide professional installation services to help you reduce your environmental impact.</p>
+                <a asp-controller="ScheduleInstallations" asp-action="Index" style="display: inline-block; padding: 10px 15px; background-color: #ffffff; color: #005893; text-decoration: none; border-radius: 5px; font-weight: bold;">
+                    Get Started
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Title for Features -->
+        <h2 class="features-title">Features:</h2>
+
+        <!-- Existing Cards -->
+        <div class="card-container">
+            <div class="card-img">
+                <img src="@Url.Content("~/Images/CFP.png")" alt="Carbon Footprint Calculator" style="width: 100%; height: 100%; border-radius: 5px;">
+            </div>
+            <div class="card-text">
+                Our Carbon Footprint Calculator helps you measure and track your carbon emissions. By understanding your personal or business carbon footprint, 
+                you can make more informed decisions about your environmental impact and take steps toward sustainability.
+            </div>
+            <a asp-controller="Calculators" asp-action="Index" class="card-button">
+                Learn More
+            </a>
+        </div>
+
+        <div class="card-container">
+            <div class="card-img">
+                <img src="@Url.Content("~/Images/EnergyTracker.png")" alt="Energy Tracker" style="width: 100%; height: 100%; border-radius: 5px;">
+            </div>
+            <div class="card-text">
+                The EnergyTracker app allows you to monitor and optimize your energy consumption. With detailed insights and real-time data, 
+                you can make smarter energy decisions and reduce your overall energy bills while contributing to a greener planet.
+            </div>
+            <a asp-controller="EnergyTrackers" asp-action="Index" class="card-button">
+                Track Now
+            </a>
+        </div>
+
+        <!-- Additional Cards -->
+        <div class="card-container">
+            <div class="card-img">
+                <img src="@Url.Content("~/Images/Consultation.png")" alt="Consultation" style="width: 100%; height: 100%; border-radius: 5px;">
+            </div>
+            <div class="card-text">
+                Schedule a Consultation with one of our experts to discuss your energy usage and carbon footprint. 
+                We offer tailored advice on reducing emissions and optimizing energy consumption for a more sustainable future.
+            </div>
+            <a asp-controller="ScheduleConsultations" asp-action="Index" class="card-button">
+                Book Now
+            </a>
+        </div>
+
+        <div class="card-container">
+            <div class="card-img">
+                <img src="@Url.Content("~/Images/Installation.png")" alt="Installation" style="width: 100%; height: 100%; border-radius: 5px;">
+            </div>
+            <div class="card-text">
+                Ready to take the next step? Schedule an Installation of energy-efficient solutions for your home or business. 
+                From solar panels to smart thermostats, we provide professional installation services to help you reduce your environmental impact.
+            </div>
+            <a asp-controller="ScheduleInstallations" asp-action="Index" class="card-button">
+                Get Started
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>

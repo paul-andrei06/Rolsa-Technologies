@@ -62,6 +62,12 @@
 \\dom.sandwell.ac.uk\Student\HomeEven\692962\GitHub\Rolsa-Technologies\RolsaTechnologies\RolsaTechnologies\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\Images\CFP.png
+wwwroot\Images\Consultation.png
+wwwroot\Images\EnergyTracker.png
+wwwroot\Images\HomePageBanner.jpg
+wwwroot\Images\Installation.png
+wwwroot\Images\Logo.png
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

@@ -5,6 +5,30 @@
       "PackagePath": "staticwebassets\\RolsaTechnologies.p38md53gtl.bundle.scp.css"
     },
     {
+      "Id": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\Images\\CFP.png",
+      "PackagePath": "staticwebassets\\Images\\CFP.png"
+    },
+    {
+      "Id": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\Images\\Consultation.png",
+      "PackagePath": "staticwebassets\\Images\\Consultation.png"
+    },
+    {
+      "Id": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\Images\\EnergyTracker.png",
+      "PackagePath": "staticwebassets\\Images\\EnergyTracker.png"
+    },
+    {
+      "Id": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\Images\\HomePageBanner.jpg",
+      "PackagePath": "staticwebassets\\Images\\HomePageBanner.jpg"
+    },
+    {
+      "Id": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\Images\\Installation.png",
+      "PackagePath": "staticwebassets\\Images\\Installation.png"
+    },
+    {
+      "Id": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\Images\\Logo.png",
+      "PackagePath": "staticwebassets\\Images\\Logo.png"
+    },
+    {
       "Id": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
