@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6bEcwUSppQyZrWU0nmNmQWuGn47yKizdc1eY4db5two=",
+  "Hash": "CSsJTDnN+tSYzB1lTZZ9dUaxYWxS8pAaUWkbddCoX80=",
   "Source": "RolsaTechnologies",
   "BasePath": "_content/RolsaTechnologies",
   "Mode": "Default",
@@ -1613,12 +1613,12 @@
       "OriginalItemSpec": "C:\\Users\\692962.SANDWELL\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\9.0.0\\staticwebassets\\V5\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\obj\\Debug\\net9.0\\compressed\\p19z7sbmy6-3y8m7uxm6z.gz",
+      "Identity": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\obj\\Debug\\net9.0\\compressed\\p19z7sbmy6-ktkj6bz9j4.gz",
       "SourceId": "RolsaTechnologies",
       "SourceType": "Discovered",
       "ContentRoot": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/RolsaTechnologies",
-      "RelativePath": "css/site#[.{fingerprint=3y8m7uxm6z}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=ktkj6bz9j4}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1627,8 +1627,8 @@
       "RelatedAsset": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\css\\site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "bf2fev07o4",
-      "Integrity": "+dvIhEk+MwrCzO6wRnBQxycbwls5LEn5yPJduYTj46c=",
+      "Fingerprint": "aa3fema9c2",
+      "Integrity": "nnuJhKE9GFugIPVV09mU0gqCcDA/l86WWeoSMCehjGs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\css\\site.css"
@@ -2719,8 +2719,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "3y8m7uxm6z",
-      "Integrity": "NfpQtPYvYs68F9hvcKnTyGOrELZ+V3fCFkzJQtAsMSM=",
+      "Fingerprint": "ktkj6bz9j4",
+      "Integrity": "KDK/RTPqR4hLwycxLX5n100Wz/5TZFL4L2KOXagZbAE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -5479,174 +5479,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.3y8m7uxm6z.css",
-      "AssetFile": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\obj\\Debug\\net9.0\\compressed\\p19z7sbmy6-3y8m7uxm6z.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.003125000000"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "319"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+dvIhEk+MwrCzO6wRnBQxycbwls5LEn5yPJduYTj46c=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 10:54:59 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"NfpQtPYvYs68F9hvcKnTyGOrELZ+V3fCFkzJQtAsMSM=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "3y8m7uxm6z"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-NfpQtPYvYs68F9hvcKnTyGOrELZ+V3fCFkzJQtAsMSM="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.3y8m7uxm6z.css",
-      "AssetFile": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "669"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NfpQtPYvYs68F9hvcKnTyGOrELZ+V3fCFkzJQtAsMSM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 10:54:59 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "3y8m7uxm6z"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-NfpQtPYvYs68F9hvcKnTyGOrELZ+V3fCFkzJQtAsMSM="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.3y8m7uxm6z.css.gz",
-      "AssetFile": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\obj\\Debug\\net9.0\\compressed\\p19z7sbmy6-3y8m7uxm6z.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "319"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+dvIhEk+MwrCzO6wRnBQxycbwls5LEn5yPJduYTj46c=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 10:54:59 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "3y8m7uxm6z"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-+dvIhEk+MwrCzO6wRnBQxycbwls5LEn5yPJduYTj46c="
-        }
-      ]
-    },
-    {
       "Route": "css/site.css",
-      "AssetFile": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\obj\\Debug\\net9.0\\compressed\\p19z7sbmy6-3y8m7uxm6z.gz",
+      "AssetFile": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\obj\\Debug\\net9.0\\compressed\\p19z7sbmy6-ktkj6bz9j4.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.003125000000"
+          "Quality": "0.003115264798"
         }
       ],
       "ResponseHeaders": [
@@ -5656,15 +5495,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "319"
+          "Value": "320"
         },
         {
           "Name": "ETag",
-          "Value": "\"+dvIhEk+MwrCzO6wRnBQxycbwls5LEn5yPJduYTj46c=\""
+          "Value": "\"nnuJhKE9GFugIPVV09mU0gqCcDA/l86WWeoSMCehjGs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 10:54:59 GMT"
+          "Value": "Tue, 01 Apr 2025 10:52:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5684,13 +5523,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"NfpQtPYvYs68F9hvcKnTyGOrELZ+V3fCFkzJQtAsMSM=\""
+          "Value": "W/\"KDK/RTPqR4hLwycxLX5n100Wz/5TZFL4L2KOXagZbAE=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-NfpQtPYvYs68F9hvcKnTyGOrELZ+V3fCFkzJQtAsMSM="
+          "Value": "sha256-KDK/RTPqR4hLwycxLX5n100Wz/5TZFL4L2KOXagZbAE="
         }
       ]
     },
@@ -5705,7 +5544,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "669"
+          "Value": "671"
         },
         {
           "Name": "Content-Type",
@@ -5713,11 +5552,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"NfpQtPYvYs68F9hvcKnTyGOrELZ+V3fCFkzJQtAsMSM=\""
+          "Value": "\"KDK/RTPqR4hLwycxLX5n100Wz/5TZFL4L2KOXagZbAE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 10:54:59 GMT"
+          "Value": "Tue, 01 Apr 2025 10:52:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5727,7 +5566,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-NfpQtPYvYs68F9hvcKnTyGOrELZ+V3fCFkzJQtAsMSM="
+          "Value": "sha256-KDK/RTPqR4hLwycxLX5n100Wz/5TZFL4L2KOXagZbAE="
         }
       ]
     },
@@ -5770,7 +5609,7 @@
     },
     {
       "Route": "css/site.css.gz",
-      "AssetFile": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\obj\\Debug\\net9.0\\compressed\\p19z7sbmy6-3y8m7uxm6z.gz",
+      "AssetFile": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\obj\\Debug\\net9.0\\compressed\\p19z7sbmy6-ktkj6bz9j4.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5779,7 +5618,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "319"
+          "Value": "320"
         },
         {
           "Name": "Content-Type",
@@ -5787,11 +5626,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+dvIhEk+MwrCzO6wRnBQxycbwls5LEn5yPJduYTj46c=\""
+          "Value": "\"nnuJhKE9GFugIPVV09mU0gqCcDA/l86WWeoSMCehjGs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 10:54:59 GMT"
+          "Value": "Tue, 01 Apr 2025 10:52:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5809,7 +5648,168 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+dvIhEk+MwrCzO6wRnBQxycbwls5LEn5yPJduYTj46c="
+          "Value": "sha256-nnuJhKE9GFugIPVV09mU0gqCcDA/l86WWeoSMCehjGs="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.ktkj6bz9j4.css",
+      "AssetFile": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\obj\\Debug\\net9.0\\compressed\\p19z7sbmy6-ktkj6bz9j4.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.003115264798"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "320"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nnuJhKE9GFugIPVV09mU0gqCcDA/l86WWeoSMCehjGs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 10:52:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"KDK/RTPqR4hLwycxLX5n100Wz/5TZFL4L2KOXagZbAE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ktkj6bz9j4"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KDK/RTPqR4hLwycxLX5n100Wz/5TZFL4L2KOXagZbAE="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.ktkj6bz9j4.css",
+      "AssetFile": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "671"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KDK/RTPqR4hLwycxLX5n100Wz/5TZFL4L2KOXagZbAE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 10:52:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ktkj6bz9j4"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KDK/RTPqR4hLwycxLX5n100Wz/5TZFL4L2KOXagZbAE="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.ktkj6bz9j4.css.gz",
+      "AssetFile": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\obj\\Debug\\net9.0\\compressed\\p19z7sbmy6-ktkj6bz9j4.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "320"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nnuJhKE9GFugIPVV09mU0gqCcDA/l86WWeoSMCehjGs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 10:52:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ktkj6bz9j4"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nnuJhKE9GFugIPVV09mU0gqCcDA/l86WWeoSMCehjGs="
         }
       ]
     },

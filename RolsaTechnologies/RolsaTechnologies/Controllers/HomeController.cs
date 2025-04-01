@@ -25,6 +25,15 @@ namespace RolsaTechnologies.Controllers
         {
             return View();
         }
+        public IActionResult Accessibility()
+        {
+            return View();
+        }
+        public IActionResult FAQs()
+        {
+            return View();
+        }
+
 
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Admin()

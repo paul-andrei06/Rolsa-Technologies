@@ -74,17 +74,312 @@
                             </ul>
                         </li>
 
+                        <!-- Accessibility Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" id="navbarDropdownAccessibility" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Accessibility
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownAccessibility">
+                                <li><a class="dropdown-item" href="#" onclick="toggleDarkMode()">Toggle Dark Mode</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="toggleHighContrast()">Toggle High Contrast</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="changeFontSize('increase')">Increase Font Size</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="changeFontSize('decrease')">Decrease Font Size</a></li>
+                            </ul>
+                        </li>
+
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+
+
+    <style>
+        /* Make body and html take full height */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        /* Flexbox for body, ensures the footer stays at the bottom */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Push content to take available space */
+        .content {
+            flex: 1;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+        }
+    </style>
+   
+
+        <div class="content">
+            <div class="container">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Useful Links</h3>
+                        <ul class="list-unstyled">
+                            <li><a asp-controller="Home" asp-action="Privacy">Privacy Policy</a></li>
+                            <li><a asp-controller="Home" asp-action="FAQs">FAQs</a></li>
+                            <li><a asp-controller="Home" asp-action="Accessibility">Accessibility</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Contact</h3>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-telephone"></i> +44 123 456 7890</li>
+                            <li><i class="bi bi-envelope"></i> info@rolsatechnologies.com</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 item social text-center">
+                        <a href="#"><i class="icon ion-social-facebook fs-4"></i></a>
+                        <a href="#"><i class="icon ion-social-twitter fs-4"></i></a>
+                        <a href="#"><i class="icon ion-social-instagram fs-4"></i></a>
+                        <p class="copyright mt-2">Rolsa Technologies © 2025</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+            const body = document.body;
+
+            // Dark Mode
+            function toggleDarkMode() {
+                body.classList.toggle("dark-mode");
+                localStorage.setItem("theme", body.classList.contains("dark-mode") ? "dark" : "light");
+            }
+            if (localStorage.getItem("theme") === "dark") {
+                body.classList.add("dark-mode");
+            }
+            window.toggleDarkMode = toggleDarkMode;
+
+            // High Contrast
+            function toggleHighContrast() {
+                body.classList.toggle("high-contrast");
+                localStorage.setItem("contrastMode", body.classList.contains("high-contrast") ? "high-contrast" : "normal");
+            }
+            if (localStorage.getItem("contrastMode") === "high-contrast") {
+                body.classList.add("high-contrast");
+            }
+            window.toggleHighContrast = toggleHighContrast;
+
+            // Font Size
+            function changeFontSize(action) {
+                let currentSize = parseInt(window.getComputedStyle(body).fontSize);
+                if (action === 'increase') {
+                    currentSize += 2;
+                } else if (action === 'decrease') {
+                    currentSize -= 2;
+                }
+                body.style.fontSize = currentSize + "px";
+                localStorage.setItem("fontSize", currentSize + "px");
+            }
+            window.changeFontSize = changeFontSize;
+        });
+
+        </script>
+
+        <style>
+        /* Default styles */
+        body {
+            background-color: white;
+            color: black;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+            /* Dark mode styles */
+            body.dark-mode {
+                background-color: #121212; /* Dark background color */
+                color: white; /* White text color */
+            }
+
+                body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6,
+                body.dark-mode p, body.dark-mode li, body.dark-mode a {
+                    color: white; /* Ensures text and links are white in dark mode */
+                }
+
+                body.dark-mode a {
+                    text-decoration: none;
+                }
+
+                    body.dark-mode a:hover {
+                        color: #FFD700; /* Optional: Highlight color on hover */
+                    }
+
+            /* High contrast mode styles */
+            body.high-contrast {
+                background-color: black !important; /* Black background */
+                color: yellow !important; /* Yellow text color */
+            }
+
+                /* High contrast mode for text and links */
+                body.high-contrast h1, body.high-contrast h2, body.high-contrast h3, body.high-contrast h4, body.high-contrast h5, body.high-contrast h6,
+                body.high-contrast p, body.high-contrast li, body.high-contrast a {
+                    color: yellow !important; /* Override text color to yellow */
+                }
+                
+
+        /* Optional: Adjust font size */
+        body {
+            transition: font-size 0.3s;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            padding: 20px;
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+            footer a {
+                color: var(--text-color);
+                text-decoration: none;
+            }
+
+                footer a:hover {
+                    color: #FFD700; /* Optional: gold color for links on hover */
+                }
+
+        /* Social media icons */
+        .social-icons a {
+            margin: 0 10px;
+            color: var(--text-color);
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+            .social-icons a:hover {
+                color: #FFD700;
+            }
+
+        /* Default navigation styles */
+        .navbar {
+            background-color: #ffffff; /* White background */
+            transition: background-color 0.3s;
+        }
+
+            .navbar .nav-link {
+                color: #000000; /* Default text color for links */
+                transition: color 0.3s;
+            }
+
+                .navbar .nav-link:hover {
+                    color: #007bff; /* Highlight color on hover */
+                }
+
+            
+
+        .navbar-nav .nav-item {
+            margin-right: 15px; /* Space between nav items */
+        }
+
+        /* Dark mode navigation */
+        body.dark-mode .navbar {
+            background-color: #121212 !important; /* Dark background */
+            
+        }
+
+            body.dark-mode .navbar .nav-link {
+                color: #ffffff; /* White text color */
+            }
+
+                body.dark-mode .navbar .nav-link:hover {
+                    color: #FFD700; /* Highlight color in dark mode */
+                }
+
+            body.dark-mode .navbar .navbar-toggler-icon {
+                background-color: #ffffff; /* White toggler icon in dark mode */
+            }
+
+        /* High contrast mode navigation */
+        body.high-contrast .navbar {
+            background-color: black !important; /* Black background in high contrast */
+        }
+
+            body.high-contrast .navbar .nav-link {
+                color: yellow !important; /* Yellow text color */
+            }
+
+                body.high-contrast .navbar .nav-link:hover {
+                    color: yellow !important; /* Maintain yellow color on hover */
+                }
+
+            body.high-contrast .navbar .navbar-toggler-icon {
+                background-color: yellow !important; /* Yellow toggler icon */
+            }
+
+        /* Dropdown menu styles */
+        .navbar .dropdown-menu {
+            background-color: #ffffff; /* White background for dropdown */
+            border: none; /* Remove border */
+        }
+
+        body.dark-mode .navbar .dropdown-menu {
+            background-color: #2c2c2c; /* Dark background for dropdown in dark mode */
+        }
+
+        body.high-contrast .navbar .dropdown-menu {
+            background-color: black !important; /* Black dropdown in high contrast mode */
+        }
+
+        .navbar .dropdown-item {
+            
+            transition: color 0.3s;
+        }
+
+        body.dark-mode .navbar .dropdown-item {
+            color: #ffffff; /* White text for dropdown in dark mode */
+        }
+
+        body.high-contrast .navbar .dropdown-item {
+            color: yellow !important; /* Yellow text in high contrast mode */
+        }
+
+        .navbar .dropdown-item:hover {
+            background-color: #007bff; /* Hover background color for dropdown items */
+            color: #ffffff; /* White text color on hover */
+        }
+
+        body.dark-mode .navbar .dropdown-item:hover {
+            background-color: #FFD700; /* Highlight with gold in dark mode */
+        }
+
+        /* Make sure the navbar collapses correctly on small screens */
+        @@media (max-width: 767px) {
+            .navbar-nav
+
+        {
+            text-align: center;
+        }
+
+        .navbar-nav .nav-item {
+            margin-right: 0; /* Remove right margin on small screens */
+            margin-bottom: 10px; /* Space between nav items on small screens */
+        }
+
+        }
+        </style>
 
     
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
