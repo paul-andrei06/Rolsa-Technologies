@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
     <style>
-        /* Default card-container style */
+        
         .card-container {
             display: flex;
             flex-direction: row;
@@ -25,17 +25,17 @@
             max-width: 980px;
             min-height: 200px;
             z-index: 1;
-            margin-bottom: 20px; /* Default margin between containers */
+            margin-bottom: 20px; /*  margin between containers */
         }
 
         
 
-            /* Add extra margin after the last .card-container */
+            
             .card-container:last-of-type {
                 margin-bottom: 130px; /* Adds the white space after the last container */
             }
 
-        /* Responsive media query */
+        /* Responsive media */
         @@media (max-width: 768px) {
             .card-container
 
@@ -43,11 +43,11 @@
             flex-direction: column;
             align-items: center;
             gap: 10px;
-            margin-bottom: 20px; /* Adjust for mobile layout */
+            margin-bottom: 20px; 
         }
 
         .card-container:last-of-type {
-            margin-bottom: 50px; /* Reduced margin after the last container on mobile */
+            margin-bottom: 50px; 
         }
 
         .card-img {
@@ -97,12 +97,11 @@
 
         /* Hero Banner Animation */
         .banner {
-            width: 99vw; /* Full width */
-            height: 600px; /* Fixed height */
-            object-fit: cover; /* Ensure it covers the area */
+            width: 99vw; 
+            height: 600px; 
+            object-fit: cover;
             display: block;
-            margin-bottom: 30px; /* Space below the banner */
-            /* Initial Position (Off-Screen) */
+            margin-bottom: 30px; 
             transform: translateY(-100%);
             opacity: 0;
             /* Animation */
@@ -148,7 +147,7 @@
             animation-delay: 0.2s;
         }
 
-        /* New containers with #0A9642 color */
+        
         .inline-container {
             display: flex;
             flex-direction: row;
@@ -159,7 +158,7 @@
             border-radius: 10px;
             max-width: 980px;
             min-height: 200px;
-            margin-bottom: 30px; /* Gap between the inline containers and the title */
+            margin-bottom: 30px; 
             position: relative;
         }
 
@@ -190,7 +189,7 @@
                 text-decoration: none;
             }
 
-        /* Responsive styles */
+        /* Responsive mode style */
         @@media (max-width: 768px) {
             .card-container, .inline-container
 
@@ -219,7 +218,7 @@
 
         }
 
-        /* Title Styles */
+        /* Features Title */
         .features-title {
             font-size: 24px;
             color: #0A9642;
@@ -230,7 +229,7 @@
 </head>
 <body>
 
-    <!-- Introduction/Overview Section -->
+    <!-- Introduction Section -->
     <div style="text-align: center; margin-top: 30px;">
         <h2 class="intro-title">Welcome to Rosla Technologies</h2>
         <p class="intro-text">
@@ -273,10 +272,10 @@
 
         </div>
 
-        <!-- Title for Features -->
+        <!-- Features Title -->
         <h2 class="features-title">Features:</h2>
 
-        <!-- Existing Cards -->
+        <!-- first section of Containers -->
         <div class="card-container">
             <div class="card-img">
                 <img src="@Url.Content("~/Images/CFP.png")" alt="Carbon Footprint Calculator" style="width: 100%; height: 100%; border-radius: 5px;">
@@ -303,7 +302,7 @@
             </a>
         </div>
 
-        <!-- Additional Cards -->
+        <!-- second section of Containers -->
         <div class="card-container">
             <div class="card-img">
                 <img src="@Url.Content("~/Images/Consultation.png")" alt="Consultation" style="width: 100%; height: 100%; border-radius: 5px;">

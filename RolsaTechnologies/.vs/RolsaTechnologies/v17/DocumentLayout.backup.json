@@ -3,46 +3,22 @@
   "WorkspaceRootPath": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6C67FD96-D5E7-4E5F-B2C1-1F34DC73A087}|RolsaTechnologies\\RolsaTechnologies.csproj|\\\\dom.sandwell.ac.uk\\student\\homeeven\\692962\\github\\rolsa-technologies\\rolsatechnologies\\rolsatechnologies\\views\\scheduleinstallations\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C67FD96-D5E7-4E5F-B2C1-1F34DC73A087}|RolsaTechnologies\\RolsaTechnologies.csproj|\\\\dom.sandwell.ac.uk\\student\\homeeven\\692962\\github\\rolsa-technologies\\rolsatechnologies\\rolsatechnologies\\views\\scheduleinstallations\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C67FD96-D5E7-4E5F-B2C1-1F34DC73A087}|RolsaTechnologies\\RolsaTechnologies.csproj|\\\\dom.sandwell.ac.uk\\student\\homeeven\\692962\\github\\rolsa-technologies\\rolsatechnologies\\rolsatechnologies\\controllers\\scheduleinstallationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6C67FD96-D5E7-4E5F-B2C1-1F34DC73A087}|RolsaTechnologies\\RolsaTechnologies.csproj|\\\\dom.sandwell.ac.uk\\student\\homeeven\\692962\\github\\rolsa-technologies\\rolsatechnologies\\rolsatechnologies\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C67FD96-D5E7-4E5F-B2C1-1F34DC73A087}|RolsaTechnologies\\RolsaTechnologies.csproj|\\\\dom.sandwell.ac.uk\\student\\homeeven\\692962\\github\\rolsa-technologies\\rolsatechnologies\\rolsatechnologies\\views\\home\\accessibility.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6C67FD96-D5E7-4E5F-B2C1-1F34DC73A087}|RolsaTechnologies\\RolsaTechnologies.csproj|\\\\dom.sandwell.ac.uk\\student\\homeeven\\692962\\github\\rolsa-technologies\\rolsatechnologies\\rolsatechnologies\\views\\scheduleconsultations\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C67FD96-D5E7-4E5F-B2C1-1F34DC73A087}|RolsaTechnologies\\RolsaTechnologies.csproj|\\\\dom.sandwell.ac.uk\\student\\homeeven\\692962\\github\\rolsa-technologies\\rolsatechnologies\\rolsatechnologies\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C67FD96-D5E7-4E5F-B2C1-1F34DC73A087}|RolsaTechnologies\\RolsaTechnologies.csproj|\\\\dom.sandwell.ac.uk\\student\\homeeven\\692962\\github\\rolsa-technologies\\rolsatechnologies\\rolsatechnologies\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C67FD96-D5E7-4E5F-B2C1-1F34DC73A087}|RolsaTechnologies\\RolsaTechnologies.csproj|\\\\dom.sandwell.ac.uk\\student\\homeeven\\692962\\github\\rolsa-technologies\\rolsatechnologies\\rolsatechnologies\\views\\home\\faqs.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C67FD96-D5E7-4E5F-B2C1-1F34DC73A087}|RolsaTechnologies\\RolsaTechnologies.csproj|\\\\dom.sandwell.ac.uk\\student\\homeeven\\692962\\github\\rolsa-technologies\\rolsatechnologies\\rolsatechnologies\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C67FD96-D5E7-4E5F-B2C1-1F34DC73A087}|RolsaTechnologies\\RolsaTechnologies.csproj|\\\\dom.sandwell.ac.uk\\student\\homeeven\\692962\\github\\rolsa-technologies\\rolsatechnologies\\rolsatechnologies\\views\\home\\admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C67FD96-D5E7-4E5F-B2C1-1F34DC73A087}|RolsaTechnologies\\RolsaTechnologies.csproj|\\\\dom.sandwell.ac.uk\\student\\homeeven\\692962\\github\\rolsa-technologies\\rolsatechnologies\\rolsatechnologies\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C67FD96-D5E7-4E5F-B2C1-1F34DC73A087}|RolsaTechnologies\\RolsaTechnologies.csproj|\\\\dom.sandwell.ac.uk\\student\\homeeven\\692962\\github\\rolsa-technologies\\rolsatechnologies\\rolsatechnologies\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_RolsaTechnologies_ee5c2272_50f9_404c_b1b1_db39d1516ae2/True/SqlTable/dbo.AspNetRoles.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_RolsaTechnologies_ee5c2272_50f9_404c_b1b1_db39d1516ae2/True/SqlTable/dbo.AspNetUsers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C67FD96-D5E7-4E5F-B2C1-1F34DC73A087}|RolsaTechnologies\\RolsaTechnologies.csproj|\\\\dom.sandwell.ac.uk\\student\\homeeven\\692962\\github\\rolsa-technologies\\rolsatechnologies\\rolsatechnologies\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C67FD96-D5E7-4E5F-B2C1-1F34DC73A087}|RolsaTechnologies\\RolsaTechnologies.csproj|\\\\dom.sandwell.ac.uk\\student\\homeeven\\692962\\github\\rolsa-technologies\\rolsatechnologies\\rolsatechnologies\\models\\userroleviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C67FD96-D5E7-4E5F-B2C1-1F34DC73A087}|RolsaTechnologies\\RolsaTechnologies.csproj|\\\\dom.sandwell.ac.uk\\student\\homeeven\\692962\\github\\rolsa-technologies\\rolsatechnologies\\rolsatechnologies\\models\\manageuserroleviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6C67FD96-D5E7-4E5F-B2C1-1F34DC73A087}|RolsaTechnologies\\RolsaTechnologies.csproj|\\\\dom.sandwell.ac.uk\\student\\homeeven\\692962\\github\\rolsa-technologies\\rolsatechnologies\\rolsatechnologies\\views\\scheduleconsultations\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -56,173 +32,81 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Privacy.cshtml",
-              "DocumentMoniker": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\Home\\Privacy.cshtml",
-              "RelativeDocumentMoniker": "RolsaTechnologies\\Views\\Home\\Privacy.cshtml",
-              "ToolTip": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\Home\\Privacy.cshtml",
-              "RelativeToolTip": "RolsaTechnologies\\Views\\Home\\Privacy.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ScheduleInstallationsController.cs",
+              "DocumentMoniker": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Controllers\\ScheduleInstallationsController.cs",
+              "RelativeDocumentMoniker": "RolsaTechnologies\\Controllers\\ScheduleInstallationsController.cs",
+              "ToolTip": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Controllers\\ScheduleInstallationsController.cs",
+              "RelativeToolTip": "RolsaTechnologies\\Controllers\\ScheduleInstallationsController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAADwvzkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T13:54:45.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\ScheduleInstallations\\Create.cshtml",
+              "RelativeDocumentMoniker": "RolsaTechnologies\\Views\\ScheduleInstallations\\Create.cshtml",
+              "ToolTip": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\ScheduleInstallations\\Create.cshtml",
+              "RelativeToolTip": "RolsaTechnologies\\Views\\ScheduleInstallations\\Create.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAGoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-01T10:01:50.83Z",
+              "WhenOpened": "2025-04-01T13:50:31.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\ScheduleInstallations\\Index.cshtml",
+              "RelativeDocumentMoniker": "RolsaTechnologies\\Views\\ScheduleInstallations\\Index.cshtml",
+              "ToolTip": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\ScheduleInstallations\\Index.cshtml",
+              "RelativeToolTip": "RolsaTechnologies\\Views\\ScheduleInstallations\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-01T13:48:49.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\ScheduleConsultations\\Create.cshtml",
+              "RelativeDocumentMoniker": "RolsaTechnologies\\Views\\ScheduleConsultations\\Create.cshtml",
+              "ToolTip": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\ScheduleConsultations\\Create.cshtml",
+              "RelativeToolTip": "RolsaTechnologies\\Views\\ScheduleConsultations\\Create.cshtml",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAUwGwAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-01T13:45:08.272Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "RolsaTechnologies\\Views\\Home\\Index.cshtml",
-              "ToolTip": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "RolsaTechnologies\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAC8BAAAAAAAAAAAAABIAAAAlAAAAAAAAAA==",
+              "DocumentMoniker": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\ScheduleConsultations\\Index.cshtml",
+              "RelativeDocumentMoniker": "RolsaTechnologies\\Views\\ScheduleConsultations\\Index.cshtml",
+              "ToolTip": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\ScheduleConsultations\\Index.cshtml",
+              "RelativeToolTip": "RolsaTechnologies\\Views\\ScheduleConsultations\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAwBwAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-31T10:02:18.052Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "RolsaTechnologies\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "RolsaTechnologies\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAA0BAAAAAAAAAAAYwCsBAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-26T14:48:00.947Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "dbo.AspNetRoles.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_RolsaTechnologies_ee5c2272_50f9_404c_b1b1_db39d1516ae2/True/SqlTable/dbo.AspNetRoles.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_RolsaTechnologies_ee5c2272_50f9_404c_b1b1_db39d1516ae2/True/SqlTable/dbo.AspNetRoles.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-03-31T09:57:29.611Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "dbo.AspNetUsers.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_RolsaTechnologies_ee5c2272_50f9_404c_b1b1_db39d1516ae2/True/SqlTable/dbo.AspNetUsers.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_RolsaTechnologies_ee5c2272_50f9_404c_b1b1_db39d1516ae2/True/SqlTable/dbo.AspNetUsers.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-03-31T09:57:22.676Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Register.cshtml.cs",
-              "DocumentMoniker": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeDocumentMoniker": "RolsaTechnologies\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ToolTip": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeToolTip": "RolsaTechnologies\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ViewState": "AgIAAGcAAAAAAAAAAAAiwIoAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T09:49:16.964Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "site.css",
-              "DocumentMoniker": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "RolsaTechnologies\\wwwroot\\css\\site.css",
-              "ToolTip": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "RolsaTechnologies\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-03-31T10:51:36.746Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Accessibility.cshtml",
-              "DocumentMoniker": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\Home\\Accessibility.cshtml",
-              "RelativeDocumentMoniker": "RolsaTechnologies\\Views\\Home\\Accessibility.cshtml",
-              "ToolTip": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\Home\\Accessibility.cshtml",
-              "RelativeToolTip": "RolsaTechnologies\\Views\\Home\\Accessibility.cshtml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAEcAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-01T10:43:05.457Z",
+              "WhenOpened": "2025-04-01T13:41:50.119Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "RolsaTechnologies\\Controllers\\HomeController.cs",
-              "ToolTip": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "RolsaTechnologies\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T10:47:19.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FAQs.cshtml",
-              "DocumentMoniker": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\Home\\FAQs.cshtml",
-              "RelativeDocumentMoniker": "RolsaTechnologies\\Views\\Home\\FAQs.cshtml",
-              "ToolTip": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\Home\\FAQs.cshtml",
-              "RelativeToolTip": "RolsaTechnologies\\Views\\Home\\FAQs.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAbAAAAAAAAAA==",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "RolsaTechnologies\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "RolsaTechnologies\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAALMBAAAAAAAAAAAAANIBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-01T10:44:03.745Z",
+              "WhenOpened": "2025-03-26T14:48:00.947Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ScaffoldingReadMe.txt",
-              "DocumentMoniker": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\ScaffoldingReadMe.txt",
-              "RelativeDocumentMoniker": "RolsaTechnologies\\ScaffoldingReadMe.txt",
-              "ToolTip": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\ScaffoldingReadMe.txt",
-              "RelativeToolTip": "RolsaTechnologies\\ScaffoldingReadMe.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-03-31T09:48:35.109Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Admin.cshtml",
-              "DocumentMoniker": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\Home\\Admin.cshtml",
-              "RelativeDocumentMoniker": "RolsaTechnologies\\Views\\Home\\Admin.cshtml",
-              "ToolTip": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\Home\\Admin.cshtml",
-              "RelativeToolTip": "RolsaTechnologies\\Views\\Home\\Admin.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-31T09:37:10.887Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UserRoleViewModel.cs",
-              "DocumentMoniker": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Models\\UserRoleViewModel.cs",
-              "RelativeDocumentMoniker": "RolsaTechnologies\\Models\\UserRoleViewModel.cs",
-              "ToolTip": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Models\\UserRoleViewModel.cs",
-              "RelativeToolTip": "RolsaTechnologies\\Models\\UserRoleViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T14:39:39.951Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ManageUserRoleViewModel.cs",
-              "DocumentMoniker": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Models\\ManageUserRoleViewModel.cs",
-              "RelativeDocumentMoniker": "RolsaTechnologies\\Models\\ManageUserRoleViewModel.cs",
-              "ToolTip": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Models\\ManageUserRoleViewModel.cs",
-              "RelativeToolTip": "RolsaTechnologies\\Models\\ManageUserRoleViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T14:37:49.246Z"
             }
           ]
         }

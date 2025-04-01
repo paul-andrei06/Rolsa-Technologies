@@ -25,10 +25,7 @@ namespace RolsaTechnologies.Controllers
         {
             return View();
         }
-        public IActionResult Accessibility()
-        {
-            return View();
-        }
+        
         public IActionResult FAQs()
         {
             return View();

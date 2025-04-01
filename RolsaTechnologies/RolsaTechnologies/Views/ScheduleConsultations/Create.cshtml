@@ -1,44 +1,45 @@
 ﻿@model RolsaTechnologies.Models.ScheduleConsultation
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Schedule Consultation";
 }
 
-<h1>Create</h1>
+<div class="container py-4">
+    <div class="card shadow-lg p-4">
+        <h2 class="fw-bold text-center mb-4">Schedule a Consultation</h2>
 
-<h4>ScheduleConsultation</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
         <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
 
-            <!-- Date Picker for Scheduled Date -->
-            <div class="form-group">
-                <label asp-for="ScheduledDate" class="control-label">Select Date</label>
-                <input asp-for="ScheduledDate" type="date" class="form-control" />
-                <span asp-validation-for="ScheduledDate" class="text-danger"></span>
+            <div class="row">
+                <!-- Date Picker -->
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label asp-for="ScheduledDate" class="form-label">Select Date</label>
+                        <input asp-for="ScheduledDate" type="date" class="form-control" />
+                        <span asp-validation-for="ScheduledDate" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!-- Time Slot Dropdown -->
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label for="scheduledTime" class="form-label">Select Time</label>
+                        <select id="scheduledTime" name="scheduledTime" class="form-select">
+                            @foreach (var timeSlot in ViewBag.AvailableSlots as List<TimeSpan>)
+                            {
+                                <option value="@timeSlot.ToString(@"hh\:mm")">@timeSlot.ToString(@"hh\:mm")</option>
+                            }
+                        </select>
+                        <span asp-validation-for="ScheduledDate" class="text-danger"></span>
+                    </div>
+                </div>
             </div>
 
-            <!-- Time Slot Dropdown -->
-            <div class="form-group">
-                <label for="scheduledTime">Select Time</label>
-                <select id="scheduledTime" name="scheduledTime" class="form-control"> 
-                    <!-- Loop through each available time slot from ViewBag -->
-                    @foreach (var timeSlot in ViewBag.AvailableSlots as List<TimeSpan>) 
-
-                    {
-                        <!-- Create an option element for each time slot formatted as hh:mm -->
-                        <option value="@timeSlot.ToString(@"hh\:mm")">@timeSlot.ToString(@"hh\:mm")</option>
-                    }
-                </select>
-                <span asp-validation-for="ScheduledDate" class="text-danger"></span>
-            </div>
-
-            <!-- Contact Method dropdown -->
-            <div class="form-group">
-                <label asp-for="ContactMethod" class="control-label"></label>
-                <select asp-for="ContactMethod" class="form-control" id="contactMethod" onchange="toggleContactFields()">
+            <!-- Contact Method -->
+            <div class="form-group mb-3">
+                <label asp-for="ContactMethod" class="form-label">Preferred Contact Method</label>
+                <select asp-for="ContactMethod" class="form-select" id="contactMethod" onchange="toggleContactFields()">
                     <option value="">Select Contact Method</option>
                     <option value="Email">Email</option>
                     <option value="Mobile">Mobile</option>
@@ -46,61 +47,62 @@
                 <span asp-validation-for="ContactMethod" class="text-danger"></span>
             </div>
 
-            <!-- Mobile input field (Initially hidden) -->
-            <div class="form-group" id="mobileField" style="display:none;">
-                <label asp-for="Mobile" class="control-label"></label>
-                <input asp-for="Mobile" class="form-control" />
-                <span asp-validation-for="Mobile" class="text-danger"></span>
-            </div>
+            <div class="row">
+                <!-- Mobile input field (Initially hidden) -->
+                <div class="col-md-6">
+                    <div class="form-group mb-3" id="mobileField" style="display:none;">
+                        <label asp-for="Mobile" class="form-label">Mobile Number</label>
+                        <input asp-for="Mobile" class="form-control" />
+                        <span asp-validation-for="Mobile" class="text-danger"></span>
+                    </div>
+                </div>
 
-            <!-- Contact Email field (Initially hidden) -->
-            <div class="form-group" id="contactEmailField" style="display:none;">
-                <label asp-for="ContactEmail" class="control-label"></label>
-                <input asp-for="ContactEmail" class="form-control" readonly />
-                <span asp-validation-for="ContactEmail" class="text-danger"></span>
+                <!-- Contact Email field (Initially hidden) -->
+                <div class="col-md-6">
+                    <div class="form-group mb-3" id="contactEmailField" style="display:none;">
+                        <label asp-for="ContactEmail" class="form-label">Email Address</label>
+                        <input asp-for="ContactEmail" class="form-control" readonly />
+                        <span asp-validation-for="ContactEmail" class="text-danger"></span>
+                    </div>
+                </div>
             </div>
 
             <!-- Notes input -->
-            <div class="form-group">
-                <label asp-for="Notes" class="control-label"></label>
-                <input asp-for="Notes" class="form-control" />
+            <div class="form-group mb-3">
+                <label asp-for="Notes" class="form-label">Additional Notes</label>
+                <textarea asp-for="Notes" class="form-control" rows="3"></textarea>
                 <span asp-validation-for="Notes" class="text-danger"></span>
             </div>
 
-            <!-- Submit button -->
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            <!-- Buttons -->
+            <div class="d-flex justify-content-between mt-4">
+                <a asp-action="Index" class="btn btn-outline-secondary">
+                    <i class="bi bi-arrow-left"></i> Back to List
+                </a>
+                <button type="submit" class="btn btn-success">
+                    <i class="bi bi-calendar-plus"></i> Schedule Consultation
+                </button>
             </div>
         </form>
-
-        <!-- JavaScript to handle dynamic showing/hiding fields -->
-        <script type="text/javascript">
-            function toggleContactFields() {
-                // Get selected contact method
-                var contactMethod = document.getElementById("contactMethod").value;
-
-                // Hide both Mobile and ContactEmail fields by default
-                document.getElementById("mobileField").style.display = "none";
-                document.getElementById("contactEmailField").style.display = "none";
-
-                // Show the appropriate field based on the selected contact method
-                if (contactMethod === "Mobile") {
-                    document.getElementById("mobileField").style.display = "block";
-                } else if (contactMethod === "Email") {
-                    document.getElementById("contactEmailField").style.display = "block";
-
-                    // Automatically populate the ContactEmail field with the logged-in user's email (assumed available in a variable)
-                    var loggedInUserEmail = '@User.Identity.Name';  // Ensure this is the correct way to retrieve the email in your system
-                    document.getElementById("ContactEmail").value = loggedInUserEmail;
-                }
-            }
-        </script>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+<!-- JavaScript to handle dynamic showing/hiding fields -->
+<script type="text/javascript">
+    function toggleContactFields() {
+        var contactMethod = document.getElementById("contactMethod").value;
+        document.getElementById("mobileField").style.display = "none";
+        document.getElementById("contactEmailField").style.display = "none";
+
+        if (contactMethod === "Mobile") {
+            document.getElementById("mobileField").style.display = "block";
+        } else if (contactMethod === "Email") {
+            document.getElementById("contactEmailField").style.display = "block";
+            var loggedInUserEmail = '@User.Identity.Name';  
+            document.getElementById("ContactEmail").value = loggedInUserEmail;
+        }
+    }
+</script>
 
 @section Scripts {
     @{

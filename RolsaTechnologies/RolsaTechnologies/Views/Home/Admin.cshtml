@@ -2,39 +2,45 @@
 @model List<RolsaTechnologies.Models.UserRoleViewModel>
 @{
     ViewData["Title"] = "User Roles";
-    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>User Roles</h1>
+<h1 class="mb-4 text-center">User Roles Management</h1>
 
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Email</th>
-            <th>Roles</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var user in Model)
-        {
-            <tr>
-                <td>@user.UserId</td>
-                <td>@user.Email</td>
-                <td>@(user.Roles.Any() ? string.Join(", ", user.Roles) : "No Roles Assigned")</td>
-                <td>
-                    <a class="btn btn-primary"
-                       asp-controller="ManageUserRole"
-                       asp-action="Manage"
-                       asp-route-userId="@user.UserId">
-                        Manage Roles
-                    </a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
-
-
-                        
+<div class="card shadow-lg p-4">
+    <div class="table-responsive">
+        <table class="table table-hover align-middle accessible-table">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Roles</th>
+                    <th scope="col" class="text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model)
+                {
+                    <tr tabindex="0">
+                        <!-- Makes rows focusable -->
+                        <td>@user.UserId</td>
+                        <td>@user.Email</td>
+                        <td>
+                            @(user.Roles.Any() ?
+                                string.Join(", ", user.Roles) :
+                                "<span class='text-muted'>No Roles Assigned</span>")
+                        </td>
+                        <td class="text-center">
+                            <a class="btn btn-outline-primary btn-sm accessible-btn"
+                               asp-controller="ManageUserRole"
+                               asp-action="Manage"
+                               asp-route-userId="@user.UserId"
+                               aria-label="Manage roles for @user.Email">
+                                <i class="bi bi-person-gear"></i> Manage Roles
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

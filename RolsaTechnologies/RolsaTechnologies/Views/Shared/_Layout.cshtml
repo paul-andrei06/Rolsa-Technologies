@@ -24,7 +24,7 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         
-                        <!-- Admin Button - Visible only if the user is in the Admin role -->
+                        <!-- Admin Button - Visible only if the user has an Admin Role -->
                         @if (User.IsInRole("Admin"))
                         {
                             <li class="nav-item">
@@ -96,7 +96,7 @@
 
 
     <style>
-        /* Make body and html take full height */
+        
         html, body {
             height: 100%;
             margin: 0;
@@ -129,43 +129,57 @@
             </div>
         </div>
 
-        <footer>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-sm-4 col-md-3 item">
-                        <h3>Useful Links</h3>
-                        <ul class="list-unstyled">
-                            <li><a asp-controller="Home" asp-action="Privacy">Privacy Policy</a></li>
-                            <li><a asp-controller="Home" asp-action="FAQs">FAQs</a></li>
-                            <li><a asp-controller="Home" asp-action="Accessibility">Accessibility</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-4 col-md-3 item">
-                        <h3>Contact</h3>
-                        <ul class="list-unstyled">
-                            <li><i class="bi bi-telephone"></i> +44 123 456 7890</li>
-                            <li><i class="bi bi-envelope"></i> info@rolsatechnologies.com</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 item social text-center">
-                        <a href="#"><i class="icon ion-social-facebook fs-4"></i></a>
-                        <a href="#"><i class="icon ion-social-twitter fs-4"></i></a>
-                        <a href="#"><i class="icon ion-social-instagram fs-4"></i></a>
-                        <p class="copyright mt-2">Rolsa Technologies © 2025</p>
-                    </div>
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <!-- Useful Links Section -->
+                <div class="col-sm-4 col-md-3 item">
+                    <h3>Useful Links</h3>
+                    <ul class="list-unstyled">
+                        <!-- List of important pages on the site -->
+                        <li><a asp-controller="Home" asp-action="Privacy">Privacy Policy</a></li>
+                        <li><a asp-controller="Home" asp-action="FAQs">FAQs</a></li>
+                        <li><a asp-controller="Home" asp-action="Index">Accessibility</a></li>
+                    </ul>
                 </div>
+
+                <!-- Contact Information Section -->
+                <div class="col-sm-4 col-md-3 item">
+                    <h3>Contact</h3>
+                    <ul class="list-unstyled">
+                        <!-- Contact details with icons -->
+                        <li><i class="bi bi-telephone"></i> +44 123 456 7890</li>
+                        <li><i class="bi bi-envelope"></i> info@rolsatechnologies.com</li>
+                    </ul>
+                </div>
+
+                <!-- Social Media and Copyright Section -->
+                <div class="col-lg-3 item social text-center">
+                    <!-- Social media links with icons -->
+                    <a href="#"><i class="icon ion-social-facebook fs-4"></i></a>
+                    <a href="#"><i class="icon ion-social-twitter fs-4"></i></a>
+                    <a href="#"><i class="icon ion-social-instagram fs-4"></i></a>
+                    <!-- Copyright notice -->
+                    <p class="copyright mt-2">Rolsa Technologies © 2025</p>
+                </div>
+
             </div>
-        </footer>
+        </div>
+    </footer>
+
 
 
         <script>
-                    document.addEventListener("DOMContentLoaded", function () {
+            document.addEventListener("DOMContentLoaded", function () {
             const body = document.body;
 
             // Dark Mode
             function toggleDarkMode() {
+                // toggles dark mode on body
                 body.classList.toggle("dark-mode");
-                localStorage.setItem("theme", body.classList.contains("dark-mode") ? "dark" : "light");
+                localStorage.setItem("theme", body.classList.contains("dark-mode") ? "dark" : "light"); // saves the dark mode in local storage so that even if the page reloads, it stays in dark mode
             }
             if (localStorage.getItem("theme") === "dark") {
                 body.classList.add("dark-mode");
@@ -174,8 +188,9 @@
 
             // High Contrast
             function toggleHighContrast() {
+                // toggles high contrast mode on body
                 body.classList.toggle("high-contrast");
-                localStorage.setItem("contrastMode", body.classList.contains("high-contrast") ? "high-contrast" : "normal");
+                localStorage.setItem("contrastMode", body.classList.contains("high-contrast") ? "high-contrast" : "normal"); // saves the high contrast mode in local storage so that even if the page reloads, it stays in high contrast mode
             }
             if (localStorage.getItem("contrastMode") === "high-contrast") {
                 body.classList.add("high-contrast");
@@ -185,31 +200,31 @@
             // Font Size
             function changeFontSize(action) {
                 let currentSize = parseInt(window.getComputedStyle(body).fontSize);
-                if (action === 'increase') {
+                if (action === 'increase') { // increase font size
                     currentSize += 2;
-                } else if (action === 'decrease') {
+                } else if (action === 'decrease') { // decrease font size
                     currentSize -= 2;
                 }
-                body.style.fontSize = currentSize + "px";
-                localStorage.setItem("fontSize", currentSize + "px");
+                body.style.fontSize = currentSize + "px"; // applies the new font size
+                localStorage.setItem("fontSize", currentSize + "px"); // saves the font size in local storage so that even if the page reloads, the font size stays the same
             }
-            window.changeFontSize = changeFontSize;
+            window.changeFontSize = changeFontSize; // make changeFontSize globally accessible
         });
 
         </script>
 
         <style>
-        /* Default styles */
+        
         body {
             background-color: white;
             color: black;
             transition: background-color 0.3s, color 0.3s;
         }
 
-            /* Dark mode styles */
+            /* Dark mode */
             body.dark-mode {
-                background-color: #121212; /* Dark background color */
-                color: white; /* White text color */
+                background-color: #121212; /* Dark background colour */
+                color: white; /* White text colour */
             }
 
                 body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6,
@@ -222,28 +237,28 @@
                 }
 
                     body.dark-mode a:hover {
-                        color: #FFD700; /* Optional: Highlight color on hover */
+                        color: #FFD700; /* Highlight colour on hover */
                     }
 
-            /* High contrast mode styles */
+            /* High contrast mode */
             body.high-contrast {
                 background-color: black !important; /* Black background */
-                color: yellow !important; /* Yellow text color */
+                color: yellow !important; /* Yellow text colour */
             }
 
                 /* High contrast mode for text and links */
                 body.high-contrast h1, body.high-contrast h2, body.high-contrast h3, body.high-contrast h4, body.high-contrast h5, body.high-contrast h6,
                 body.high-contrast p, body.high-contrast li, body.high-contrast a {
-                    color: yellow !important; /* Override text color to yellow */
+                    color: yellow !important; /* Override text colour to yellow */
                 }
                 
 
-        /* Optional: Adjust font size */
+        /* Adjust font size */
         body {
             transition: font-size 0.3s;
         }
 
-        /* Footer styles */
+        /* Footer  */
         footer {
             background-color: var(--background-color);
             color: var(--text-color);
@@ -258,7 +273,7 @@
             }
 
                 footer a:hover {
-                    color: #FFD700; /* Optional: gold color for links on hover */
+                    color: #FFD700; /* gold color for links on hover */
                 }
 
         /* Social media icons */
@@ -273,19 +288,19 @@
                 color: #FFD700;
             }
 
-        /* Default navigation styles */
+        /* navigation styles */
         .navbar {
             background-color: #ffffff; /* White background */
             transition: background-color 0.3s;
         }
 
             .navbar .nav-link {
-                color: #000000; /* Default text color for links */
+                color: #000000; /*  text colour for links */
                 transition: color 0.3s;
             }
 
                 .navbar .nav-link:hover {
-                    color: #007bff; /* Highlight color on hover */
+                    color: #007bff; /* Highlight colour on hover */
                 }
 
             
@@ -301,15 +316,15 @@
         }
 
             body.dark-mode .navbar .nav-link {
-                color: #ffffff; /* White text color */
+                color: #ffffff !important; /* White text */
             }
 
                 body.dark-mode .navbar .nav-link:hover {
-                    color: #FFD700; /* Highlight color in dark mode */
+                    color: #FFD700; /* Highlight colour in dark mode */
                 }
 
             body.dark-mode .navbar .navbar-toggler-icon {
-                background-color: #ffffff; /* White toggler icon in dark mode */
+                background-color: darkgrey; /* White toggler icon in dark mode */
             }
 
         /* High contrast mode navigation */
@@ -318,11 +333,11 @@
         }
 
             body.high-contrast .navbar .nav-link {
-                color: yellow !important; /* Yellow text color */
+                color: yellow !important; /* Yellow text colour */
             }
 
                 body.high-contrast .navbar .nav-link:hover {
-                    color: yellow !important; /* Maintain yellow color on hover */
+                    color: yellow !important; /* Maintain yellow colour on hover */
                 }
 
             body.high-contrast .navbar .navbar-toggler-icon {
@@ -357,15 +372,15 @@
         }
 
         .navbar .dropdown-item:hover {
-            background-color: #007bff; /* Hover background color for dropdown items */
-            color: #ffffff; /* White text color on hover */
+            background-color: #007bff; /* Hover background colour (dropdown items) */
+            color: #ffffff; /* White text colour on hover */
         }
 
         body.dark-mode .navbar .dropdown-item:hover {
             background-color: #FFD700; /* Highlight with gold in dark mode */
         }
 
-        /* Make sure the navbar collapses correctly on small screens */
+        /* navbar collapses correctly on small screens */
         @@media (max-width: 767px) {
             .navbar-nav
 
@@ -374,11 +389,83 @@
         }
 
         .navbar-nav .nav-item {
-            margin-right: 0; /* Remove right margin on small screens */
-            margin-bottom: 10px; /* Space between nav items on small screens */
+            margin-right: 0; 
+            margin-bottom: 10px; /* Space between nav items for small screens */
         }
 
         }
+
+        body.dark-mode .privacy-container{
+            background-color: black;
+        }
+
+        body.high-contrast .privacy-container{
+            background-color: black;
+        }
+
+
+        body.dark-mode .privacy-title {
+            color: #fff; 
+        }
+
+        body.high-contrast .privacy-title {
+            color: yellow !important;
+        }
+
+        /*Admin Page*/
+
+        /* Table Styling for Accessibility */
+        .accessible-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            .accessible-table th, .accessible-table td {
+                padding: 12px;
+                border: 1px solid #dee2e6;
+            }
+
+            /* Improved Focus Visibility */
+            .accessible-table tr:focus {
+                outline: 2px solid #007bff;
+                background-color: rgba(0, 123, 255, 0.1);
+            }
+
+        /* Light Mode Default Styling */
+        .dark-mode .accessible-btn {
+            color: #007bff; /* Default blue */
+        }
+
+        /* Dark Mode Adjustments */
+        @@media (prefers-color-scheme: dark) {
+            .accessible-table
+
+        {
+            background-color: #1e1e1e;
+            color: white;
+        }
+
+        .accessible-table th, .accessible-table td {
+            border-color: #444;
+        }
+
+        .accessible-table tr:nth-child(even) {
+            background-color: #2a2a2a;
+        }
+
+        .accessible-table tr:focus {
+            background-color: rgba(255, 255, 255, 0.2);
+            outline: 2px solid white;
+        
+        }
+        }
+        
+
+        .dark-mode .btn-outline-secondary {
+            color: black !important;
+            border-color: black !important;
+        }
+
         </style>
 
     

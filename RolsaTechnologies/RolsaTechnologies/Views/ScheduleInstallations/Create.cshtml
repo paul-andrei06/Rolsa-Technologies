@@ -1,86 +1,106 @@
 ﻿@model RolsaTechnologies.Models.ScheduleInstallation
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Schedule Installation";
 }
 
-<h1>Create</h1>
+<div class="card shadow-lg p-4">
+    <h2 class="text-primary mb-3">Schedule Installation</h2>
+    <hr />
 
-<h4>ScheduleInstallation</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            
-            <!-- Date Picker for Scheduled Date -->
-            <div class="form-group">
-                <label asp-for="ScheduledDate" class="control-label">Select Date</label>
-                <input asp-for="ScheduledDate" type="date" class="form-control" />
-                <span asp-validation-for="ScheduledDate" class="text-danger"></span>
-            </div>
+    <div class="row">
+        <div class="col-md-6">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
 
-            <!-- Time Slot Dropdown -->
-            <div class="form-group">
-                <label for="scheduledTime">Select Time</label>
-                <select id="scheduledTime" name="scheduledTime" class="form-control">
-                    <!-- Loop through each available time slot from ViewBag -->
-                    @foreach (var timeSlot in ViewBag.AvailableSlots as List<TimeSpan>)
+                <!-- Scheduled Date -->
+                <div class="form-group mb-3">
+                    <label asp-for="ScheduledDate" class="form-label">Select Date</label>
+                    <input asp-for="ScheduledDate" type="date" class="form-control" />
+                    <span asp-validation-for="ScheduledDate" class="text-danger"></span>
+                </div>
 
-                    {
-                        <!-- Create an option element for each time slot formatted as hh:mm -->
-                        <option value="@timeSlot.ToString(@"hh\:mm")">@timeSlot.ToString(@"hh\:mm")</option>
-                    }
-                </select>
-                <span asp-validation-for="ScheduledDate" class="text-danger"></span>
-            </div>
+                <!-- Time Slot Selection -->
+                <div class="form-group mb-3">
+                    <label for="scheduledTime" class="form-label">Select Time</label>
+                    <select id="scheduledTime" name="scheduledTime" class="form-control">
+                        @foreach (var timeSlot in ViewBag.AvailableSlots as List<TimeSpan>)
+                        {
+                            <option value="@timeSlot.ToString(@"hh\:mm")">@timeSlot.ToString(@"hh\:mm")</option>
+                        }
+                    </select>
+                    <span asp-validation-for="ScheduledDate" class="text-danger"></span>
+                </div>
 
-            <div class="form-group">
-                <label asp-for="ApplianceType" class="control-label"></label>
+                <!-- Appliance Type Selection -->
+                <div class="form-group mb-3">
+                    <label asp-for="ApplianceType" class="form-label">Appliance Type</label>
+                    <select asp-for="ApplianceType" class="form-control">
+                        <option value="" disabled selected>Select an appliance</option>
+                        <option value="Solar Panels">Solar Panels</option>
+                        <option value="Smart Home Appliances">Smart Home Appliances</option>
+                        <option value="Electric Vehicle Charging Station">Electric Vehicle Charging Station</option>
+                    </select>
+                    <span asp-validation-for="ApplianceType" class="text-danger"></span>
+                </div>
 
-                <!-- Dropdown for ApplianceType -->
-                <select asp-for="ApplianceType" class="form-control">
-                    <option value="" disabled selected>Select a type of appliance</option> <!-- Placeholder -->
-                    <option value="Solar Panels">Solar Panels</option> <!-- First choice -->
-                    <option value="Smart Home Appliances">Smart Home Appliances</option> <!-- Second choice -->
-                    <option value="Electric Vehicle Charging Station">Electric Vehicle Charging Station</option> <!-- Third choice -->
-                </select>
+                <!-- Postcode Field -->
+                <div class="form-group mb-3">
+                    <label for="Postcode" class="form-label">Postcode</label>
+                    <input id="Postcode" name="Postcode" class="form-control" />
+                    <span class="text-danger" id="postcode-error"></span>
+                </div>
 
-                <!-- Validation message for ApplianceType -->
-                <span asp-validation-for="ApplianceType" class="text-danger"></span>
-            </div>
-            <!-- Separate Postcode Field -->
-            <div class="form-group">
-                <label for="Postcode" class="control-label">Postcode</label>
-                <input id="Postcode" name="Postcode" class="form-control" />
-                <span class="text-danger" id="postcode-error"></span> <!-- Show validation error here -->
-            </div>
-            <div class="form-group">
-                <label asp-for="Address" class="control-label"></label>
-                <input asp-for="Address" class="form-control" />
-                <span asp-validation-for="Address" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Mobile" class="control-label"></label>
-                <input asp-for="Mobile" class="form-control" />
-                <span asp-validation-for="Mobile" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Notes" class="control-label"></label>
-                <input asp-for="Notes" class="form-control" />
-                <span asp-validation-for="Notes" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+                <!-- Address -->
+                <div class="form-group mb-3">
+                    <label asp-for="Address" class="form-label">Address</label>
+                    <input asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+
+                <!-- Mobile Number -->
+                <div class="form-group mb-3">
+                    <label asp-for="Mobile" class="form-label">Mobile</label>
+                    <input asp-for="Mobile" class="form-control" />
+                    <span asp-validation-for="Mobile" class="text-danger"></span>
+                </div>
+
+                <!-- Notes -->
+                <div class="form-group mb-4">
+                    <label asp-for="Notes" class="form-label">Additional Notes</label>
+                    <textarea asp-for="Notes" class="form-control" rows="3"></textarea>
+                    <span asp-validation-for="Notes" class="text-danger"></span>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-calendar-plus"></i> Schedule Installation
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <a asp-action="Index" class="btn btn-outline-secondary back-to-list-btn">
+            <i class="bi bi-arrow-left"></i> Back to List
+        </a>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        // Ensure dark mode styles are applied when toggled
+        function applyDarkMode() {
+            if (document.body.classList.contains("dark-mode")) {
+                document.querySelector(".back-to-list-btn").classList.add("text-black");
+            }
+        }
+        applyDarkMode();
+    </script>
+
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
