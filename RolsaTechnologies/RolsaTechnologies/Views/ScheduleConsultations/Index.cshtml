@@ -2,6 +2,8 @@
 
 @{
     ViewData["Title"] = "Scheduled Consultations";
+    var isAdmin = User.IsInRole("Admin");
+    var isProfessional = User.IsInRole("Professional");
 }
 
 <div class="container py-4">
@@ -17,13 +19,28 @@
             <table class="table table-hover align-middle accessible-table">
                 <thead class="table-dark">
                     <tr>
-                        <th>@Html.DisplayNameFor(model => model.UserId)</th>
+                        @if (isAdmin)
+                        {
+                            <th>Email</th>
+                        }
                         <th>@Html.DisplayNameFor(model => model.ScheduledDate)</th>
-                        <th>@Html.DisplayNameFor(model => model.ContactMethod)</th>
-                        <th>@Html.DisplayNameFor(model => model.Mobile)</th>
-                        <th>@Html.DisplayNameFor(model => model.ContactEmail)</th>
-                        <th>@Html.DisplayNameFor(model => model.Notes)</th>
-                        @if (User.IsInRole("Admin") || User.IsInRole("Professional"))
+                        @if (isProfessional || isAdmin)
+                        {
+                            <th>@Html.DisplayNameFor(model => model.ContactMethod)</th>
+                        }
+                        @if (isProfessional || isAdmin)
+                        {
+                            <th>@Html.DisplayNameFor(model => model.Mobile)</th>
+                        }
+                        @if (isProfessional || isAdmin)
+                        {
+                            <th>@Html.DisplayNameFor(model => model.ContactEmail)</th>
+                        }
+                        @if (isProfessional || isAdmin)
+                        {
+                            <th>@Html.DisplayNameFor(model => model.Notes)</th>
+                        }
+                        @if (isAdmin)
                         {
                             <th class="text-center">Actions</th>
                         }
@@ -33,14 +50,38 @@
                     @foreach (var item in Model)
                     {
                         <tr tabindex="0">
-                            <td>@Html.DisplayFor(modelItem => item.UserId)</td>
-                            <td>@Html.DisplayFor(modelItem => item.ScheduledDate)</td>
-                            <td>@Html.DisplayFor(modelItem => item.ContactMethod)</td>
-                            <td>@Html.DisplayFor(modelItem => item.Mobile)</td>
-                            <td>@Html.DisplayFor(modelItem => item.ContactEmail)</td>
-                            <td>@Html.DisplayFor(modelItem => item.Notes)</td>
-                            @if (User.IsInRole("Admin") || User.IsInRole("Professional"))
+                            @if (isAdmin)
                             {
+                                <td>@ViewBag.UserEmail</td> <!-- Display email for Admins -->
+                            }
+
+                            <td>@Html.DisplayFor(modelItem => item.ScheduledDate)</td> <!-- Always display ScheduledDate -->
+                            @if (isProfessional || isAdmin)
+                            {
+                                <td>@Html.DisplayFor(modelItem => item.ContactMethod)</td> <!-- Display ContactMethod for Professional or Admin -->
+                            }
+
+                            @if (isProfessional || isAdmin)
+                            {
+                                <!-- Show Mobile or ContactEmail based on ContactMethod for Professional or Admin -->
+                                @if (item.ContactMethod == "Mobile")
+                                {
+                                    <td>@Html.DisplayFor(modelItem => item.Mobile)</td>
+                                }
+                                else
+                                {
+                                    <td>@Html.DisplayFor(modelItem => item.ContactEmail)</td>
+                                }
+                            }
+
+                            @if (isProfessional || isAdmin)
+                            {
+                                <td>@Html.DisplayFor(modelItem => item.Notes)</td> <!-- Display Notes for Professional or Admin -->
+                            }
+
+                            @if (isAdmin)
+                            {
+                                <!-- Moved the Action buttons into their own column -->
                                 <td class="text-center">
                                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">
                                         <i class="bi bi-pencil-square"></i> Edit

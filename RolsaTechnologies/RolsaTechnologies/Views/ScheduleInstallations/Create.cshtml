@@ -4,88 +4,88 @@
     ViewData["Title"] = "Schedule Installation";
 }
 
-<div class="card shadow-lg p-4">
-    <h2 class="text-primary mb-3">Schedule Installation</h2>
-    <hr />
+<div class="container py-4">
+    <div class="card shadow-lg p-4">
+        <h2 class="fw-bold text-center mb-4">Schedule an Installation</h2>
 
-    <div class="row">
-        <div class="col-md-6">
-            <form asp-action="Create">
-                <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
 
+            <div class="row">
                 <!-- Scheduled Date -->
-                <div class="form-group mb-3">
-                    <label asp-for="ScheduledDate" class="form-label">Select Date</label>
-                    <input asp-for="ScheduledDate" type="date" class="form-control" />
-                    <span asp-validation-for="ScheduledDate" class="text-danger"></span>
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label asp-for="ScheduledDate" class="form-label">Select Date</label>
+                        <input asp-for="ScheduledDate" type="date" class="form-control" />
+                        <span asp-validation-for="ScheduledDate" class="text-danger"></span>
+                    </div>
                 </div>
 
                 <!-- Time Slot Selection -->
-                <div class="form-group mb-3">
-                    <label for="scheduledTime" class="form-label">Select Time</label>
-                    <select id="scheduledTime" name="scheduledTime" class="form-control">
-                        @foreach (var timeSlot in ViewBag.AvailableSlots as List<TimeSpan>)
-                        {
-                            <option value="@timeSlot.ToString(@"hh\:mm")">@timeSlot.ToString(@"hh\:mm")</option>
-                        }
-                    </select>
-                    <span asp-validation-for="ScheduledDate" class="text-danger"></span>
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label for="scheduledTime" class="form-label">Select Time</label>
+                        <select id="scheduledTime" name="scheduledTime" class="form-control">
+                            @foreach (var timeSlot in ViewBag.AvailableSlots as List<TimeSpan>)
+                            {
+                                <option value="@timeSlot.ToString(@"hh\:mm")">@timeSlot.ToString(@"hh\:mm")</option>
+                            }
+                        </select>
+                        <span asp-validation-for="ScheduledDate" class="text-danger"></span>
+                    </div>
                 </div>
+            </div>
 
-                <!-- Appliance Type Selection -->
-                <div class="form-group mb-3">
-                    <label asp-for="ApplianceType" class="form-label">Appliance Type</label>
-                    <select asp-for="ApplianceType" class="form-control">
-                        <option value="" disabled selected>Select an appliance</option>
-                        <option value="Solar Panels">Solar Panels</option>
-                        <option value="Smart Home Appliances">Smart Home Appliances</option>
-                        <option value="Electric Vehicle Charging Station">Electric Vehicle Charging Station</option>
-                    </select>
-                    <span asp-validation-for="ApplianceType" class="text-danger"></span>
-                </div>
+            <!-- Appliance Type Selection -->
+            <div class="form-group mb-3">
+                <label asp-for="ApplianceType" class="form-label">Appliance Type</label>
+                <select asp-for="ApplianceType" class="form-control">
+                    <option value="" disabled selected>Select an appliance</option>
+                    <option value="Solar Panels">Solar Panels</option>
+                    <option value="Smart Home Appliances">Smart Home Appliances</option>
+                    <option value="Electric Vehicle Charging Station">Electric Vehicle Charging Station</option>
+                </select>
+                <span asp-validation-for="ApplianceType" class="text-danger"></span>
+            </div>
 
-                <!-- Postcode Field -->
-                <div class="form-group mb-3">
-                    <label for="Postcode" class="form-label">Postcode</label>
-                    <input id="Postcode" name="Postcode" class="form-control" />
-                    <span class="text-danger" id="postcode-error"></span>
-                </div>
+            <!-- Postcode Field -->
+            <div class="form-group mb-3">
+                <label for="Postcode" class="form-label">Postcode</label>
+                <input id="Postcode" name="Postcode" class="form-control" />
+                <span class="text-danger" id="postcode-error"></span>
+            </div>
 
-                <!-- Address -->
-                <div class="form-group mb-3">
-                    <label asp-for="Address" class="form-label">Address</label>
-                    <input asp-for="Address" class="form-control" />
-                    <span asp-validation-for="Address" class="text-danger"></span>
-                </div>
+            <!-- Address -->
+            <div class="form-group mb-3">
+                <label asp-for="Address" class="form-label">Address</label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
 
-                <!-- Mobile Number -->
-                <div class="form-group mb-3">
-                    <label asp-for="Mobile" class="form-label">Mobile</label>
-                    <input asp-for="Mobile" class="form-control" />
-                    <span asp-validation-for="Mobile" class="text-danger"></span>
-                </div>
+            <!-- Mobile Number -->
+            <div class="form-group mb-3">
+                <label asp-for="Mobile" class="form-label">Mobile</label>
+                <input asp-for="Mobile" class="form-control" />
+                <span asp-validation-for="Mobile" class="text-danger"></span>
+            </div>
 
-                <!-- Notes -->
-                <div class="form-group mb-4">
-                    <label asp-for="Notes" class="form-label">Additional Notes</label>
-                    <textarea asp-for="Notes" class="form-control" rows="3"></textarea>
-                    <span asp-validation-for="Notes" class="text-danger"></span>
-                </div>
+            <!-- Notes -->
+            <div class="form-group mb-3">
+                <label asp-for="Notes" class="form-label">Additional Notes</label>
+                <textarea asp-for="Notes" class="form-control" rows="3"></textarea>
+                <span asp-validation-for="Notes" class="text-danger"></span>
+            </div>
 
-                <!-- Submit Button -->
-                <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-primary">
-                        <i class="bi bi-calendar-plus"></i> Schedule Installation
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <div class="mt-3">
-        <a asp-action="Index" class="btn btn-outline-secondary back-to-list-btn">
-            <i class="bi bi-arrow-left"></i> Back to List
-        </a>
+            <!-- Submit Button -->
+            <div class="d-flex justify-content-between mt-4">
+                <a asp-action="Index" class="btn btn-outline-secondary dark-mode-btn">
+                    <i class="bi bi-arrow-left"></i> Back to List
+                </a>
+                <button type="submit" class="btn btn-success">
+                    <i class="bi bi-calendar-plus"></i> Schedule Installation
+                </button>
+            </div>
+        </form>
     </div>
 </div>
 

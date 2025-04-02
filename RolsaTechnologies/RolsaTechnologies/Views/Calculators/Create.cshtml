@@ -4,65 +4,106 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<div class="container py-4">
+    <div class="card shadow-lg p-4">
+        <h2 class="fw-bold text-center mb-4">Create a Carbon Footprint Record</h2>
 
-<h4>Calculator</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
         <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
 
-            <div class="form-group">
-                <label asp-for="ElectricityUsage" class="control-label"></label>
-                <input asp-for="ElectricityUsage" class="form-control" />
-                <span asp-validation-for="ElectricityUsage" class="text-danger"></span>
+            <div class="row">
+                <!-- Electricity Usage -->
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label asp-for="ElectricityUsage" class="form-label">Electricity Usage (kWh)</label>
+                        <input asp-for="ElectricityUsage" class="form-control" />
+                        <span asp-validation-for="ElectricityUsage" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!-- Gas Usage -->
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label asp-for="GasUsage" class="form-label">Gas Usage (kWh)</label>
+                        <input asp-for="GasUsage" class="form-control" />
+                        <span asp-validation-for="GasUsage" class="text-danger"></span>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="GasUsage" class="control-label"></label>
-                <input asp-for="GasUsage" class="form-control" />
-                <span asp-validation-for="GasUsage" class="text-danger"></span>
+
+            <div class="row">
+                <!-- Car Miles Per Week -->
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label asp-for="CarMilesPerWeek" class="form-label">Car Miles Per Week</label>
+                        <input asp-for="CarMilesPerWeek" class="form-control" />
+                        <span asp-validation-for="CarMilesPerWeek" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!-- Car Fuel Efficiency -->
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label asp-for="CarFuelEfficiency" class="form-label">Car Fuel Efficiency (mpg)</label>
+                        <input asp-for="CarFuelEfficiency" class="form-control" />
+                        <span asp-validation-for="CarFuelEfficiency" class="text-danger"></span>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="CarMilesPerWeek" class="control-label"></label>
-                <input asp-for="CarMilesPerWeek" class="form-control" />
-                <span asp-validation-for="CarMilesPerWeek" class="text-danger"></span>
+
+            <div class="row">
+                <!-- Public Transport Miles Per Week -->
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label asp-for="PublicTransportMilesPerWeek" class="form-label">Public Transport Miles Per Week</label>
+                        <input asp-for="PublicTransportMilesPerWeek" class="form-control" />
+                        <span asp-validation-for="PublicTransportMilesPerWeek" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!-- Waste Produced Per Week -->
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label asp-for="WasteProducedPerWeek" class="form-label">Waste Produced Per Week (kg)</label>
+                        <input asp-for="WasteProducedPerWeek" class="form-control" />
+                        <span asp-validation-for="WasteProducedPerWeek" class="text-danger"></span>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="CarFuelEfficiency" class="control-label"></label>
-                <input asp-for="CarFuelEfficiency" class="form-control" />
-                <span asp-validation-for="CarFuelEfficiency" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PublicTransportMilesPerWeek" class="control-label"></label>
-                <input asp-for="PublicTransportMilesPerWeek" class="form-control" />
-                <span asp-validation-for="PublicTransportMilesPerWeek" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="WasteProducedPerWeek" class="control-label"></label>
-                <input asp-for="WasteProducedPerWeek" class="form-control" />
-                <span asp-validation-for="WasteProducedPerWeek" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
+
+            <!-- Recycling Habits -->
+            <div class="form-group form-check mb-3">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="RecyclingHabits" /> @Html.DisplayNameFor(model => model.RecyclingHabits)
+                    <input class="form-check-input" asp-for="RecyclingHabits" />
+                    @Html.DisplayNameFor(model => model.RecyclingHabits)
                 </label>
             </div>
-            <div class="form-group">
-                <label asp-for="MeatConsumptionPerWeek" class="control-label"></label>
-                <input asp-for="MeatConsumptionPerWeek" class="form-control" />
-                <span asp-validation-for="MeatConsumptionPerWeek" class="text-danger"></span>
+
+            <div class="row">
+                <!-- Meat Consumption Per Week -->
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label asp-for="MeatConsumptionPerWeek" class="form-label">Meat Consumption Per Week (kg)</label>
+                        <input asp-for="MeatConsumptionPerWeek" class="form-control" />
+                        <span asp-validation-for="MeatConsumptionPerWeek" class="text-danger"></span>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+
+            <!-- Buttons -->
+            <div class="d-flex justify-content-between mt-4">
+                <a asp-action="Index" class="btn btn-outline-secondary dark-mode-btn">
+                    <i class="bi bi-arrow-left"></i> Back to List
+                </a>
+                <button type="submit" class="btn btn-success">
+                    <i class="bi bi-check-circle"></i> Create Carbon Footprint Record
+                </button>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{

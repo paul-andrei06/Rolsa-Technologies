@@ -31,27 +31,30 @@ namespace RolsaTechnologies.Controllers
         // GET: ScheduleInstallations
         public async Task<IActionResult> Index()
         {
-            string user = User.Identity.Name; // Gets the currently logged-in user's username
-            var currentUser = await _context.Users.FirstOrDefaultAsync(x => x.UserName == user); // Gets the details of that user from the database
-            var currentUserId = currentUser.Id; // Gets the user's Id
+            // Retrieve the currently logged-in user's email
+            var userEmail = (await _userManager.FindByNameAsync(User.Identity.Name))?.Email;
 
-            
-            var userRole = await _userManager.GetRolesAsync(currentUser); // Check if the user is a "User" or a "Professional"
+            string user = User.Identity.Name; // Gets the currently logged-in user's username
+            var currentUser = await _context.Users.FirstOrDefaultAsync(x => x.UserName == user); // Get the details of that user
+            var currentUserId = currentUser.Id; // Get the user's Id
+
+            var userRole = await _userManager.GetRolesAsync(currentUser);
 
             List<ScheduleInstallation> userInstallations;
 
             if (userRole.Contains("Professional"))
             {
-               
                 userInstallations = await _context.ScheduleInstallation.ToListAsync(); // If the user is a "Professional", get all schedule installations
             }
             else
             {
-               
                 userInstallations = await _context.ScheduleInstallation.Where(u => u.UserId == currentUserId).ToListAsync(); // If the user is a "User", get only their own schedule installations
             }
 
-            return View(userInstallations); // Pass the installations to the view based on the role
+            // Pass the email to the view using ViewBag
+            ViewBag.UserEmail = userEmail;
+
+            return View(userInstallations); // Pass the list of installations to the view
         }
 
         // GET: ScheduleInstallations/Details/5

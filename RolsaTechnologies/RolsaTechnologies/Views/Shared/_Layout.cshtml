@@ -547,7 +547,97 @@
                 font-size: 1.5rem;
             }
 
+        /* Calculator */
+
+        /* CSS to change the text color to white in dark mode */
+        body.dark-mode .dark-mode-btn {
+            color: white !important;
+            border-color: white !important;
+        }
+
+            body.dark-mode .dark-mode-btn i {
+                color: white !important;
+            }
+
+        /* Optional: Set background color for dark mode */
+        body.dark-mode .dark-mode-btn {
+            background-color: transparent !important; /* or adjust the background color to fit dark mode */
+        }
         </style>
+
+    <!-- Cookie and Terms Popup -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2>Cookies & Terms and Conditions</h2>
+            <p>We use cookies to ensure you get the best experience on our website. By continuing, you agree to our <a asp-controller="Home" asp-action="TermsConditions">Terms and Conditions</a> and <a asp-controller="Home" asp-action="Privacy">Privacy Policy</a>.</p>
+            <button id="accept-btn">Accept</button>
+        </div>
+    </div>
+
+    <script>
+        // Wait for the page to load
+        window.onload = function() {
+            // Check if the user has already accepted the terms
+            if (!sessionStorage.getItem('termsAccepted')) {
+                // Set a timeout to show the popup after 3 seconds
+                setTimeout(function() {
+                    let popup = document.getElementById('popup');
+                    popup.style.display = 'block'; // Show the popup
+                }, 3000); // 3000 milliseconds = 3 seconds
+            }
+
+            // Get the accept button
+            let acceptBtn = document.getElementById('accept-btn');
+
+            // Event listener for the accept button
+            acceptBtn.addEventListener('click', function() {
+                let popup = document.getElementById('popup');
+                popup.style.display = 'none'; // Hide the popup when accepted
+                // Set a session storage item to remember the user's acceptance for the session
+                sessionStorage.setItem('termsAccepted', 'true');
+            });
+        };
+    </script>
+
+    <style>
+        /* Basic styling for the popup */
+        .popup {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: none; /* Hidden by default */
+            z-index: 9999;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .popup-content {
+            padding: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #45a049;
+            }
+
+        a {
+            color: #4CAF50;
+        }
+    </style>
 
     
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

@@ -1,65 +1,67 @@
 ﻿@model IEnumerable<RolsaTechnologies.Models.ScheduleInstallation>
 
+
 @{
     ViewData["Title"] = "Scheduled Installations";
     var isAdminOrProfessional = User.IsInRole("Admin") || User.IsInRole("Professional");
 }
 
-<div class="card shadow-lg p-4">
-    <div class="d-flex justify-content-between align-items-center mb-3">
-        <h2 class="text-primary">Scheduled Installations</h2>
-        <a asp-action="Create" class="btn btn-success">
-            <i class="bi bi-plus-lg"></i> Schedule New Installation
-        </a>
-    </div>
+<div class="container py-4">
+    <div class="card shadow-lg p-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="fw-bold">Scheduled Installations</h2>
+            <a asp-action="Create" class="btn btn-success">
+                <i class="bi bi-calendar-plus"></i> Schedule New Installation
+            </a>
+        </div>
 
-    <div class="table-responsive">
-        <table class="table table-hover align-middle">
-            <thead class="table-dark">
-                <tr>
-                    <th>ID</th>
-                    <th>Scheduled Date</th>
-                    <th>Appliance Type</th>
-                    <th>Address</th>
-                    <th>Mobile</th>
-                    <th>Notes</th>
-                    @if (isAdminOrProfessional)
-                    {
-                        <th class="text-center">Actions</th>
-                    }
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
+        <div class="table-responsive">
+            <table class="table table-hover align-middle accessible-table">
+                <thead class="table-dark">
                     <tr>
-                        <td>@Html.DisplayFor(modelItem => item.UserId)</td>
-                        <td>@Html.DisplayFor(modelItem => item.ScheduledDate)</td>
-                        <td>@Html.DisplayFor(modelItem => item.ApplianceType)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Address)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Mobile)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Notes)</td>
-
-                        @if (isAdminOrProfessional)
+                        <th>Email</th>
+                        <th>@Html.DisplayNameFor(model => model.ScheduledDate)</th>
+                        <th>@Html.DisplayNameFor(model => model.ApplianceType)</th>
+                        <th>@Html.DisplayNameFor(model => model.Address)</th>
+                        <th>@Html.DisplayNameFor(model => model.Mobile)</th>
+                        <th>@Html.DisplayNameFor(model => model.Notes)</th>
+                        @if (User.IsInRole("Admin") || User.IsInRole("Professional"))
                         {
-                            <td class="text-center">
-                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-warning btn-sm">
-                                    <i class="bi bi-pencil-square"></i> Edit
-                                </a>
-                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-info btn-sm">
-                                    <i class="bi bi-eye"></i> Details
-                                </a>
-                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger btn-sm">
-                                    <i class="bi bi-trash"></i> Delete
-                                </a>
-                            </td>
+                            <th class="text-center">Actions</th>
                         }
                     </tr>
-                }
-            </tbody>
-        </table>
-    </div>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@ViewBag.UserEmail</td>
+                            <td>@Html.DisplayFor(modelItem => item.ScheduledDate)</td>
+                            <td>@Html.DisplayFor(modelItem => item.ApplianceType)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Address)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Mobile)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Notes)</td>
 
+                            @if (User.IsInRole("Admin") || User.IsInRole("Professional"))
+                            {
+                                <td class="text-center">
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">
+                                        <i class="bi bi-pencil-square"></i> Edit
+                                    </a>
+                                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">
+                                        <i class="bi bi-eye"></i> Details
+                                    </a>
+                                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">
+                                        <i class="bi bi-trash"></i> Delete
+                                    </a>
+                                </td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 
 @section Scripts {

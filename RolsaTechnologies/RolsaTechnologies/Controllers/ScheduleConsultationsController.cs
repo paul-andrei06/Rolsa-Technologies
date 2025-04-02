@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -14,9 +15,11 @@ namespace RolsaTechnologies.Controllers
     public class ScheduleConsultationsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<IdentityUser> _userManager;
 
-        public ScheduleConsultationsController(ApplicationDbContext context)
+        public ScheduleConsultationsController(ApplicationDbContext context, UserManager<IdentityUser> userManager)
         {
+            _userManager = userManager;
             _context = context;
         }
 
@@ -25,11 +28,33 @@ namespace RolsaTechnologies.Controllers
         // GET: ScheduleConsultations
         public async Task<IActionResult> Index()
         {
-            string user = User.Identity.Name; // Get the current logged -in user's name
-            var currentUser = _context.Users.FirstOrDefault(x => x.UserName == user); // Retrieve the current user's details from the database
-            var currentUserId = currentUser.Id; // Gets the current user's Id
+            // Get the currently logged -in user's email
+            var userEmail = (await _userManager.FindByNameAsync(User.Identity.Name))?.Email;
 
-            var userConsultation = await _context.ScheduleConsultation.Where(c => c.UserId == currentUserId).ToListAsync(); // Gets all energy tracker records associated with the current user
+            // Get the current logged-in user's name and details from the database
+            string user = User.Identity.Name;
+            var currentUser = await _context.Users.FirstOrDefaultAsync(x => x.UserName == user);
+            var currentUserId = currentUser.Id;
+
+            // Check if the user is an admin or a professional
+            var userRoles = await _userManager.GetRolesAsync(currentUser);
+            List<ScheduleConsultation> userConsultation;
+
+            if (userRoles.Contains("Admin") || userRoles.Contains("Professional"))
+            {
+                // If the user is an Admin or Professional, show all consultations
+                userConsultation = await _context.ScheduleConsultation.ToListAsync();
+            }
+            else
+            {
+                // If the user is a regular user, only show their own consultations
+                userConsultation = await _context.ScheduleConsultation
+                                                 .Where(c => c.UserId == currentUserId)
+                                                 .ToListAsync();
+            }
+
+            // Pass the email to the view using ViewBag
+            ViewBag.UserEmail = userEmail;
 
             return View(userConsultation); // Return the data to the view
         }
