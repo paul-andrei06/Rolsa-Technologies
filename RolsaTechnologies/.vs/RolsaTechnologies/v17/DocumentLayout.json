@@ -1,12 +1,100 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6C67FD96-D5E7-4E5F-B2C1-1F34DC73A087}|RolsaTechnologies\\RolsaTechnologies.csproj|\\\\dom.sandwell.ac.uk\\student\\homeeven\\692962\\github\\rolsa-technologies\\rolsatechnologies\\rolsatechnologies\\views\\home\\smarthomeenergy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C67FD96-D5E7-4E5F-B2C1-1F34DC73A087}|RolsaTechnologies\\RolsaTechnologies.csproj|\\\\dom.sandwell.ac.uk\\student\\homeeven\\692962\\github\\rolsa-technologies\\rolsatechnologies\\rolsatechnologies\\views\\home\\greenenergyproducts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C67FD96-D5E7-4E5F-B2C1-1F34DC73A087}|RolsaTechnologies\\RolsaTechnologies.csproj|\\\\dom.sandwell.ac.uk\\student\\homeeven\\692962\\github\\rolsa-technologies\\rolsatechnologies\\rolsatechnologies\\views\\home\\evchargerinformation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C67FD96-D5E7-4E5F-B2C1-1F34DC73A087}|RolsaTechnologies\\RolsaTechnologies.csproj|\\\\dom.sandwell.ac.uk\\student\\homeeven\\692962\\github\\rolsa-technologies\\rolsatechnologies\\rolsatechnologies\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C67FD96-D5E7-4E5F-B2C1-1F34DC73A087}|RolsaTechnologies\\RolsaTechnologies.csproj|\\\\dom.sandwell.ac.uk\\student\\homeeven\\692962\\github\\rolsa-technologies\\rolsatechnologies\\rolsatechnologies\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EvChargerInformation.cshtml",
+              "DocumentMoniker": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\Home\\EvChargerInformation.cshtml",
+              "RelativeDocumentMoniker": "RolsaTechnologies\\Views\\Home\\EvChargerInformation.cshtml",
+              "ToolTip": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\Home\\EvChargerInformation.cshtml",
+              "RelativeToolTip": "RolsaTechnologies\\Views\\Home\\EvChargerInformation.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-02T11:27:37.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SmartHomeEnergy.cshtml",
+              "DocumentMoniker": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\Home\\SmartHomeEnergy.cshtml",
+              "RelativeDocumentMoniker": "RolsaTechnologies\\Views\\Home\\SmartHomeEnergy.cshtml",
+              "ToolTip": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\Home\\SmartHomeEnergy.cshtml",
+              "RelativeToolTip": "RolsaTechnologies\\Views\\Home\\SmartHomeEnergy.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEgAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-02T11:12:37.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "RolsaTechnologies\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "RolsaTechnologies\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACcBAAAAAAAAAAAWwE0BAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-02T09:49:20.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "RolsaTechnologies\\Controllers\\HomeController.cs",
+              "ToolTip": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "RolsaTechnologies\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T09:48:19.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GreenEnergyProducts.cshtml",
+              "DocumentMoniker": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\Home\\GreenEnergyProducts.cshtml",
+              "RelativeDocumentMoniker": "RolsaTechnologies\\Views\\Home\\GreenEnergyProducts.cshtml",
+              "ToolTip": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Views\\Home\\GreenEnergyProducts.cshtml",
+              "RelativeToolTip": "RolsaTechnologies\\Views\\Home\\GreenEnergyProducts.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-02T09:47:39.633Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

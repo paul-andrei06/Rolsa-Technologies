@@ -25,7 +25,29 @@ namespace RolsaTechnologies.Controllers
         {
             return View();
         }
+
+        public IActionResult GreenEnergyProducts()
+        {
+            return View();
+        }
+
         
+        
+        public IActionResult SolarPanelInformation()
+        {
+            return View();
+        }
+        
+        public IActionResult EvChargerInformation()
+        {
+            return View();
+        }
+
+        public IActionResult SmartHomeEnergy()
+        {
+            return View();
+        }
+
         public IActionResult FAQs()
         {
             return View();

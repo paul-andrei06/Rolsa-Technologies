@@ -8698,6 +8698,88 @@
       ]
     },
     {
+      "Route": "Images/DifferentSolarPanels.0rjzi6puo4.png",
+      "AssetFile": "Images/DifferentSolarPanels.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "322771"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vIjSKFH/phcpJeXr7rD5PXJfedJLy5ZjA9yMb/BeMLw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 10:20:41 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0rjzi6puo4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vIjSKFH/phcpJeXr7rD5PXJfedJLy5ZjA9yMb/BeMLw="
+        },
+        {
+          "Name": "label",
+          "Value": "Images/DifferentSolarPanels.png"
+        }
+      ]
+    },
+    {
+      "Route": "Images/DifferentSolarPanels.png",
+      "AssetFile": "Images/DifferentSolarPanels.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "322771"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vIjSKFH/phcpJeXr7rD5PXJfedJLy5ZjA9yMb/BeMLw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 10:20:41 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vIjSKFH/phcpJeXr7rD5PXJfedJLy5ZjA9yMb/BeMLw="
+        }
+      ]
+    },
+    {
       "Route": "Images/EnergyTracker.fonryo2rpc.png",
       "AssetFile": "Images/EnergyTracker.png",
       "Selectors": [],
@@ -8776,6 +8858,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-Ya0N25xX+zqfu3fPG0shJauWUG4b76r76tmooa1nNns="
+        }
+      ]
+    },
+    {
+      "Route": "Images/EvCharger.jpg",
+      "AssetFile": "Images/EvCharger.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "146244"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6XQNJVQvcBouuANpe7YSWYQZmsEfto+vO+cur0g0VnA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 10:03:05 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6XQNJVQvcBouuANpe7YSWYQZmsEfto+vO+cur0g0VnA="
+        }
+      ]
+    },
+    {
+      "Route": "Images/EvCharger.l1ntv7uyfz.jpg",
+      "AssetFile": "Images/EvCharger.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "146244"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6XQNJVQvcBouuANpe7YSWYQZmsEfto+vO+cur0g0VnA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 10:03:05 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "l1ntv7uyfz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6XQNJVQvcBouuANpe7YSWYQZmsEfto+vO+cur0g0VnA="
+        },
+        {
+          "Name": "label",
+          "Value": "Images/EvCharger.jpg"
         }
       ]
     },
@@ -9022,6 +9186,990 @@
         {
           "Name": "integrity",
           "Value": "sha256-XmLYWZ07kwoT+MJxmG0F9K+QF3ZHra1nKi1HTVohyio="
+        }
+      ]
+    },
+    {
+      "Route": "Images/MonocrystallineSolarPanel.jpg",
+      "AssetFile": "Images/MonocrystallineSolarPanel.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "105013"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GxqQX+zKk9gSyGpL6b9EcPgVXYsD7k2jx5LCwzhRvcE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 10:23:27 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GxqQX+zKk9gSyGpL6b9EcPgVXYsD7k2jx5LCwzhRvcE="
+        }
+      ]
+    },
+    {
+      "Route": "Images/MonocrystallineSolarPanel.v3900jg3uf.jpg",
+      "AssetFile": "Images/MonocrystallineSolarPanel.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "105013"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GxqQX+zKk9gSyGpL6b9EcPgVXYsD7k2jx5LCwzhRvcE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 10:23:27 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "v3900jg3uf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GxqQX+zKk9gSyGpL6b9EcPgVXYsD7k2jx5LCwzhRvcE="
+        },
+        {
+          "Name": "label",
+          "Value": "Images/MonocrystallineSolarPanel.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "Images/PodPointEvCharger.d7iih8lwtx.jpg",
+      "AssetFile": "Images/PodPointEvCharger.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "83277"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qU0bFaX811dHlf2PFBiznKD0H2CF5c4uHWRViJ27HLU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 10:37:20 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "d7iih8lwtx"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qU0bFaX811dHlf2PFBiznKD0H2CF5c4uHWRViJ27HLU="
+        },
+        {
+          "Name": "label",
+          "Value": "Images/PodPointEvCharger.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "Images/PodPointEvCharger.jpg",
+      "AssetFile": "Images/PodPointEvCharger.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "83277"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qU0bFaX811dHlf2PFBiznKD0H2CF5c4uHWRViJ27HLU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 10:37:20 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qU0bFaX811dHlf2PFBiznKD0H2CF5c4uHWRViJ27HLU="
+        }
+      ]
+    },
+    {
+      "Route": "Images/PolycrystallineSolarPanel.jpg",
+      "AssetFile": "Images/PolycrystallineSolarPanel.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "171016"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ATyQza113zQM24ZftPf8dpfNv29vD+e4CctrYsDzQ48=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 10:20:14 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ATyQza113zQM24ZftPf8dpfNv29vD+e4CctrYsDzQ48="
+        }
+      ]
+    },
+    {
+      "Route": "Images/PolycrystallineSolarPanel.xczk8dzr2q.jpg",
+      "AssetFile": "Images/PolycrystallineSolarPanel.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "171016"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ATyQza113zQM24ZftPf8dpfNv29vD+e4CctrYsDzQ48=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 10:20:14 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xczk8dzr2q"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ATyQza113zQM24ZftPf8dpfNv29vD+e4CctrYsDzQ48="
+        },
+        {
+          "Name": "label",
+          "Value": "Images/PolycrystallineSolarPanel.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "Images/RolecEvCharger.73esndadd3.png",
+      "AssetFile": "Images/RolecEvCharger.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47134"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rR6bJo/C3SrSPltSe7LwK4IgsCwwSqOuZ9ZrMzqUS5w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 10:36:52 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "73esndadd3"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rR6bJo/C3SrSPltSe7LwK4IgsCwwSqOuZ9ZrMzqUS5w="
+        },
+        {
+          "Name": "label",
+          "Value": "Images/RolecEvCharger.png"
+        }
+      ]
+    },
+    {
+      "Route": "Images/RolecEvCharger.png",
+      "AssetFile": "Images/RolecEvCharger.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47134"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rR6bJo/C3SrSPltSe7LwK4IgsCwwSqOuZ9ZrMzqUS5w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 10:36:52 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rR6bJo/C3SrSPltSe7LwK4IgsCwwSqOuZ9ZrMzqUS5w="
+        }
+      ]
+    },
+    {
+      "Route": "Images/SmartHomeSystem.jpg",
+      "AssetFile": "Images/SmartHomeSystem.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "354757"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"x+pS7jPVEgQoMxJ4hj3C8NYswuPuOotSNZoV88Y34AU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 10:06:19 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-x+pS7jPVEgQoMxJ4hj3C8NYswuPuOotSNZoV88Y34AU="
+        }
+      ]
+    },
+    {
+      "Route": "Images/SmartHomeSystem.nwbml0tcdv.jpg",
+      "AssetFile": "Images/SmartHomeSystem.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "354757"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"x+pS7jPVEgQoMxJ4hj3C8NYswuPuOotSNZoV88Y34AU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 10:06:19 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nwbml0tcdv"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-x+pS7jPVEgQoMxJ4hj3C8NYswuPuOotSNZoV88Y34AU="
+        },
+        {
+          "Name": "label",
+          "Value": "Images/SmartHomeSystem.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "Images/SmartLighting.0rlhfgjqld.jpg",
+      "AssetFile": "Images/SmartLighting.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "668519"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XOeAP6xBKBYeNjyIZFX3dP7/sV3g8asEj7pIaGnwjck=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 11:16:37 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0rlhfgjqld"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XOeAP6xBKBYeNjyIZFX3dP7/sV3g8asEj7pIaGnwjck="
+        },
+        {
+          "Name": "label",
+          "Value": "Images/SmartLighting.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "Images/SmartLighting.jpg",
+      "AssetFile": "Images/SmartLighting.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "668519"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XOeAP6xBKBYeNjyIZFX3dP7/sV3g8asEj7pIaGnwjck=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 11:16:37 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XOeAP6xBKBYeNjyIZFX3dP7/sV3g8asEj7pIaGnwjck="
+        }
+      ]
+    },
+    {
+      "Route": "Images/SmartSecurity.jpeg",
+      "AssetFile": "Images/SmartSecurity.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "373611"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z95AuHAUOfk8+N4c8dn5CF8x4aNkCJDsiwpUIXGHOjs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 11:17:16 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-z95AuHAUOfk8+N4c8dn5CF8x4aNkCJDsiwpUIXGHOjs="
+        }
+      ]
+    },
+    {
+      "Route": "Images/SmartSecurity.znn8loywd7.jpeg",
+      "AssetFile": "Images/SmartSecurity.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "373611"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z95AuHAUOfk8+N4c8dn5CF8x4aNkCJDsiwpUIXGHOjs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 11:17:16 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "znn8loywd7"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-z95AuHAUOfk8+N4c8dn5CF8x4aNkCJDsiwpUIXGHOjs="
+        },
+        {
+          "Name": "label",
+          "Value": "Images/SmartSecurity.jpeg"
+        }
+      ]
+    },
+    {
+      "Route": "Images/SmartThermostat.h7cwj4zuzk.jpg",
+      "AssetFile": "Images/SmartThermostat.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "94969"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zTi2ERuBXvBv6YPu1IAIe3h4NGl/DvLmyH1DDLavPsE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 11:21:06 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "h7cwj4zuzk"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zTi2ERuBXvBv6YPu1IAIe3h4NGl/DvLmyH1DDLavPsE="
+        },
+        {
+          "Name": "label",
+          "Value": "Images/SmartThermostat.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "Images/SmartThermostat.jpg",
+      "AssetFile": "Images/SmartThermostat.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "94969"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zTi2ERuBXvBv6YPu1IAIe3h4NGl/DvLmyH1DDLavPsE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 11:21:06 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zTi2ERuBXvBv6YPu1IAIe3h4NGl/DvLmyH1DDLavPsE="
+        }
+      ]
+    },
+    {
+      "Route": "Images/SolarPanel.png",
+      "AssetFile": "Images/SolarPanel.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "577267"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PwTV2V+9uYnDu6qEmo4g0Bj6VWj9Rnwztn30COk69CQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 09:56:34 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PwTV2V+9uYnDu6qEmo4g0Bj6VWj9Rnwztn30COk69CQ="
+        }
+      ]
+    },
+    {
+      "Route": "Images/SolarPanel.t5bdyo4mde.png",
+      "AssetFile": "Images/SolarPanel.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "577267"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PwTV2V+9uYnDu6qEmo4g0Bj6VWj9Rnwztn30COk69CQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 09:56:34 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t5bdyo4mde"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PwTV2V+9uYnDu6qEmo4g0Bj6VWj9Rnwztn30COk69CQ="
+        },
+        {
+          "Name": "label",
+          "Value": "Images/SolarPanel.png"
+        }
+      ]
+    },
+    {
+      "Route": "Images/TeslaEvCharger.jpg",
+      "AssetFile": "Images/TeslaEvCharger.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23183"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pPkGo4/gx/zzP9q3kBU6/1vvd6MGMoc6PvgdBxi593g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 10:36:29 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-pPkGo4/gx/zzP9q3kBU6/1vvd6MGMoc6PvgdBxi593g="
+        }
+      ]
+    },
+    {
+      "Route": "Images/TeslaEvCharger.w7wlg45ue4.jpg",
+      "AssetFile": "Images/TeslaEvCharger.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23183"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pPkGo4/gx/zzP9q3kBU6/1vvd6MGMoc6PvgdBxi593g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 10:36:29 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w7wlg45ue4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-pPkGo4/gx/zzP9q3kBU6/1vvd6MGMoc6PvgdBxi593g="
+        },
+        {
+          "Name": "label",
+          "Value": "Images/TeslaEvCharger.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "Images/ThinFilmSolarPanel.jpg",
+      "AssetFile": "Images/ThinFilmSolarPanel.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "188890"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ka/lljPoetH/7aAzLYHnBxiEc1ysFe3kvDwRWrxlsGE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 10:20:31 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ka/lljPoetH/7aAzLYHnBxiEc1ysFe3kvDwRWrxlsGE="
+        }
+      ]
+    },
+    {
+      "Route": "Images/ThinFilmSolarPanel.n2td4ive8u.jpg",
+      "AssetFile": "Images/ThinFilmSolarPanel.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "188890"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ka/lljPoetH/7aAzLYHnBxiEc1ysFe3kvDwRWrxlsGE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 10:20:31 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "n2td4ive8u"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ka/lljPoetH/7aAzLYHnBxiEc1ysFe3kvDwRWrxlsGE="
+        },
+        {
+          "Name": "label",
+          "Value": "Images/ThinFilmSolarPanel.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "Images/ZappiEvCharger.10gmx4ugyx.jpg",
+      "AssetFile": "Images/ZappiEvCharger.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68993"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gSu2IEMDXM9i1KCKFXz/T+xCcJLBYRNqAlbHuj2GlVU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 10:36:07 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "10gmx4ugyx"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gSu2IEMDXM9i1KCKFXz/T+xCcJLBYRNqAlbHuj2GlVU="
+        },
+        {
+          "Name": "label",
+          "Value": "Images/ZappiEvCharger.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "Images/ZappiEvCharger.jpg",
+      "AssetFile": "Images/ZappiEvCharger.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68993"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gSu2IEMDXM9i1KCKFXz/T+xCcJLBYRNqAlbHuj2GlVU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 10:36:07 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gSu2IEMDXM9i1KCKFXz/T+xCcJLBYRNqAlbHuj2GlVU="
         }
       ]
     },

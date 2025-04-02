@@ -42,9 +42,11 @@
                                 Information
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownInformation">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="GreenEnergyProducts">Green Energy Products</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Contact" asp-action="Index">Contact</a></li>
                                 <li><a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></li>
                                 <li><a class="dropdown-item" asp-area="" asp-controller="About" asp-action="Index">About</a></li>
-                                <li><a class="dropdown-item" asp-area="" asp-controller="Contact" asp-action="Index">Contact</a></li>
+                                
                                 <!-- Add more links as needed -->
                             </ul>
                         </li>
@@ -323,9 +325,10 @@
                     color: #FFD700; /* Highlight colour in dark mode */
                 }
 
-            body.dark-mode .navbar .navbar-toggler-icon {
-                background-color: darkgrey; /* White toggler icon in dark mode */
-            }
+        /* Dark mode adjustments */
+        body.dark-mode .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
 
         /* High contrast mode navigation */
         body.high-contrast .navbar {
@@ -465,6 +468,84 @@
             color: black !important;
             border-color: black !important;
         }
+
+        /*Green Energy Products Page*/
+
+        /* Dark Mode */
+        body.dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+
+            body.dark-mode .card {
+                background-color: #1e1e1e;
+                color: white;
+                border: 1px solid #333;
+            }
+
+            body.dark-mode .btn-primary {
+                background-color: #FFD700;
+                border-color: #FFD700;
+                color: black;
+            }
+
+                body.dark-mode .btn-primary:hover {
+                    background-color: #e6c200;
+                    border-color: #e6c200;
+                }
+
+        /* High Contrast Mode */
+        body.high-contrast {
+            background-color: black !important;
+            color: yellow !important;
+        }
+
+            body.high-contrast .card {
+                background-color: black !important;
+                color: yellow !important;
+                border: 2px solid yellow !important;
+            }
+
+            body.high-contrast .btn-primary {
+                background-color: yellow !important;
+                color: black !important;
+                border: 2px solid yellow !important;
+            }
+
+            /*Solar Panel Information Page*/
+
+        
+
+        body.dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+
+            body.dark-mode .card, body.dark-mode .carousel-item {
+                background-color: #1e1e1e;
+                color: white;
+            }
+
+        .carousel img {
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* EvCharger Information Page */
+
+        body.dark-mode {
+            background-color: #121212; /* Dark background colour */
+            color: white; /* White text colour */
+        }
+
+        .card {
+            background-color: #f8f9fa;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+            .card h2 {
+                font-size: 1.5rem;
+            }
 
         </style>
 

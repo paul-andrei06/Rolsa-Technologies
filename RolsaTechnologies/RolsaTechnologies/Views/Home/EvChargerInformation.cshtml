@@ -1,0 +1,123 @@
+﻿<body>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Electric Vehicle Charger Information</h1>
+
+        <!-- Overview Section -->
+        <div class="mt-4">
+            <h2>What is an Electric Vehicle Charger?</h2>
+            <p>An Electric Vehicle (EV) charger is a device used to recharge the battery of an electric vehicle. EV chargers come in various types, depending on the power they provide, from home chargers to fast chargers found at public charging stations.</p>
+        </div>
+
+        <!-- Types of EV Chargers -->
+        <div class="row mt-4">
+            <div class="col-md-4 col-sm-12">
+                <div class="card p-3">
+                    <h2>Home Charger</h2>
+                    <p>A home EV charger is installed in your garage or driveway, allowing you to charge your EV overnight. It's typically slower but more convenient for daily use.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="card p-3">
+                    <h2>Fast Charger</h2>
+                    <p>Fast chargers are commonly found at public charging stations. They charge your EV much faster than home chargers, allowing you to get back on the road quickly.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="card p-3">
+                    <h2>Rapid Charger</h2>
+                    <p>Rapid chargers can charge your EV in a fraction of the time it takes for home chargers. These are typically located at high-traffic areas and provide an ultra-fast charge to your vehicle.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Maintenance and Installation -->
+        <div class="mt-4">
+            <h2>Installation and Maintenance</h2>
+            <p>Installing an EV charger should be done by a certified electrician. It's important to ensure your electrical system can support the charger. Maintenance is minimal, but occasional inspections are recommended to ensure the charger is working efficiently.</p>
+        </div>
+
+        <!-- Brands and Cost -->
+        <div class="mt-4">
+            <h2>Popular EV Charger Brands and Costs</h2>
+            <p>Some of the top brands in the UK include:</p>
+            <ul>
+                <li>Pod Point</li>
+                <li>Rolec</li>
+                <li>Zappi</li>
+                <li>Tesla Wall Connector</li>
+            </ul>
+            <p>Prices for home chargers range from £500 to £1,500, depending on the brand and installation costs. Fast and rapid chargers can cost more depending on the location and power required.</p>
+        </div>
+
+        <!-- EV Charger Brands Carousel -->
+        <div id="evChargerCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="~/Images/PodPointEvCharger.jpg" class="d-block w-100" alt="Pod Point EV Charger">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/Images/RolecEvCharger.png" class="d-block w-100" alt="Rolec EV Charger">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/Images/ZappiEvCharger.jpg" class="d-block w-100" alt="Zappi EV Charger">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/Images/TeslaEvCharger.jpg" class="d-block w-100" alt="Tesla Wall Connector">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#evChargerCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#evChargerCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        /* Ensure the images inside the carousel fit well within the container */
+        #evChargerCarousel .carousel-item img {
+            object-fit: contain; /* Ensures the image is fully contained within the container */
+            width: 100%; /* Ensure the image takes the full width of the container */
+            height: auto; /* Maintain aspect ratio */
+            transform: scale(0.9); /* Slightly zoomed out (90%) */
+            transition: transform 0.5s ease; /* Smooth transition for zoom effect */
+        }
+
+            /* Zoomed-out effect on hover */
+            #evChargerCarousel .carousel-item img:hover {
+                transform: scale(1); /* Scale back to normal size on hover */
+            }
+
+        /* For larger screens, maintain a consistent aspect ratio */
+        @@media (min-width: 992px) {
+            #evChargerCarousel .carousel-item img
+
+        {
+            height: 500px; /* Adjusted height for desktop view */
+        }
+
+        }
+
+        /* For mobile screens, set a responsive height */
+        @@media (max-width: 991px) {
+            #evChargerCarousel .carousel-item img
+
+        {
+            height: 300px; /* Smaller height for mobile view */
+        }
+
+        }
+
+        /* Optional: Add some spacing between carousel items */
+        .carousel-inner {
+            border-radius: 10px; /* Optional: rounded corners for a smoother look */
+        }
+    </style>
+
+</body>

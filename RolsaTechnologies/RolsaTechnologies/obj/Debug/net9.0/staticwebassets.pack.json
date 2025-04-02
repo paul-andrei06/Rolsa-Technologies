@@ -13,8 +13,16 @@
       "PackagePath": "staticwebassets\\Images\\Consultation.png"
     },
     {
+      "Id": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\Images\\DifferentSolarPanels.png",
+      "PackagePath": "staticwebassets\\Images\\DifferentSolarPanels.png"
+    },
+    {
       "Id": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\Images\\EnergyTracker.png",
       "PackagePath": "staticwebassets\\Images\\EnergyTracker.png"
+    },
+    {
+      "Id": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\Images\\EvCharger.jpg",
+      "PackagePath": "staticwebassets\\Images\\EvCharger.jpg"
     },
     {
       "Id": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\Images\\HomePageBanner.jpg",
@@ -27,6 +35,54 @@
     {
       "Id": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\Images\\Logo.png",
       "PackagePath": "staticwebassets\\Images\\Logo.png"
+    },
+    {
+      "Id": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\Images\\MonocrystallineSolarPanel.jpg",
+      "PackagePath": "staticwebassets\\Images\\MonocrystallineSolarPanel.jpg"
+    },
+    {
+      "Id": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\Images\\PodPointEvCharger.jpg",
+      "PackagePath": "staticwebassets\\Images\\PodPointEvCharger.jpg"
+    },
+    {
+      "Id": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\Images\\PolycrystallineSolarPanel.jpg",
+      "PackagePath": "staticwebassets\\Images\\PolycrystallineSolarPanel.jpg"
+    },
+    {
+      "Id": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\Images\\RolecEvCharger.png",
+      "PackagePath": "staticwebassets\\Images\\RolecEvCharger.png"
+    },
+    {
+      "Id": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\Images\\SmartHomeSystem.jpg",
+      "PackagePath": "staticwebassets\\Images\\SmartHomeSystem.jpg"
+    },
+    {
+      "Id": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\Images\\SmartLighting.jpg",
+      "PackagePath": "staticwebassets\\Images\\SmartLighting.jpg"
+    },
+    {
+      "Id": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\Images\\SmartSecurity.jpeg",
+      "PackagePath": "staticwebassets\\Images\\SmartSecurity.jpeg"
+    },
+    {
+      "Id": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\Images\\SmartThermostat.jpg",
+      "PackagePath": "staticwebassets\\Images\\SmartThermostat.jpg"
+    },
+    {
+      "Id": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\Images\\SolarPanel.png",
+      "PackagePath": "staticwebassets\\Images\\SolarPanel.png"
+    },
+    {
+      "Id": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\Images\\TeslaEvCharger.jpg",
+      "PackagePath": "staticwebassets\\Images\\TeslaEvCharger.jpg"
+    },
+    {
+      "Id": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\Images\\ThinFilmSolarPanel.jpg",
+      "PackagePath": "staticwebassets\\Images\\ThinFilmSolarPanel.jpg"
+    },
+    {
+      "Id": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\Images\\ZappiEvCharger.jpg",
+      "PackagePath": "staticwebassets\\Images\\ZappiEvCharger.jpg"
     },
     {
       "Id": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\css\\site.css",

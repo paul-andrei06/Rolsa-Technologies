@@ -1,0 +1,100 @@
+﻿<body>
+
+    <div class="container">
+        <!-- Page Header -->
+        <h1 class="text-center mb-4">Smart Home Appliances</h1>
+
+        <!-- Overview Section -->
+        <div class="mt-4">
+            <h2>What are Smart Home Appliances?</h2>
+            <p>Smart home appliances are devices that connect to the internet and can be controlled remotely via smartphone apps or voice assistants. 
+                They can make your home more efficient, secure, and convenient.</p>
+        </div>
+
+        <!-- Categories of Smart Home Appliances -->
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h3>Smart Thermostats</h3>
+                    <p>Smart thermostats help you control your home's temperature remotely, 
+                        and some can even learn your preferences to optimize your energy usage.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h3>Smart Lighting</h3>
+                    <p>Smart lighting allows you to control the brightness and colour of your lights remotely or set schedules to automate your home lighting.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h3>Smart Security</h3>
+                    <p>Smart security devices include cameras, alarms, and door locks, 
+                        which you can control and monitor from anywhere using an app.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Smart Home Appliances Carousel -->
+        <div id="smartHomeCarousel" class="carousel slide mt-4" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="~/Images/SmartThermostat.jpg" class="d-block w-100" alt="Smart Thermostat">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/Images/SmartLighting.jpg" class="d-block w-100" alt="Smart Lighting">
+                </div>
+                <div class="carousel-item">
+                    <img src="~/Images/SmartSecurity.jpeg" class="d-block w-100" alt="Smart Security">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#smartHomeCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#smartHomeCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+        <!-- Brands and Costs Section -->
+        <div class="mt-4">
+            <h2>Popular Brands and Costs</h2>
+            <p>Some top brands in the smart home appliance market include:</p>
+            <ul>
+                <li>Nest</li>
+                <li>Philips Hue</li>
+                <li>Ring</li>
+                <li>Amazon Echo</li>
+            </ul>
+            <p>Costs for smart home appliances vary, but generally:</p>
+            <ul>
+                <li>Smart Thermostats: £100 - £250</li>
+                <li>Smart Lighting: £20 - £100 per bulb</li>
+                <li>Smart Security: £50 - £300 for cameras</li>
+            </ul>
+        </div>
+    </div>
+
+    <style>
+        
+        .carousel-inner img {
+            width: 100%;
+            height: 400px; /* Adjust this height as needed */
+            object-fit: cover;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        /* Make sure images inside carousel fit */
+        .carousel-item img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
