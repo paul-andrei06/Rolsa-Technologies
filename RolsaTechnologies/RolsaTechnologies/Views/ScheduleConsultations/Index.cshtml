@@ -2,8 +2,7 @@
 
 @{
     ViewData["Title"] = "Scheduled Consultations";
-    var isAdmin = User.IsInRole("Admin");
-    var isProfessional = User.IsInRole("Professional");
+    var isAdminOrProfessional = User.IsInRole("Admin") || User.IsInRole("Professional");
 }
 
 <div class="container py-4">
@@ -19,28 +18,13 @@
             <table class="table table-hover align-middle accessible-table">
                 <thead class="table-dark">
                     <tr>
-                        @if (isAdmin)
-                        {
-                            <th>Email</th>
-                        }
+                        <th>Email</th>
                         <th>@Html.DisplayNameFor(model => model.ScheduledDate)</th>
-                        @if (isProfessional || isAdmin)
-                        {
-                            <th>@Html.DisplayNameFor(model => model.ContactMethod)</th>
-                        }
-                        @if (isProfessional || isAdmin)
-                        {
-                            <th>@Html.DisplayNameFor(model => model.Mobile)</th>
-                        }
-                        @if (isProfessional || isAdmin)
-                        {
-                            <th>@Html.DisplayNameFor(model => model.ContactEmail)</th>
-                        }
-                        @if (isProfessional || isAdmin)
-                        {
-                            <th>@Html.DisplayNameFor(model => model.Notes)</th>
-                        }
-                        @if (isAdmin)
+                        <th>@Html.DisplayNameFor(model => model.ContactMethod)</th>
+                        <th>@Html.DisplayNameFor(model => model.Mobile)</th>
+                        <th>@Html.DisplayNameFor(model => model.ContactEmail)</th>
+                        <th>@Html.DisplayNameFor(model => model.Notes)</th>
+                        @if (isAdminOrProfessional)
                         {
                             <th class="text-center">Actions</th>
                         }
@@ -49,39 +33,35 @@
                 <tbody>
                     @foreach (var item in Model)
                     {
-                        <tr tabindex="0">
-                            @if (isAdmin)
-                            {
-                                <td>@ViewBag.UserEmail</td> <!-- Display email for Admins -->
-                            }
-
-                            <td>@Html.DisplayFor(modelItem => item.ScheduledDate)</td> <!-- Always display ScheduledDate -->
-                            @if (isProfessional || isAdmin)
-                            {
-                                <td>@Html.DisplayFor(modelItem => item.ContactMethod)</td> <!-- Display ContactMethod for Professional or Admin -->
-                            }
-
-                            @if (isProfessional || isAdmin)
-                            {
-                                <!-- Show Mobile or ContactEmail based on ContactMethod for Professional or Admin -->
+                        <tr>
+                            <td>@(ViewBag.UserEmails.ContainsKey(item.UserId) ? ViewBag.UserEmails[item.UserId] : "Email Not Found")</td>
+                            <td>@Html.DisplayFor(modelItem => item.ScheduledDate)</td>
+                            <td>@Html.DisplayFor(modelItem => item.ContactMethod)</td>
+                            <td>
                                 @if (item.ContactMethod == "Mobile")
                                 {
-                                    <td>@Html.DisplayFor(modelItem => item.Mobile)</td>
+                                    @Html.DisplayFor(modelItem => item.Mobile)
                                 }
                                 else
                                 {
-                                    <td>@Html.DisplayFor(modelItem => item.ContactEmail)</td>
+                                    <span class="text-muted">-</span>
                                 }
-                            }
+                            </td>
+                            <td>
+                                @if (item.ContactMethod == "Email")
+                                {
+                                    @Html.DisplayFor(modelItem => item.ContactEmail)
+                                }
+                                else
+                                {
+                                    <span class="text-muted">-</span>
+                                }
+                            </td>
+                            <td>@Html.DisplayFor(modelItem => item.Notes)</td>
+                           
 
-                            @if (isProfessional || isAdmin)
+                            @if (isAdminOrProfessional)
                             {
-                                <td>@Html.DisplayFor(modelItem => item.Notes)</td> <!-- Display Notes for Professional or Admin -->
-                            }
-
-                            @if (isAdmin)
-                            {
-                                <!-- Moved the Action buttons into their own column -->
                                 <td class="text-center">
                                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">
                                         <i class="bi bi-pencil-square"></i> Edit
@@ -101,3 +81,14 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        function applyDarkMode() {
+            if (document.body.classList.contains("dark-mode")) {
+                document.querySelector(".back-to-list-btn")?.classList.add("text-black");
+            }
+        }
+        applyDarkMode();
+    </script>
+}

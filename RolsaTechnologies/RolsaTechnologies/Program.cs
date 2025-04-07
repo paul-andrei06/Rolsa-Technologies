@@ -24,9 +24,15 @@ using (var scope = app.Services.CreateScope())
     
     var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>(); // Gets the RoleManager service to manage user role
     var userManager = services.GetRequiredService<UserManager<IdentityUser>>(); // Gets the UserManager service to manage user accounts
+    var context = services.GetRequiredService<ApplicationDbContext>(); // Get the ApplicationDbContext
 
     // Call SeedRoles with the required services
     await SeedData.SeedRoles(services, userManager, roleManager);
+    await SeedData.SeedRoles(services, userManager, roleManager);
+    await SeedData.SeedScheduleConsultation(services, userManager, context);
+    await SeedData.SeedScheduleInstallation(services, userManager, context);
+    await SeedData.SeedEnergyTracker(services, userManager, context);
+    await SeedData.SeedCalculator(services, userManager, context);
 }
 
 // Configure the HTTP request pipeline.

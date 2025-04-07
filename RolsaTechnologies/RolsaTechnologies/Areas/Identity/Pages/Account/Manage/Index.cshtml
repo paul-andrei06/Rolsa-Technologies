@@ -7,20 +7,45 @@
 
 <h3>@ViewData["Title"]</h3>
 <partial name="_StatusMessage" for="StatusMessage" />
-<div class="row">
-    <div class="col-md-6">
+
+<div class="container py-4">
+    <div class="card shadow-lg p-4">
+        <h2 class="fw-bold text-center mb-4">Profile Information</h2>
+
         <form id="profile-form" method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
-            <div class="form-floating mb-3">
-                <input asp-for="Username" class="form-control" placeholder="Please choose your username." disabled />
-                <label asp-for="Username" class="form-label"></label>
+            <table class="table table-bordered">
+                <tbody>
+                    <!-- Username -->
+                    <tr>
+                        <th>Username</th>
+                        <td>
+                            <div class="form-floating">
+                                <input asp-for="Username" class="form-control" placeholder="Please choose your username." disabled />
+                                <label asp-for="Username" class="form-label"></label>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Phone Number -->
+                    <tr>
+                        <th>Phone Number</th>
+                        <td>
+                            <div class="form-floating">
+                                <input asp-for="Input.PhoneNumber" class="form-control" placeholder="Please enter your phone number." />
+                                <label asp-for="Input.PhoneNumber" class="form-label"></label>
+                                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Save Button -->
+            <div class="d-flex justify-content-between mt-4">
+                <button id="update-profile-button" type="submit" class="w-100 btn btn-lg btn-primary">
+                    Save
+                </button>
             </div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.PhoneNumber" class="form-control" placeholder="Please enter your phone number."/>
-                <label asp-for="Input.PhoneNumber" class="form-label"></label>
-                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
-            </div>
-            <button id="update-profile-button" type="submit" class="w-100 btn btn-lg btn-primary">Save</button>
         </form>
     </div>
 </div>

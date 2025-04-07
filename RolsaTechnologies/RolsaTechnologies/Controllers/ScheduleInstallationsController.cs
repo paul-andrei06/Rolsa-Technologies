@@ -31,30 +31,38 @@ namespace RolsaTechnologies.Controllers
         // GET: ScheduleInstallations
         public async Task<IActionResult> Index()
         {
-            // Retrieve the currently logged-in user's email
-            var userEmail = (await _userManager.FindByNameAsync(User.Identity.Name))?.Email;
+            // Retrieve the currently logged-in user's details
+            var currentUser = await _userManager.GetUserAsync(User);
+            var currentUserId = currentUser.Id;
 
-            string user = User.Identity.Name; // Gets the currently logged-in user's username
-            var currentUser = await _context.Users.FirstOrDefaultAsync(x => x.UserName == user); // Get the details of that user
-            var currentUserId = currentUser.Id; // Get the user's Id
-
+            // Retrieve the roles of the currently logged-in user
             var userRole = await _userManager.GetRolesAsync(currentUser);
 
             List<ScheduleInstallation> userInstallations;
 
-            if (userRole.Contains("Professional"))
+            // If the user is Admin or Professional, show all installations
+            if (userRole.Contains("Admin") || userRole.Contains("Professional"))
             {
-                userInstallations = await _context.ScheduleInstallation.ToListAsync(); // If the user is a "Professional", get all schedule installations
+                userInstallations = await _context.ScheduleInstallation.ToListAsync();
             }
             else
             {
-                userInstallations = await _context.ScheduleInstallation.Where(u => u.UserId == currentUserId).ToListAsync(); // If the user is a "User", get only their own schedule installations
+                // Regular users only see their own installations
+                userInstallations = await _context.ScheduleInstallation
+                                                   .Where(u => u.UserId == currentUserId)
+                                                   .ToListAsync();
             }
 
-            // Pass the email to the view using ViewBag
-            ViewBag.UserEmail = userEmail;
+            // Fetch all users whose IDs appear in the schedule installations
+            var userIds = userInstallations.Select(u => u.UserId).Distinct();
+            var users = await _context.Users
+                                      .Where(u => userIds.Contains(u.Id))
+                                      .ToDictionaryAsync(u => u.Id, u => u.Email);
 
-            return View(userInstallations); // Pass the list of installations to the view
+            // Pass the dictionary of emails using ViewBag
+            ViewBag.UserEmails = users;
+
+            return View(userInstallations); // Return the list of schedule installations to the view
         }
 
         // GET: ScheduleInstallations/Details/5

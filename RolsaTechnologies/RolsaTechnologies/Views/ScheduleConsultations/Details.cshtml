@@ -1,54 +1,52 @@
 ﻿@model RolsaTechnologies.Models.ScheduleConsultation
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Consultation Details";
 }
 
-<h1>Details</h1>
+<div class="container py-4">
+    <div class="card shadow-lg p-4">
+        <h2 class="fw-bold text-center mb-4">Consultation Details</h2>
 
-<div>
-    <h4>ScheduleConsultation</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UserId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UserId)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ScheduledDate)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ScheduledDate)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ContactMethod)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ContactMethod)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Mobile)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Mobile)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ContactEmail)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ContactEmail)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Notes)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Notes)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+        <form>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <th>User ID</th>
+                        <td>@Html.DisplayFor(model => model.UserId)</td>
+                    </tr>
+                    <tr>
+                        <th>Scheduled Date</th>
+                        <td>@Html.DisplayFor(model => model.ScheduledDate)</td>
+                    </tr>
+                    <tr>
+                        <th>Contact Method</th>
+                        <td>@Html.DisplayFor(model => model.ContactMethod)</td>
+                    </tr>
+                    <tr>
+                        <th>Mobile Number</th>
+                        <td>@Html.DisplayFor(model => model.Mobile)</td>
+                    </tr>
+                    <tr>
+                        <th>Contact Email</th>
+                        <td>@Html.DisplayFor(model => model.ContactEmail)</td>
+                    </tr>
+                    <tr>
+                        <th>Notes</th>
+                        <td>@Html.DisplayFor(model => model.Notes)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Action Buttons -->
+            <div class="d-flex justify-content-between mt-4">
+                <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">
+                    <i class="bi bi-pencil"></i> Edit Consultation
+                </a>
+                <a asp-action="Index" class="btn btn-outline-secondary">
+                    <i class="bi bi-arrow-left"></i> Back to List
+                </a>
+            </div>
+        </form>
+    </div>
 </div>

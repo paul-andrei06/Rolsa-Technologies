@@ -35,7 +35,7 @@
                     @foreach (var item in Model)
                     {
                         <tr>
-                            <td>@ViewBag.UserEmail</td>
+                            <td>@(ViewBag.UserEmails.ContainsKey(item.UserId) ? ViewBag.UserEmails[item.UserId] : "Email Not Found")</td>
                             <td>@Html.DisplayFor(modelItem => item.ScheduledDate)</td>
                             <td>@Html.DisplayFor(modelItem => item.ApplianceType)</td>
                             <td>@Html.DisplayFor(modelItem => item.Address)</td>

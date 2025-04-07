@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -14,9 +15,11 @@ namespace RolsaTechnologies.Controllers
     public class CalculatorsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<IdentityUser> _userManager;
 
-        public CalculatorsController(ApplicationDbContext context)
+        public CalculatorsController(ApplicationDbContext context, UserManager<IdentityUser> userManager)
         {
+            _userManager = userManager;
             _context = context;
         }
 
@@ -25,11 +28,30 @@ namespace RolsaTechnologies.Controllers
         // GET: Calculators
         public async Task<IActionResult> Index()
         {
+            var userEmail = (await _userManager.FindByNameAsync(User.Identity.Name))?.Email;
+
             string user = User.Identity.Name; // Get the current logged-in user's name
             var currentUser = await _context.Users.FirstOrDefaultAsync(x => x.UserName == user); // Retrieve the current user's details from the database
             var currentUserId = currentUser.Id; // Get the current user's Id
 
             var usercalculations = await _context.Calculator.Where(u => u.UserId == currentUserId).ToListAsync(); // Gets all energy tracker records associated with the current user
+
+            // Check if the user is an admin
+            var isAdmin = await _userManager.IsInRoleAsync(currentUser, "Admin");
+
+            // If the user is an admin, fetch all calculations, else fetch only the current user's calculations
+            List<Calculator> calculators;
+            if (isAdmin)
+            {
+                usercalculations = await _context.Calculator.ToListAsync(); // Admin can see all data
+            }
+            else
+            {
+                usercalculations = await _context.Calculator.Where(u => u.UserId == currentUserId).ToListAsync(); // Non-admin can only see their own data
+            }
+
+
+            ViewBag.UserEmail = userEmail;
 
             return View(usercalculations); // Return the data to the view
         }

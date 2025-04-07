@@ -1,53 +1,70 @@
 ﻿@model IEnumerable<RolsaTechnologies.Models.EnergyTracker>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Energy Tracker Records";
+    bool isAdminOrProfessional = User.IsInRole("Admin") || User.IsInRole("Professional");
 }
 
-<h1>Index</h1>
+<div class="container py-4">
+    <div class="card shadow-lg p-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="fw-bold">Energy Tracker Records</h2>
+            <a asp-action="Create" class="btn btn-success">
+                <i class="bi bi-plus-circle"></i> Add New
+            </a>
+        </div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.UserId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Consumption)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EnergyType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Date)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Consumption)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EnergyType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
+        <div class="table-responsive">
+            <table class="table table-hover align-middle accessible-table">
+                <thead class="table-dark">
+                    <tr>
+                        @if (isAdminOrProfessional)
+                        {
+                            <th>Email</th>
+                        }
+                        <th>@Html.DisplayNameFor(model => model.Consumption)</th>
+                        <th>@Html.DisplayNameFor(model => model.EnergyType)</th>
+                        <th>@Html.DisplayNameFor(model => model.Date)</th>
+                        @if (isAdminOrProfessional)
+                        {
+                            <th class="text-center">Actions</th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr tabindex="0">
+                            @if (isAdminOrProfessional)
+                            {
+                                <td>@(ViewBag.UserEmails.ContainsKey(item.UserId) ? ViewBag.UserEmails[item.UserId] : "Email Not Found")</td> <!-- Assumes a User navigation property -->
+                            }
+                            <td>@Html.DisplayFor(modelItem => item.Consumption) kWh</td>
+                            <td>@Html.DisplayFor(modelItem => item.EnergyType)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Date)</td>
+
+                            @if (isAdminOrProfessional)
+                            {
+                                <td class="text-center">
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">
+                                        <i class="bi bi-pencil-square"></i> Edit
+                                    </a>
+                                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">
+                                        <i class="bi bi-eye"></i> Details
+                                    </a>
+                                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">
+                                        <i class="bi bi-trash"></i> Delete
+                                    </a>
+                                </td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 }
-    </tbody>
-</table>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -15,9 +16,11 @@ namespace RolsaTechnologies.Controllers
     public class EnergyTrackersController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<IdentityUser> _userManager;
 
-        public EnergyTrackersController(ApplicationDbContext context)
+        public EnergyTrackersController(ApplicationDbContext context, UserManager<IdentityUser> userManager)
         {
+            _userManager = userManager;
             _context = context;
         }
 
@@ -26,12 +29,36 @@ namespace RolsaTechnologies.Controllers
         // GET: EnergyTrackers
         public async Task<IActionResult> Index()
         {
-            string user = User.Identity.Name; // Get the current logged-in user's name
-            var currentUser = await _context.Users.FirstOrDefaultAsync(x => x.UserName == user); // Retrieve the current user's details from the database
-            var currentUserId = currentUser.Id; // Get the current user's Id
+            var currentUser = await _userManager.GetUserAsync(User);
+            var currentUserId = currentUser.Id;
 
-            var userTracker = await _context.EnergyTracker.Where(t => t.UserId == currentUserId).ToListAsync(); // Gets all energy tracker records associated with the current user
-            return View(userTracker); // Return the data to the view
+            var userRoles = await _userManager.GetRolesAsync(currentUser);
+
+            List<EnergyTracker> trackers;
+
+            if (userRoles.Contains("Admin") || userRoles.Contains("Professional"))
+            {
+                // Get all records
+                trackers = await _context.EnergyTracker.ToListAsync();
+            }
+            else
+            {
+                // Only current user's records
+                trackers = await _context.EnergyTracker
+                                         .Where(t => t.UserId == currentUserId)
+                                         .ToListAsync();
+            }
+
+            // Fetch all users whose IDs appear in the records
+            var userIds = trackers.Select(t => t.UserId).Distinct();
+            var users = await _context.Users
+                                      .Where(u => userIds.Contains(u.Id))
+                                      .ToDictionaryAsync(u => u.Id, u => u.Email);
+
+            // Pass the dictionary using ViewBag
+            ViewBag.UserEmails = users;
+
+            return View(trackers);
         }
 
         // GET: EnergyTrackers/Details/5
@@ -55,6 +82,7 @@ namespace RolsaTechnologies.Controllers
         // GET: EnergyTrackers/Create
         public IActionResult Create()
         {
+            ViewBag.EnergyTypeList = new SelectList(new[] { "Electricity", "Gas" });
             return View();
         }
 
@@ -85,6 +113,8 @@ namespace RolsaTechnologies.Controllers
                 await _context.SaveChangesAsync(); // Save changes asynchronously
                 return RedirectToAction(nameof(Index)); // Redirect the user to the Index page after successful creation
             }
+
+            ViewBag.EnergyTypeList = new SelectList(new[] { "Electricity", "Gas" });
 
             // If the data is invalid, return the same view with validation errors
             return View(energyTracker);

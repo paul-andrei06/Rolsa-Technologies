@@ -28,35 +28,38 @@ namespace RolsaTechnologies.Controllers
         // GET: ScheduleConsultations
         public async Task<IActionResult> Index()
         {
-            // Get the currently logged -in user's email
-            var userEmail = (await _userManager.FindByNameAsync(User.Identity.Name))?.Email;
-
-            // Get the current logged-in user's name and details from the database
-            string user = User.Identity.Name;
-            var currentUser = await _context.Users.FirstOrDefaultAsync(x => x.UserName == user);
+            // Retrieve the currently logged-in user's details
+            var currentUser = await _userManager.GetUserAsync(User);
             var currentUserId = currentUser.Id;
 
-            // Check if the user is an admin or a professional
-            var userRoles = await _userManager.GetRolesAsync(currentUser);
-            List<ScheduleConsultation> userConsultation;
+            // Retrieve the roles of the currently logged-in user
+            var userRole = await _userManager.GetRolesAsync(currentUser);
 
-            if (userRoles.Contains("Admin") || userRoles.Contains("Professional"))
+            List<ScheduleConsultation> userConsultations;
+
+            // If the user is Admin or Professional, show all consultations
+            if (userRole.Contains("Admin") || userRole.Contains("Professional"))
             {
-                // If the user is an Admin or Professional, show all consultations
-                userConsultation = await _context.ScheduleConsultation.ToListAsync();
+                userConsultations = await _context.ScheduleConsultation.ToListAsync();
             }
             else
             {
-                // If the user is a regular user, only show their own consultations
-                userConsultation = await _context.ScheduleConsultation
-                                                 .Where(c => c.UserId == currentUserId)
-                                                 .ToListAsync();
+                // Regular users only see their own consultations
+                userConsultations = await _context.ScheduleConsultation
+                                                   .Where(c => c.UserId == currentUserId)
+                                                   .ToListAsync();
             }
 
-            // Pass the email to the view using ViewBag
-            ViewBag.UserEmail = userEmail;
+            // Fetch all users whose IDs appear in the schedule consultations
+            var userIds = userConsultations.Select(c => c.UserId).Distinct();
+            var users = await _context.Users
+                                      .Where(u => userIds.Contains(u.Id))
+                                      .ToDictionaryAsync(u => u.Id, u => u.Email);
 
-            return View(userConsultation); // Return the data to the view
+            // Pass the dictionary of emails using ViewBag
+            ViewBag.UserEmails = users;
+
+            return View(userConsultations); // Return the list of schedule consultations to the view
         }
 
         // GET: ScheduleConsultations/Details/5

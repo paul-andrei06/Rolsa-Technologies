@@ -1,40 +1,53 @@
 ﻿@model RolsaTechnologies.Models.EnergyTracker
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Create Energy Tracker";
 }
 
-<h1>Create</h1>
+<div class="container py-4">
+    <div class="card shadow-lg p-4">
+        <h2 class="fw-bold text-center mb-4">Create Energy Tracker</h2>
 
-<h4>EnergyTracker</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
         <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-           
-            <div class="form-group">
-                <label asp-for="Consumption" class="control-label"></label>
-                <input asp-for="Consumption" class="form-control" />
-                <span asp-validation-for="Consumption" class="text-danger"></span>
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+            <div class="row">
+                <!-- Consumption Input -->
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label asp-for="Consumption" class="form-label">Energy Consumption (kWh)</label>
+                        <input asp-for="Consumption" class="form-control" />
+                        <span asp-validation-for="Consumption" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!-- Energy Type Dropdown -->
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label asp-for="EnergyType" class="form-label">Select Energy Type</label>
+                        <select asp-for="EnergyType" class="form-select" asp-items="ViewBag.EnergyTypeList">
+                            <option value="">Choose type of energy</option>
+                        </select>
+                        <span asp-validation-for="EnergyType" class="text-danger"></span>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="EnergyType" class="control-label"></label>
-                <input asp-for="EnergyType" class="form-control" />
-                <span asp-validation-for="EnergyType" class="text-danger"></span>
-            </div>
-            
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+
+            <!-- Buttons -->
+            <div class="d-flex justify-content-between mt-4">
+                <a asp-action="Index" class="btn btn-outline-secondary dark-mode-btn">
+                    <i class="bi bi-arrow-left"></i> Back to List
+                </a>
+                <button type="submit" class="btn btn-success">
+                    <i class="bi bi-plus-circle"></i> Create Energy Tracker
+                </button>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
