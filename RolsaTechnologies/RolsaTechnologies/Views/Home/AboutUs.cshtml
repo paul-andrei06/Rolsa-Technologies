@@ -1,0 +1,146 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Rolsa Technologies</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+    <style>
+        .about-container {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #0A9642;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #0A9642;
+            margin-top: 40px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .intro-text {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-section {
+            margin-top: 20px;
+        }
+
+            .about-section ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+                .about-section ul li {
+                    margin-bottom: 10px;
+                }
+
+        .about-title {
+            font-size: 20px;
+            color: #0A9642;
+            margin-top: 30px;
+        }
+
+        /* Dark mode About Us page */
+        body.dark-mode .about-container {
+            background-color: #121212; /* Dark background */
+            color: #f1f1f1; /* Light text */
+        }
+
+        body.dark-mode h1,
+        body.dark-mode h2,
+        body.dark-mode .about-title {
+            color: #0A9642;
+        }
+
+        body.dark-mode p {
+            color: #d1d1d1; /* Lighter text for paragraphs */
+        }
+
+        body.dark-mode .about-section {
+            background-color: #1e1e1e; /* Dark background for sections */
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+            body.dark-mode .about-section p {
+                color: #e0e0e0; /* Light text for section paragraphs */
+            }
+
+        body.dark-mode a {
+            color: #0A9642;
+        }
+
+            body.dark-mode a:hover {
+                color: #ffffff; /* White on hover */
+            }
+    </style>
+</head>
+<body>
+
+    <div class="about-container">
+        <h1>About Us - Rolsa Technologies</h1>
+
+        <div class="intro-text">
+            <p>Welcome to Rolsa Technologies, a company dedicated to providing sustainable energy solutions for both businesses and individuals. Our goal is to help you reduce your environmental impact while maximise energy efficiency. Learn more about who we are and what we do below.</p>
+        </div>
+
+        <div class="about-section">
+            <h2 class="about-title">Our Mission</h2>
+            <p>At Rolsa Technologies, our mission is to empower individuals and organisations to achieve their sustainability goals. We offer innovative tools and services that allow users to track their energy consumption, reduce their carbon footprint, and make informed decisions about their energy usage.</p>
+        </div>
+
+        <div class="about-section">
+            <h2 class="about-title">Our Vision</h2>
+            <p>We envision a world where clean, renewable energy is accessible to everyone. Our vision is to be a global leader in energy efficiency, offering solutions that help businesses and individuals reduce their environmental footprint while saving money on energy costs.</p>
+        </div>
+
+        <div class="about-section">
+            <h2 class="about-title">Our Values</h2>
+            <ul>
+                <li><strong>Innovation:</strong> Constantly evolving to provide the best energy-saving solutions.</li>
+                <li><strong>Transparency:</strong> Clear communication with our customers about our products and services.</li>
+                <li><strong>Sustainability:</strong> Committed to creating a greener planet through smarter energy usage.</li>
+                <li><strong>Customer Focus:</strong> Always putting our customers' needs first, ensuring a positive experience.</li>
+            </ul>
+        </div>
+
+        <div class="about-section">
+            <h2 class="about-title">Meet the Team</h2>
+            <p>Our team is made up of passionate and dedicated professionals with expertise in energy management, software development, and sustainability. Together, we work towards achieving our mission of creating a more sustainable world for future generations.</p>
+        </div>
+
+        <div class="about-section">
+            <h2 class="about-title">Contact Us</h2>
+            <p>If you have any questions or would like to learn more about our services, feel free to <a asp-controller="Home" asp-action="NotFound">contact us</a>.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

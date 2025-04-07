@@ -228,6 +228,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5lcmd5VHJhY2tlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[//dom.sandwell.ac.uk/Student/HomeEven/692962/GitHub/Rolsa-Technologies/RolsaTechnologies/RolsaTechnologies/Views/Home/AboutUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [//dom.sandwell.ac.uk/Student/HomeEven/692962/GitHub/Rolsa-Technologies/RolsaTechnologies/RolsaTechnologies/Views/Home/Admin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -246,6 +250,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [//dom.sandwell.ac.uk/Student/HomeEven/692962/GitHub/Rolsa-Technologies/RolsaTechnologies/RolsaTechnologies/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[//dom.sandwell.ac.uk/Student/HomeEven/692962/GitHub/Rolsa-Technologies/RolsaTechnologies/RolsaTechnologies/Views/Home/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb3RGb3VuZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [//dom.sandwell.ac.uk/Student/HomeEven/692962/GitHub/Rolsa-Technologies/RolsaTechnologies/RolsaTechnologies/Views/Home/Privacy.cshtml]

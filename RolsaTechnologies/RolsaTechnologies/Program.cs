@@ -28,7 +28,8 @@ using (var scope = app.Services.CreateScope())
 
     // Call SeedRoles with the required services
     await SeedData.SeedRoles(services, userManager, roleManager);
-    await SeedData.SeedRoles(services, userManager, roleManager);
+
+    // Seed data to all of the functions on the website
     await SeedData.SeedScheduleConsultation(services, userManager, context);
     await SeedData.SeedScheduleInstallation(services, userManager, context);
     await SeedData.SeedEnergyTracker(services, userManager, context);

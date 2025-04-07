@@ -79,6 +79,7 @@ namespace RolsaTechnologies.Data
             }
         }
 
+        // Seed ScheduleConsultation
         public static async Task SeedScheduleConsultation(IServiceProvider serviceProvider, UserManager<IdentityUser> userManager, ApplicationDbContext context)
         {
             // Fetch users by their emails
@@ -89,62 +90,55 @@ namespace RolsaTechnologies.Data
             if (user == null || user2 == null)
                 return;
 
-            // List of consultations to seed for the two specific users
-            var consultations = new List<ScheduleConsultation>
-    {
-        // Consultation with "Email" as the contact method (Phone number is null)
-        new ScheduleConsultation
-        {
-            UserId = user2.Id,
-            ScheduledDate = DateTime.Now.AddDays(1), // Set the date to 1 day from now
-            ContactMethod = "Email", // Email as the contact method
-            Mobile = null, // No phone number required for email
-            ContactEmail = "user2@example.com", // Email provided
-            Notes = "Would like to discuss the installation process and any potential delays."
-        },
-
-        // Consultation with "Phone" as the contact method (Email is null)
-        new ScheduleConsultation
-        {
-            UserId = user.Id,
-            ScheduledDate = DateTime.Now.AddDays(2),
-            ContactMethod = "Mobile", // Phone as the contact method
-            Mobile = "07123 456789", // Phone number in UK format
-            ContactEmail = null, // No email for phone contact
-            Notes = "Has questions about the maintenance schedule and warranty options."
-        }
-    };
-
-            // Add the consultations to the context if they do not exist
-            foreach (var consultation in consultations)
+            // Check if consultations exist before seeding
+            if (!context.ScheduleConsultation.Any())
             {
-                if (!context.ScheduleConsultation.Local.Any(c => c.UserId == consultation.UserId && c.ScheduledDate == consultation.ScheduledDate))
+                // List of consultations to seed for the two specific users
+                var consultations = new List<ScheduleConsultation>
+            {
+                new ScheduleConsultation
                 {
-                    context.ScheduleConsultation.Add(consultation);
+                    UserId = user2.Id,
+                    ScheduledDate = DateTime.Now.AddDays(1),
+                    ContactMethod = "Email",
+                    Mobile = null,
+                    ContactEmail = "user2@example.com",
+                    Notes = "Would like to discuss the installation process and any potential delays."
+                },
+                new ScheduleConsultation
+                {
+                    UserId = user.Id,
+                    ScheduledDate = DateTime.Now.AddDays(2),
+                    ContactMethod = "Mobile",
+                    Mobile = "07123 456789",
+                    ContactEmail = null,
+                    Notes = "Has questions about the maintenance schedule and warranty options."
                 }
-            }
+            };
 
-            await context.SaveChangesAsync();
+                context.ScheduleConsultation.AddRange(consultations);
+                await context.SaveChangesAsync();
+            }
         }
-        
+
+        // Seed ScheduleInstallation
         public static async Task SeedScheduleInstallation(IServiceProvider serviceProvider, UserManager<IdentityUser> userManager, ApplicationDbContext context)
         {
-            // Fetch users by their emails
             var user = await userManager.FindByEmailAsync("user@example.com");
             var user2 = await userManager.FindByEmailAsync("user2@example.com");
 
-            // If either user is not found, exit early
             if (user == null || user2 == null)
                 return;
 
-            // List of installations to seed for the two specific users
-            var installations = new List<ScheduleInstallation>
+            if (!context.ScheduleInstallation.Any())
+            {
+                var installations = new List<ScheduleInstallation>
             {
                 new ScheduleInstallation
                 {
                     UserId = user2.Id,
                     ScheduledDate = DateTime.Now.AddDays(1),
-                    ApplianceType = "Solar Panels", // Updated to match dropdown options
+                    ApplianceType = "Solar Panels",
                     Address = "123 Oak Street, London, E1 6AN",
                     Mobile = FormatPhoneNumber("+44 7911 123456"),
                     Notes = "Customer requested a demonstration on how to use the solar panel settings."
@@ -153,118 +147,102 @@ namespace RolsaTechnologies.Data
                 {
                     UserId = user.Id,
                     ScheduledDate = DateTime.Now.AddDays(2),
-                    ApplianceType = "Smart Home Appliances", // Updated to match dropdown options
+                    ApplianceType = "Smart Home Appliances",
                     Address = "456 Maple Avenue, Manchester, M1 7ES",
                     Mobile = FormatPhoneNumber("+44 20 7946 0958"),
                     Notes = "Customer wants the installation done in the kitchen and needs help with connecting the appliances."
                 }
             };
 
-            // Check if the data exists in the context
-            foreach (var installation in installations)
-            {
-                if (!context.ScheduleInstallation.Local.Any(i => i.UserId == installation.UserId && i.ScheduledDate == installation.ScheduledDate))
-                {
-                    context.ScheduleInstallation.Add(installation);
-                }
+                context.ScheduleInstallation.AddRange(installations);
+                await context.SaveChangesAsync();
             }
-
-            await context.SaveChangesAsync();
         }
 
+        // Seed EnergyTracker
         public static async Task SeedEnergyTracker(IServiceProvider serviceProvider, UserManager<IdentityUser> userManager, ApplicationDbContext context)
         {
-            // Fetch users by their emails
             var user = await userManager.FindByEmailAsync("user@example.com");
             var user2 = await userManager.FindByEmailAsync("user2@example.com");
 
-            // If either user is not found, exit early
             if (user == null || user2 == null)
                 return;
 
-            // List of energy tracker entries to seed for the two specific users
-            var energyTrackers = new List<EnergyTracker>
+            if (!context.EnergyTracker.Any())
+            {
+                var energyTrackers = new List<EnergyTracker>
             {
                 new EnergyTracker
                 {
                     UserId = user2.Id,
-                    Consumption = 320.5, // Example of consumption in kWh for User2
+                    Consumption = 320.5,
                     EnergyType = "Electricity",
-                    Date = DateOnly.FromDateTime(DateTime.Now.AddMonths(-1)) // Date from last month
+                    Date = DateOnly.FromDateTime(DateTime.Now.AddMonths(-1))
                 },
                 new EnergyTracker
                 {
                     UserId = user.Id,
-                    Consumption = 250.0, // Example of consumption in kWh for User1
+                    Consumption = 250.0,
                     EnergyType = "Gas",
-                    Date = DateOnly.FromDateTime(DateTime.Now.AddMonths(-1)) // Date from last month
+                    Date = DateOnly.FromDateTime(DateTime.Now.AddMonths(-1))
                 }
             };
 
-            // Check if the data exists in the context
-            foreach (var energyTracker in energyTrackers)
-            {
-                if (!context.EnergyTracker.Local.Any(e => e.UserId == energyTracker.UserId && e.Date == energyTracker.Date))
-                {
-                    context.EnergyTracker.Add(energyTracker);
-                }
+                context.EnergyTracker.AddRange(energyTrackers);
+                await context.SaveChangesAsync();
             }
-
-            await context.SaveChangesAsync();
         }
 
+        // Seed Calculator
         public static async Task SeedCalculator(IServiceProvider serviceProvider, UserManager<IdentityUser> userManager, ApplicationDbContext context)
         {
-            // Fetch users by their emails
             var user = await userManager.FindByEmailAsync("user@example.com");
             var user2 = await userManager.FindByEmailAsync("user2@example.com");
 
-            // If either user is not found, exit early
             if (user == null || user2 == null)
                 return;
 
-            // List of sample data to seed for the Calculator model
-            var calculators = new List<Calculator>
+            if (!context.Calculator.Any())
+            {
+                var calculators = new List<Calculator>
             {
                 new Calculator
                 {
                     UserId = user.Id,
-                    ElectricityUsage = 300, // Monthly electricity usage in kWh
-                    GasUsage = 150, // Monthly gas usage in kWh
-                    CarMilesPerWeek = 150, // Average car miles driven per week
-                    CarFuelEfficiency = 25, // Car fuel efficiency in miles per gallon
-                    PublicTransportMilesPerWeek = 50, // Weekly distance travelled by public transport (bus/train)
-                    WasteProducedPerWeek = 10, // Weekly waste produced (kg)
-                    RecyclingHabits = true, // User recycles
-                    MeatConsumptionPerWeek = 2, // Weekly meat consumption (kg)
+                    ElectricityUsage = 300,
+                    GasUsage = 150,
+                    CarMilesPerWeek = 150,
+                    CarFuelEfficiency = 25,
+                    PublicTransportMilesPerWeek = 50,
+                    WasteProducedPerWeek = 10,
+                    RecyclingHabits = true,
+                    MeatConsumptionPerWeek = 2
                 },
                 new Calculator
                 {
                     UserId = user2.Id,
-                    ElectricityUsage = 400, // Monthly electricity usage in kWh
-                    GasUsage = 200, // Monthly gas usage in kWh
-                    CarMilesPerWeek = 100, // Average car miles driven per week
-                    CarFuelEfficiency = 30, // Car fuel efficiency in miles per gallon
-                    PublicTransportMilesPerWeek = 75, // Weekly distance travelled by public transport (bus/train)
-                    WasteProducedPerWeek = 12, // Weekly waste produced (kg)
-                    RecyclingHabits = false, // User does not recycle
-                    MeatConsumptionPerWeek = 3, // Weekly meat consumption (kg)
+                    ElectricityUsage = 400,
+                    GasUsage = 200,
+                    CarMilesPerWeek = 100,
+                    CarFuelEfficiency = 30,
+                    PublicTransportMilesPerWeek = 75,
+                    WasteProducedPerWeek = 12,
+                    RecyclingHabits = false,
+                    MeatConsumptionPerWeek = 3
                 }
             };
 
-            // Check if the data exists in the context
-            foreach (var calculator in calculators)
-            {
-                if (!context.Calculator.Local.Any(c => c.UserId == calculator.UserId))
+                foreach (var calculator in calculators)
                 {
-                    calculator.CalculateFootprint();
-                    context.Calculator.Add(calculator);
+                    calculator.CalculateFootprint(); // Assuming this method calculates the user's footprint based on their data
                 }
-            }
 
-            await context.SaveChangesAsync();
+                context.Calculator.AddRange(calculators);
+                await context.SaveChangesAsync();
+            }
         }
 
+        // Format phone number for consistency
         private static string FormatPhoneNumber(string number)
         {
             return number;
