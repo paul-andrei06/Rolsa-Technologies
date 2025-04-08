@@ -35,7 +35,7 @@
               "RelativeDocumentMoniker": "RolsaTechnologies\\Controllers\\CalculatorsController.cs",
               "ToolTip": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\Controllers\\CalculatorsController.cs",
               "RelativeToolTip": "RolsaTechnologies\\Controllers\\CalculatorsController.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAswGMAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAswFoAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-08T13:35:26.986Z",
               "EditorCaption": ""
@@ -50,8 +50,7 @@
               "RelativeToolTip": "RolsaTechnologies\\Views\\ScheduleInstallations\\Create.cshtml",
               "ViewState": "AgIAACIAAAAAAAAAAAAgwD4AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-08T13:01:46.182Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T13:01:46.182Z"
             },
             {
               "$type": "Document",
@@ -63,8 +62,7 @@
               "RelativeToolTip": "RolsaTechnologies\\Controllers\\ScheduleInstallationsController.cs",
               "ViewState": "AgIAAIIAAAAAAAAAAAAcwJYAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T13:00:05.26Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T13:00:05.26Z"
             },
             {
               "$type": "Document",
@@ -88,8 +86,7 @@
               "RelativeToolTip": "RolsaTechnologies\\Views\\Home\\EvChargerInformation.cshtml",
               "ViewState": "AgIAAEQAAAAAAAAAAAAuwFcAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-08T10:32:05.207Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T10:32:05.207Z"
             }
           ]
         }
