@@ -87,30 +87,47 @@ namespace RolsaTechnologies.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,UserId,ElectricityUsage,GasUsage,CarMilesPerWeek,CarFuelEfficiency,PublicTransportMilesPerWeek,WasteProducedPerWeek,RecyclingHabits,MeatConsumptionPerWeek,CalculatedCarbonFootprint,DateCalculated")] Calculator calculator)
         {
-            string userName = User.Identity.Name;  // Get the currently logged-in user's username
-            var currentUser = await _context.Users.FirstOrDefaultAsync(x => x.UserName == userName); // Retrieve the user details from the database based on the username
+            string userName = User.Identity.Name;
+            var currentUser = await _context.Users.FirstOrDefaultAsync(x => x.UserName == userName);
 
-            // If the user is not found, return an unauthorized response
             if (currentUser == null)
             {
                 return Unauthorized();
             }
 
-            calculator.UserId = currentUser.Id; // Assign the logged-in user's ID to the calculator entry
-            calculator.CalculateFootprint(); // Call the CalculateFootprint method to compute the carbon footprint
-
-            ModelState.Remove("UserId"); // Remove ModelState validation for UserId as it is assigned manually
-
-            if (ModelState.IsValid) // Check if the provided model data is valid
+            // validation for negative values
+            var fieldsToValidate = new Dictionary<string, double>
             {
-                _context.Add(calculator); // Add the calculator entry to the database
-                await _context.SaveChangesAsync(); // Save changes asynchronously
-                return RedirectToAction(nameof(Index)); // Redirect the user to the Index page after successful creation
+                { "ElectricityUsage", calculator.ElectricityUsage },
+                { "GasUsage", calculator.GasUsage },
+                { "CarMilesPerWeek", calculator.CarMilesPerWeek },
+                { "CarFuelEfficiency", calculator.CarFuelEfficiency },
+                { "PublicTransportMilesPerWeek", calculator.PublicTransportMilesPerWeek },
+                { "WasteProducedPerWeek", calculator.WasteProducedPerWeek },
+                { "MeatConsumptionPerWeek", calculator.MeatConsumptionPerWeek }
+            };
+
+            foreach (var field in fieldsToValidate)
+            {
+                if (field.Value < 0)
+                {
+                    ModelState.AddModelError(field.Key, $"{field.Key} cannot be negative.");
+                }
             }
 
-            // If the data is invalid, return the same view with validation errors
-            return View(calculator);
+            calculator.UserId = currentUser.Id;
+            calculator.CalculateFootprint();
 
+            ModelState.Remove("UserId");
+
+            if (ModelState.IsValid)
+            {
+                _context.Add(calculator);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(calculator);
         }
 
         // GET: Calculators/Edit/5

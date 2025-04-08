@@ -144,7 +144,7 @@ namespace RolsaTechnologies.Controllers
                 ModelState.AddModelError("Address", "Street address is required.");
             }
 
-            // Custom validation for UK postcode (simplified regex)
+            // validation for UK postcode 
             var postcodeRegex = @"^([A-Z]{1,2}[0-9][A-Z0-9]?)\s?([0-9][A-Z]{2})$";
             if (string.IsNullOrEmpty(Postcode) || !Regex.IsMatch(Postcode, postcodeRegex))
             {

@@ -52,7 +52,14 @@
             <div class="form-group mb-3">
                 <label for="Postcode" class="form-label">Postcode</label>
                 <input id="Postcode" name="Postcode" class="form-control" />
-                <span class="text-danger" id="postcode-error"></span>
+                <span class="text-danger" id="Postcode"></span>
+                <!-- Manually display the validation error for Postcode -->
+                @if (ViewData.ModelState["Postcode"]?.Errors.Any() == true)
+                {
+                    <span class="text-danger">
+                        @ViewData.ModelState["Postcode"].Errors.FirstOrDefault()?.ErrorMessage
+                    </span>
+                }
             </div>
 
             <!-- Address -->
