@@ -3,14 +3,14 @@
     <StaticWebAssetEndpoint Include="_content/RolsaTechnologies/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Je3Oh\u002BVpjI246jqCULu7cr0czMLe5ZlMr9j0SmhBZ2c="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"9915"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Je3Oh\u002BVpjI246jqCULu7cr0czMLe5ZlMr9j0SmhBZ2c=\u0022"},{"Name":"Last-Modified","Value":"Tue, 08 Apr 2025 11:13:53 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-O\u002BvvKEJJSFIkm58vBhjxglzyl2LEEpNtVGQHj7ZCKXg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"673"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022O\u002BvvKEJJSFIkm58vBhjxglzyl2LEEpNtVGQHj7ZCKXg=\u0022"},{"Name":"Last-Modified","Value":"Wed, 09 Apr 2025 09:54:41 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/RolsaTechnologies/css/site.frcd9yq6ac.css">
+    <StaticWebAssetEndpoint Include="_content/RolsaTechnologies/css/site.z683rxsr0p.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"frcd9yq6ac"},{"Name":"integrity","Value":"sha256-Je3Oh\u002BVpjI246jqCULu7cr0czMLe5ZlMr9j0SmhBZ2c="},{"Name":"label","Value":"_content/RolsaTechnologies/css/site.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"9915"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Je3Oh\u002BVpjI246jqCULu7cr0czMLe5ZlMr9j0SmhBZ2c=\u0022"},{"Name":"Last-Modified","Value":"Tue, 08 Apr 2025 11:13:53 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"z683rxsr0p"},{"Name":"integrity","Value":"sha256-O\u002BvvKEJJSFIkm58vBhjxglzyl2LEEpNtVGQHj7ZCKXg="},{"Name":"label","Value":"_content/RolsaTechnologies/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"673"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022O\u002BvvKEJJSFIkm58vBhjxglzyl2LEEpNtVGQHj7ZCKXg=\u0022"},{"Name":"Last-Modified","Value":"Wed, 09 Apr 2025 09:54:41 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/RolsaTechnologies/favicon.61n19gt1b8.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>

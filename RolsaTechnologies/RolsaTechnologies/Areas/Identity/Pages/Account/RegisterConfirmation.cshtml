@@ -1,23 +1,43 @@
 ﻿@page
 @model RegisterConfirmationModel
 @{
-    ViewData["Title"] = "Register confirmation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Registration Confirmation";
 }
 
-<h1>@ViewData["Title"]</h1>
-@{
-    if (@Model.DisplayConfirmAccountLink)
-    {
-<p>
-    This app does not currently have a real email sender registered, see <a href="https://aka.ms/aspaccountconf">these docs</a> for how to configure a real email sender.
-    Normally this would be emailed: <a id="confirm-link" href="@Model.EmailConfirmationUrl">Click here to confirm your account</a>
-</p>
-    }
-    else
-    {
-<p>
-        Please check your email to confirm your account.
-</p>
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
 
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+</head>
+<body>
+
+    <div class="container" style="padding-top: 80px; position: relative; left: 20px; padding: 40px; background-color: #17195A; color: white; border-radius: 8px; width: 100%; max-width: 800px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h1 class="text-white" style="font-size: 42px;">@ViewData["Title"]</h1>
+
+        <div class="message-container" style="padding: 20px; border-radius: 8px; margin-top: 20px;">
+            @if (Model.DisplayConfirmAccountLink)
+            {
+                <p style="font-size: 18px; line-height: 1.6;">
+                    Thank you for registering. Please confirm your account by clicking the button below.
+                </p>
+
+                <button class="btn btn-warning" style="background-color: #FE5716; color: white; padding: 12px 24px; font-size: 18px; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px;" onclick="window.location.href='@Model.EmailConfirmationUrl'">Confirm My Account</button>
+            }
+            else
+            {
+                <p style="font-size: 18px; line-height: 1.6;">
+                    Thank you for registering. Please check your email inbox for a confirmation message and follow the link provided to verify your account.
+                </p>
+            }
+        </div>
+    </div>
+
+</body>
+</html>

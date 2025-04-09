@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KUexWeyqSooe4HQ+rYnYT1JtiB6g638djtrPjJiSNHE=",
+  "Hash": "Vf7Dv+mqwznHiPOPHfWuhqQcWVmAKmxCdV6L4Q8N65o=",
   "Source": "RolsaTechnologies",
   "BasePath": "_content/RolsaTechnologies",
   "Mode": "Default",
@@ -1613,12 +1613,12 @@
       "OriginalItemSpec": "C:\\Users\\692962.SANDWELL\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\9.0.0\\staticwebassets\\V5\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\obj\\Debug\\net9.0\\compressed\\p19z7sbmy6-frcd9yq6ac.gz",
+      "Identity": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\obj\\Debug\\net9.0\\compressed\\p19z7sbmy6-z683rxsr0p.gz",
       "SourceId": "RolsaTechnologies",
       "SourceType": "Discovered",
       "ContentRoot": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/RolsaTechnologies",
-      "RelativePath": "css/site#[.{fingerprint=frcd9yq6ac}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=z683rxsr0p}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1627,8 +1627,8 @@
       "RelatedAsset": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\css\\site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "zuxnv06bpn",
-      "Integrity": "K6ona5jL0RxH7G4rBE19r3AhPGaMgVTCQ5s4LLpSIus=",
+      "Fingerprint": "uwo1i0jufp",
+      "Integrity": "osm0RPvIjEyyYMZ2zRMFeswNWneAhas/UW+d/FyvHA4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\css\\site.css"
@@ -2719,8 +2719,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "frcd9yq6ac",
-      "Integrity": "Je3Oh+VpjI246jqCULu7cr0czMLe5ZlMr9j0SmhBZ2c=",
+      "Fingerprint": "z683rxsr0p",
+      "Integrity": "O+vvKEJJSFIkm58vBhjxglzyl2LEEpNtVGQHj7ZCKXg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -5774,12 +5774,12 @@
   "Endpoints": [
     {
       "Route": "css/site.css",
-      "AssetFile": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\obj\\Debug\\net9.0\\compressed\\p19z7sbmy6-frcd9yq6ac.gz",
+      "AssetFile": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\obj\\Debug\\net9.0\\compressed\\p19z7sbmy6-z683rxsr0p.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000425170068"
+          "Quality": "0.003105590062"
         }
       ],
       "ResponseHeaders": [
@@ -5789,15 +5789,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2351"
+          "Value": "321"
         },
         {
           "Name": "ETag",
-          "Value": "\"K6ona5jL0RxH7G4rBE19r3AhPGaMgVTCQ5s4LLpSIus=\""
+          "Value": "\"osm0RPvIjEyyYMZ2zRMFeswNWneAhas/UW+d/FyvHA4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 11:13:53 GMT"
+          "Value": "Wed, 09 Apr 2025 09:54:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5817,13 +5817,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"Je3Oh+VpjI246jqCULu7cr0czMLe5ZlMr9j0SmhBZ2c=\""
+          "Value": "W/\"O+vvKEJJSFIkm58vBhjxglzyl2LEEpNtVGQHj7ZCKXg=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Je3Oh+VpjI246jqCULu7cr0czMLe5ZlMr9j0SmhBZ2c="
+          "Value": "sha256-O+vvKEJJSFIkm58vBhjxglzyl2LEEpNtVGQHj7ZCKXg="
         }
       ]
     },
@@ -5838,7 +5838,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9915"
+          "Value": "673"
         },
         {
           "Name": "Content-Type",
@@ -5846,11 +5846,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Je3Oh+VpjI246jqCULu7cr0czMLe5ZlMr9j0SmhBZ2c=\""
+          "Value": "\"O+vvKEJJSFIkm58vBhjxglzyl2LEEpNtVGQHj7ZCKXg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 11:13:53 GMT"
+          "Value": "Wed, 09 Apr 2025 09:54:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5860,7 +5860,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Je3Oh+VpjI246jqCULu7cr0czMLe5ZlMr9j0SmhBZ2c="
+          "Value": "sha256-O+vvKEJJSFIkm58vBhjxglzyl2LEEpNtVGQHj7ZCKXg="
         }
       ]
     },
@@ -5903,7 +5903,7 @@
     },
     {
       "Route": "css/site.css.gz",
-      "AssetFile": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\obj\\Debug\\net9.0\\compressed\\p19z7sbmy6-frcd9yq6ac.gz",
+      "AssetFile": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\obj\\Debug\\net9.0\\compressed\\p19z7sbmy6-z683rxsr0p.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5912,7 +5912,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2351"
+          "Value": "321"
         },
         {
           "Name": "Content-Type",
@@ -5920,11 +5920,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"K6ona5jL0RxH7G4rBE19r3AhPGaMgVTCQ5s4LLpSIus=\""
+          "Value": "\"osm0RPvIjEyyYMZ2zRMFeswNWneAhas/UW+d/FyvHA4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 11:13:53 GMT"
+          "Value": "Wed, 09 Apr 2025 09:54:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5942,18 +5942,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-K6ona5jL0RxH7G4rBE19r3AhPGaMgVTCQ5s4LLpSIus="
+          "Value": "sha256-osm0RPvIjEyyYMZ2zRMFeswNWneAhas/UW+d/FyvHA4="
         }
       ]
     },
     {
-      "Route": "css/site.frcd9yq6ac.css",
-      "AssetFile": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\obj\\Debug\\net9.0\\compressed\\p19z7sbmy6-frcd9yq6ac.gz",
+      "Route": "css/site.z683rxsr0p.css",
+      "AssetFile": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\obj\\Debug\\net9.0\\compressed\\p19z7sbmy6-z683rxsr0p.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000425170068"
+          "Quality": "0.003105590062"
         }
       ],
       "ResponseHeaders": [
@@ -5963,15 +5963,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2351"
+          "Value": "321"
         },
         {
           "Name": "ETag",
-          "Value": "\"K6ona5jL0RxH7G4rBE19r3AhPGaMgVTCQ5s4LLpSIus=\""
+          "Value": "\"osm0RPvIjEyyYMZ2zRMFeswNWneAhas/UW+d/FyvHA4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 11:13:53 GMT"
+          "Value": "Wed, 09 Apr 2025 09:54:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5991,13 +5991,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"Je3Oh+VpjI246jqCULu7cr0czMLe5ZlMr9j0SmhBZ2c=\""
+          "Value": "W/\"O+vvKEJJSFIkm58vBhjxglzyl2LEEpNtVGQHj7ZCKXg=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "frcd9yq6ac"
+          "Value": "z683rxsr0p"
         },
         {
           "Name": "label",
@@ -6005,12 +6005,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Je3Oh+VpjI246jqCULu7cr0czMLe5ZlMr9j0SmhBZ2c="
+          "Value": "sha256-O+vvKEJJSFIkm58vBhjxglzyl2LEEpNtVGQHj7ZCKXg="
         }
       ]
     },
     {
-      "Route": "css/site.frcd9yq6ac.css",
+      "Route": "css/site.z683rxsr0p.css",
       "AssetFile": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6020,7 +6020,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9915"
+          "Value": "673"
         },
         {
           "Name": "Content-Type",
@@ -6028,11 +6028,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Je3Oh+VpjI246jqCULu7cr0czMLe5ZlMr9j0SmhBZ2c=\""
+          "Value": "\"O+vvKEJJSFIkm58vBhjxglzyl2LEEpNtVGQHj7ZCKXg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 11:13:53 GMT"
+          "Value": "Wed, 09 Apr 2025 09:54:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6042,7 +6042,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "frcd9yq6ac"
+          "Value": "z683rxsr0p"
         },
         {
           "Name": "label",
@@ -6050,13 +6050,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Je3Oh+VpjI246jqCULu7cr0czMLe5ZlMr9j0SmhBZ2c="
+          "Value": "sha256-O+vvKEJJSFIkm58vBhjxglzyl2LEEpNtVGQHj7ZCKXg="
         }
       ]
     },
     {
-      "Route": "css/site.frcd9yq6ac.css.gz",
-      "AssetFile": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\obj\\Debug\\net9.0\\compressed\\p19z7sbmy6-frcd9yq6ac.gz",
+      "Route": "css/site.z683rxsr0p.css.gz",
+      "AssetFile": "\\\\dom.sandwell.ac.uk\\Student\\HomeEven\\692962\\GitHub\\Rolsa-Technologies\\RolsaTechnologies\\RolsaTechnologies\\obj\\Debug\\net9.0\\compressed\\p19z7sbmy6-z683rxsr0p.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6065,7 +6065,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2351"
+          "Value": "321"
         },
         {
           "Name": "Content-Type",
@@ -6073,11 +6073,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"K6ona5jL0RxH7G4rBE19r3AhPGaMgVTCQ5s4LLpSIus=\""
+          "Value": "\"osm0RPvIjEyyYMZ2zRMFeswNWneAhas/UW+d/FyvHA4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 08 Apr 2025 11:13:53 GMT"
+          "Value": "Wed, 09 Apr 2025 09:54:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6095,7 +6095,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "frcd9yq6ac"
+          "Value": "z683rxsr0p"
         },
         {
           "Name": "label",
@@ -6103,7 +6103,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-K6ona5jL0RxH7G4rBE19r3AhPGaMgVTCQ5s4LLpSIus="
+          "Value": "sha256-osm0RPvIjEyyYMZ2zRMFeswNWneAhas/UW+d/FyvHA4="
         }
       ]
     },
